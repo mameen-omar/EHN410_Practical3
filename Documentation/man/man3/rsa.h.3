@@ -1,0 +1,262 @@
+.TH "rsa.h" 3 "Thu May 23 2019" "Version 0.1" "EHN 410 - Group 7" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+rsa.h \- RSA library function prototype file\&. This file contains the necessary functionality to perform RSA key generation as well as encryption/decryption\&. The functions in this file consist of RSA key generation, RSA encryption, RSA decryption, Getting prime numbers and writing the keys to a file\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'randomNumberGenerator\&.h'\fP
+.br
+\fC#include <math\&.h>\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBrsactx_t\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBrsaInit\fP (\fBrsactx_t\fP *rsaCtx)"
+.br
+.RI "rsaInit - Function used to initialize the RSA context state structure passed in as "
+.ti -1c
+.RI "\fBrsactx_t\fP * \fBconstructRSAContext\fP (unsigned char *initKey, uint8_t initKeyLength, int isKeyHex, int numBits)"
+.br
+.RI "constructRSAContext - Function used to construct the RSA context structure used for RSA key-pair generation\&. The function allocates all memory required\&. In addition, the function initializes the random number generator (RC4 key stream) using the key passed in as "
+.ti -1c
+.RI "void \fBrsaWriteKeysToFile\fP (\fBrsactx_t\fP *rsaCtx, unsigned char *publicKeyFileName, unsigned char *privateKeyFileName)"
+.br
+.RI "rsaWriteKeysToFile - Function used to write the public and private keys store in the RSA Context passed in as "
+.ti -1c
+.RI "void \fBgenerateRsaKeys\fP (\fBrsactx_t\fP *rsaCtx)"
+.br
+.RI "generateRsaKeys - Function used to generate the RSA public and private key-pair according to the specifications within the RSA state passed in as "
+.ti -1c
+.RI "void \fBrsaEncrypt\fP (unsigned char *outputFile, unsigned char *publicKeyFile, unsigned char *plainText, size_t isPlaintextHex)"
+.br
+.RI "rsaEncrypt - Function used to encrypt the plaintext passed in as "
+.ti -1c
+.RI "void \fBrsaDecrypt\fP (unsigned char *outputFile, unsigned char *privateKeyFile, unsigned char *cipherText)"
+.br
+.RI "rsaDecrypt - Function used to decrypt the ciphertext passed in as "
+.ti -1c
+.RI "void \fBgetPrime\fP (mpz_t p, int bits)"
+.br
+.RI "getPrime - Function used to generate a prime number of length "
+.ti -1c
+.RI "void \fBrsaClean\fP (\fBrsactx_t\fP *rsaCtx)"
+.br
+.RI "rsaClean - Function used to deallocate all memory allocated for the RSA context state structure in "
+.in -1c
+.SH "Detailed Description"
+.PP 
+RSA library function prototype file\&. This file contains the necessary functionality to perform RSA key generation as well as encryption/decryption\&. The functions in this file consist of RSA key generation, RSA encryption, RSA decryption, Getting prime numbers and writing the keys to a file\&. 
+
+
+.PP
+\fBAuthors:\fP
+.RS 4
+Mohamed Ameen Omar (u16055323) 
+.PP
+Douglas Healy (u16018100) 
+.PP
+Llewellyn Moyse (u15100708) 
+.RE
+.PP
+\fBVersion:\fP
+.RS 4
+0\&.1 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+2019-05-22
+.RE
+.PP
+\fBCopyright:\fP
+.RS 4
+Copyright (c) 2019 
+.RE
+.PP
+
+.PP
+Definition in file \fBrsa\&.h\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "\fBrsactx_t\fP* constructRSAContext (unsigned char * initKey, uint8_t initKeyLength, int isKeyHex, int numBits)"
+
+.PP
+constructRSAContext - Function used to construct the RSA context structure used for RSA key-pair generation\&. The function allocates all memory required\&. In addition, the function initializes the random number generator (RC4 key stream) using the key passed in as 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIinitKey,used\fP for the generation of the RSA key-pairs\&. The function calls rsaInit function to aid in initialization\&. The caller must use cleanRSA in order to deallocate all memory once the key-pair has been generated\&.
+.br
+\fIunsigned\fP char* - initKey - The key used to initialize the random number generator\&. 
+.br
+\fIinitKeyLength\fP - uint8_t - The length of the key passed in as 
+.br
+\fIinitKey\&.\fP 
+.br
+\fIisKeyHex\fP - int - a flag indicating whether the key 
+.br
+\fIinitKey\fP is a hex string or ascii encoded string\&. 
+.br
+\fInumBits\fP - int - the number of bits required for the public and private RSA key pair to be generated\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+rsactx_t* - A pointer to the RSA context structure used to store the state of the RSA key generation\&. 
+.RE
+.PP
+
+.PP
+Definition at line 35 of file rsa\&.c\&.
+.SS "void generateRsaKeys (\fBrsactx_t\fP * rsaCtx)"
+
+.PP
+generateRsaKeys - Function used to generate the RSA public and private key-pair according to the specifications within the RSA state passed in as 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIrsaCtx\&.\fP Makes use of the mpz libraries in order to compute the prime numbers used for the p and q variables used during RSA key generation\&. The function does check for negative values for the 'd' parameter as a result of under and overflows and makes the required adjustments\&. Stores the RSA key pair and the parameters used during RSA key generation in the RSA state structure\&.
+.br
+\fIrsaCtx\fP - rsactx_t* - The RSA context state to use for the RSA key-pair generation\&. 
+.RE
+.PP
+
+.PP
+Definition at line 77 of file rsa\&.c\&.
+.SS "void getPrime (mpz_t p, int bits)"
+
+.PP
+getPrime - Function used to generate a prime number of length 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbits\fP and store it in 
+.br
+\fIp\&.\fP Used for RSA key-pair generation\&. 
+.br
+\fIbits\fP should be half the length of the total length of the key required for the RSA keys\&. The function generates 
+.br
+\fIbits\fP - 1 random numbers using the RC4 random key stream generator and uses the LSB of each random number generated as a bit in the in the final prime number\&. Once the random number of bits length is generated, the mpz_nextprime is used to get the closest prime number to the random number generated and store it in 
+.br
+\fIp\&.\fP 
+.br
+\fIp\fP 
+.br
+\fIbits\fP 
+.RE
+.PP
+
+.PP
+Definition at line 133 of file rsa\&.c\&.
+.SS "void rsaClean (\fBrsactx_t\fP * rsaCtx)"
+
+.PP
+rsaClean - Function used to deallocate all memory allocated for the RSA context state structure in 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIrsaCtx\&.\fP In addition deallocates all memory used for the random number generator\&. 
+.br
+\fIrsaCtx\fP - rsactx_t* - The RSA context state to deallocate\&. 
+.RE
+.PP
+
+.PP
+Definition at line 382 of file rsa\&.c\&.
+.SS "void rsaDecrypt (unsigned char * outputFile, unsigned char * privateKeyFile, unsigned char * cipherText)"
+
+.PP
+rsaDecrypt - Function used to decrypt the ciphertext passed in as 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcipherText\fP using RSA decryption and write the resulting plaintext to the file 
+.br
+\fIoutputFile\fP as a string using ascii plaintext encoding\&. Function treats the entire cipherText as the a single decimal value and performs the RSA decryption\&. The function reads in the private key and writes the result to the output file\&.
+.br
+\fIoutputFile\fP - unsigned char* - File to write the plaintext to\&. 
+.br
+\fIprivateKeyFile\fP - unsigned char* - The file containing the private key to use during RSA decryption\&. The 'n' paramter should be on the first line, followed by the newline character thereafter the 'd' paramter should be placed in the private key file\&. 
+.br
+\fIcipherText\fP - unsigned char* - The ciphertext to decrypt\&. 
+.RE
+.PP
+
+.PP
+Definition at line 256 of file rsa\&.c\&.
+.SS "void rsaEncrypt (unsigned char * outputFile, unsigned char * publicKeyFile, unsigned char * plainText, size_t isPlaintextHex)"
+
+.PP
+rsaEncrypt - Function used to encrypt the plaintext passed in as 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIplainText\fP using RSA encryption and write the resulting ciphertext to the file 
+.br
+\fIoutputFile\fP in decimal\&. Function treats the entire plainText as the a single decimal value and performs the RSA encryption\&. The function reads in the public key and writes the result to the output file\&.
+.br
+\fIoutputFile\fP - unsigned char* - File to write the ciphertext to\&. 
+.br
+\fIpublicKeyFile\fP - unsigned char* - The file containing the public key to use during RSA encryption\&. The 'n' paramter should be on the first line, followed by the newline character thereafter the 'e' paramter should be placed in the public key file\&. 
+.br
+\fIplainText\fP - unsigned char* - The plaintext to encrypt\&. 
+.br
+\fIisPlaintextHex\fP - size_t - a flag used to indicate if the plaintext is encoded using ascii or hex encoding\&. 
+.RE
+.PP
+
+.PP
+Definition at line 175 of file rsa\&.c\&.
+.SS "void rsaInit (\fBrsactx_t\fP * rsaCtx)"
+
+.PP
+rsaInit - Function used to initialize the RSA context state structure passed in as 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIrsaCtx\&.\fP Used as a helper function for the constructRSAContext function\&. Does not need to be explicitly called by the user\&. Initializes all mpz library variables used as required\&.
+.br
+\fIrsaCtx\fP - rsactx_t* - A pointer to the RSA context state structure to initialize\&. 
+.RE
+.PP
+
+.PP
+Definition at line 54 of file rsa\&.c\&.
+.SS "void rsaWriteKeysToFile (\fBrsactx_t\fP * rsaCtx, unsigned char * publicKeyFileName, unsigned char * privateKeyFileName)"
+
+.PP
+rsaWriteKeysToFile - Function used to write the public and private keys store in the RSA Context passed in as 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIrsaCtx,to\fP the 
+.br
+\fIpublicKeyFileName\fP and 
+.br
+\fIprivateKeyFileName\fP respectively\&. The RSA private and public keys are written to the files in accordance with the practical specification\&. With the n paramter followed by a newline character, followed by d/e and finally a newline character\&.
+.br
+\fIrsaCtx\fP - rsactx_t* - The RSA context containing the public and private key pair to be written\&. 
+.br
+\fIpublicKeyFileName\fP - unsigned char* - The file to write the RSA public key to\&. 
+.br
+\fIprivateKeyFileName\fP - unsigned char* - The file to write the RSA private key to\&. 
+.RE
+.PP
+
+.PP
+Definition at line 345 of file rsa\&.c\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for EHN 410 - Group 7 from the source code\&.

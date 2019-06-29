@@ -1,0 +1,425 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="rc4_8c" kind="file" language="C++">
+    <compoundname>rc4.c</compoundname>
+    <includes refid="rc4_8h" local="yes">rc4.h</includes>
+    <incdepgraph>
+      <node id="55">
+        <label>stdbool.h</label>
+      </node>
+      <node id="50">
+        <label>stdarg.h</label>
+      </node>
+      <node id="52">
+        <label>stdint.h</label>
+      </node>
+      <node id="54">
+        <label>stdlib.h</label>
+      </node>
+      <node id="45">
+        <label>rc4.c</label>
+        <link refid="rc4_8c"/>
+        <childnode refid="46" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>rc4.h</label>
+        <link refid="rc4_8h"/>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+      </node>
+      <node id="56">
+        <label>textConverter.h</label>
+        <link refid="text_converter_8h"/>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+      </node>
+      <node id="53">
+        <label>string.h</label>
+      </node>
+      <node id="57">
+        <label>unistd.h</label>
+      </node>
+      <node id="47">
+        <label>rc4Lib.h</label>
+        <link refid="rc4_lib_8h"/>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+      </node>
+      <node id="49">
+        <label>gmp.h</label>
+      </node>
+      <node id="58">
+        <label>getopt.h</label>
+      </node>
+      <node id="51">
+        <label>obstack.h</label>
+      </node>
+      <node id="48">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="rc4_8c_1ad239ce7044c7e43200d20b22f36ead60" prot="public" static="no" mutable="no">
+        <type>const size_t</type>
+        <definition>const size_t RC4KEYLENGTH</definition>
+        <argsstring></argsstring>
+        <name>RC4KEYLENGTH</name>
+        <initializer>= 16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rc4.c" line="16" column="1" bodyfile="rc4.c" bodystart="16" bodyend="-1"/>
+        <referencedby refid="rc4_8c_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="rc4_8c" startline="18" endline="143">main</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="rc4_8c_1a0ddf1224851353fc92bfbff6f499fa97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char *argv[])</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>argv</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rc4.c" line="18" column="1" bodyfile="rc4.c" bodystart="18" bodyend="143"/>
+        <references refid="rc4_8c_1a0d20b69b0ad703df78459e1033d5c1d4" compoundref="rc4_8c" startline="148" endline="160">printHelp</references>
+        <references refid="namespacerc4_test_1aaae3bfdd654e72f5b6cca95ce6467170" compoundref="rc4_test_8py" startline="11">rc4Test.outputFileName</references>
+        <references refid="namespacerc4_test_1a399a06f7a52ec2592bd7dc1fe0998548" compoundref="rc4_test_8py" startline="12">rc4Test.keyFile</references>
+        <references refid="namespacersa_key_gen_tester_1aa8fa75d45876bcbe59f33f49e7d3572d" compoundref="rsa_key_gen_tester_8py" startline="11">rsaKeyGenTester.key</references>
+        <references refid="namespacemod_1a6150e0515f7202e2fb518f7206ed97dc" compoundref="mod_8py" startline="1">mod.x</references>
+        <references refid="rc4_8c_1ad09bd2f098bcd4eb97823dd5059b8a93" compoundref="rc4_8c" startline="194" endline="201">verifyArgument</references>
+        <references refid="rc4_8c_1a6870e4cfc68e6c726029a8b89839e2ba" compoundref="rc4_8c" startline="165" endline="186">clearMemory</references>
+        <references refid="rc4_8c_1ad239ce7044c7e43200d20b22f36ead60" compoundref="rc4_8c" startline="16">RC4KEYLENGTH</references>
+        <references refid="rc4_lib_8c_1a2d3a139e4437494b462422ff2355b409" compoundref="rc4_lib_8c" startline="28" endline="40">constructRc4Context</references>
+        <references refid="rc4_lib_8c_1adf2f7c39612e593f25961008b04cb22f" compoundref="rc4_lib_8c" startline="68" endline="96">rc4Init</references>
+        <references refid="rc4_lib_8c_1ad5d6c36612836b2ef2cce2a11e069b81" compoundref="rc4_lib_8c" startline="140" endline="212">performRc4</references>
+        <references refid="rc4_lib_8c_1aaead699517d29af2819f4dd9ea36cd2d" compoundref="rc4_lib_8c" startline="49" endline="56">destroyRc4Context</references>
+      </memberdef>
+      <memberdef kind="function" id="rc4_8c_1a0d20b69b0ad703df78459e1033d5c1d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void printHelp</definition>
+        <argsstring>()</argsstring>
+        <name>printHelp</name>
+        <briefdescription>
+<para>printHelp - Function used to print the help menu for the rc4 utility </para>        </briefdescription>
+        <detaileddescription>
+<para>printHelp - Function used to print the help menu for the rsa kegen utility</para><para>printHelp - Function used to print the help menu for the rsa encrypt utility</para><para>printHelp - Function used to print the help menu for the rsa decrypt utility </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rc4.c" line="148" column="1" bodyfile="rc4.c" bodystart="148" bodyend="160"/>
+        <referencedby refid="rc4_8c_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="rc4_8c" startline="18" endline="143">main</referencedby>
+        <referencedby refid="rsakeygen_8h_1ad09bd2f098bcd4eb97823dd5059b8a93" compoundref="rc4_8c" startline="194" endline="201">verifyArgument</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="rc4_8c_1a6870e4cfc68e6c726029a8b89839e2ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void clearMemory</definition>
+        <argsstring>(unsigned char *inputFileName, unsigned char *outputFileName, unsigned char *keyFile, unsigned char *key)</argsstring>
+        <name>clearMemory</name>
+        <param>
+          <type>unsigned char *</type>
+          <declname>inputFileName</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>outputFileName</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>keyFile</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>clearMemory - Function used to deallocate all memory allocated for the rc4 utility. </para>        </briefdescription>
+        <detaileddescription>
+<para>clearMemory - Function used to deallocate all memory allocated for the rsa keygen utility.</para><para>clearMemory - Function used to deallocate all memory allocated for the rsa encryption utility.</para><para>clearMemory - Function used to deallocate all memory allocated for the rsa decryption utility. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rc4.c" line="165" column="1" bodyfile="rc4.c" bodystart="165" bodyend="186"/>
+        <referencedby refid="rc4_8c_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="rc4_8c" startline="18" endline="143">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="rc4_8c_1ad09bd2f098bcd4eb97823dd5059b8a93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void verifyArgument</definition>
+        <argsstring>(size_t argCounter, size_t argc, char *parameter)</argsstring>
+        <name>verifyArgument</name>
+        <param>
+          <type>size_t</type>
+          <declname>argCounter</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>parameter</declname>
+        </param>
+        <briefdescription>
+<para>verifyArgument - Function used to verify if a paramter has an argument or not. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>argCounter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The current index being verified for the commandline paramters. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>argc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The total number of commandline arguments. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>parameter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The parameter whose argument is being verified. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rc4.c" line="194" column="1" bodyfile="rc4.c" bodystart="194" bodyend="201"/>
+        <referencedby refid="rc4_8c_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="rc4_8c" startline="18" endline="143">main</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="authors"><para>Mohamed Ameen Omar (u16055323) </para></simplesect>
+<simplesect kind="authors"><para>Douglas Healy (u16018100) </para></simplesect>
+<simplesect kind="authors"><para>Llewellyn Moyse (u15100708) </para></simplesect>
+<simplesect kind="version"><para>0.1 </para></simplesect>
+<simplesect kind="date"><para>2019-05-22</para></simplesect>
+<simplesect kind="copyright"><para>Copyright (c) 2019 </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="14"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="rc4_8h" kindref="compound">rc4.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="rc4_8h_1ad239ce7044c7e43200d20b22f36ead60" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="rc4_8c_1ad239ce7044c7e43200d20b22f36ead60" kindref="member">RC4KEYLENGTH</ref><sp/>=<sp/>16;<sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="rc4_8c_1a0ddf1224851353fc92bfbff6f499fa97" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="rc4_8c_1a0ddf1224851353fc92bfbff6f499fa97" kindref="member">main</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>argv[])<sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Supports<sp/>both<sp/>raw<sp/>input<sp/>and<sp/>file<sp/>input<sp/>for<sp/>key<sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(argc<sp/>&lt;=<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="rc4_8c_1a0d20b69b0ad703df78459e1033d5c1d4" kindref="member">printHelp</ref>();</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(EXIT_FAILURE);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>isKeyHex<sp/>=<sp/>0;<sp/></highlight><highlight class="comment">//<sp/>default<sp/>not<sp/>hex<sp/>-<sp/>practical<sp/>guide</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>inputFileName<sp/>=<sp/>NULL;<sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="namespacerc4_test_1aaae3bfdd654e72f5b6cca95ce6467170" kindref="member">outputFileName</ref><sp/>=<sp/>NULL;<sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="namespacerc4_test_1a399a06f7a52ec2592bd7dc1fe0998548" kindref="member">keyFile</ref><sp/>=<sp/>NULL;<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="namespacersa_key_gen_tester_1aa8fa75d45876bcbe59f33f49e7d3572d" kindref="member">key</ref><sp/>=<sp/>NULL;<sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>usage<sp/>./rc4<sp/>-fi<sp/>inputfile<sp/>-fo<sp/>outputfile<sp/>-kf<sp/>keyfile<sp/>-hex<sp/>(to<sp/>specify<sp/>if<sp/>the<sp/>key<sp/>is<sp/>hex<sp/>or<sp/>not)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="namespacemod_1a6150e0515f7202e2fb518f7206ed97dc" kindref="member">x</ref><sp/>=<sp/>1;<sp/><ref refid="namespacemod_1a6150e0515f7202e2fb518f7206ed97dc" kindref="member">x</ref><sp/>&lt;<sp/>argc;)<sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(strcmp(argv[<ref refid="namespacemod_1a6150e0515f7202e2fb518f7206ed97dc" kindref="member">x</ref>],<sp/></highlight><highlight class="stringliteral">&quot;-fi&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="rc4_8c_1ad09bd2f098bcd4eb97823dd5059b8a93" kindref="member">verifyArgument</ref>(x,argc,</highlight><highlight class="stringliteral">&quot;inputfile&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>inputFileName<sp/>=<sp/>calloc(strlen(argv[x+1])+1,</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strncpy(inputFileName,argv[x+1],<sp/>strlen(argv[x+1]));</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Input<sp/>file<sp/>specified<sp/>as<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/>inputFileName);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x+=2;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(strcmp(argv[x],<sp/></highlight><highlight class="stringliteral">&quot;-fo&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="rc4_8c_1ad09bd2f098bcd4eb97823dd5059b8a93" kindref="member">verifyArgument</ref>(x,argc,</highlight><highlight class="stringliteral">&quot;outputfile&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>outputFileName<sp/>=<sp/>calloc(strlen(argv[x+1])+1,</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strncpy(outputFileName,argv[x+1],strlen(argv[x+1]));</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Output<sp/>file<sp/>specified<sp/>as<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/>outputFileName);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x+=2;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(strcmp(argv[x],<sp/></highlight><highlight class="stringliteral">&quot;-kf&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="rc4_8c_1ad09bd2f098bcd4eb97823dd5059b8a93" kindref="member">verifyArgument</ref>(x,argc,</highlight><highlight class="stringliteral">&quot;keyfile&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>keyFile<sp/>=<sp/>calloc(strlen(argv[x+1])+1,</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strncpy(keyFile,argv[x+1],strlen(argv[x+1]));</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;key<sp/>file<sp/>specified<sp/>as<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/>keyFile);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x+=2;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(strcmp(argv[x],<sp/></highlight><highlight class="stringliteral">&quot;-hex&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>isKeyHex<sp/>=<sp/>1;<sp/></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Key<sp/>is<sp/>specified<sp/>as<sp/>hex\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x+=2;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(strcmp(argv[x],<sp/></highlight><highlight class="stringliteral">&quot;-h&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Help<sp/>menu<sp/>requested\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="rc4_8c_1a0d20b69b0ad703df78459e1033d5c1d4" kindref="member">printHelp</ref>();</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="rc4_8c_1a6870e4cfc68e6c726029a8b89839e2ba" kindref="member">clearMemory</ref>(inputFileName,outputFileName,keyFile,key);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(EXIT_SUCCESS);<sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Argument<sp/>%s<sp/>is<sp/>not<sp/>recognized\n&quot;</highlight><highlight class="normal">,<sp/>argv[x]);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="rc4_8c_1a0d20b69b0ad703df78459e1033d5c1d4" kindref="member">printHelp</ref>();</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="rc4_8c_1a6870e4cfc68e6c726029a8b89839e2ba" kindref="member">clearMemory</ref>(inputFileName,outputFileName,keyFile,key);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(EXIT_FAILURE);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>FILE<sp/>*keyFilePtr<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>keyLen;<sp/></highlight><highlight class="comment">//<sp/>length<sp/>of<sp/>the<sp/>key</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(keyFile<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>key<sp/>=<sp/>calloc(<ref refid="rc4_8c_1ad239ce7044c7e43200d20b22f36ead60" kindref="member">RC4KEYLENGTH</ref>*5,</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;No<sp/>key<sp/>file<sp/>has<sp/>been<sp/>specified,<sp/>please<sp/>enter<sp/>the<sp/>RC4<sp/>key<sp/>in<sp/>ascii<sp/>(plaintext)\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>valid<sp/>=<sp/>scanf(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,key);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>keyLen<sp/>=<sp/>strlen(key);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;KeyLength<sp/>is<sp/>%ld\n&quot;</highlight><highlight class="normal">,<sp/>keyLen);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(keyLen<sp/>&gt;<sp/>16<sp/>||<sp/>valid<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Error<sp/>the<sp/>inputted<sp/>key<sp/>is<sp/>%ld<sp/>bytes<sp/>long,<sp/>which<sp/>is<sp/>greater<sp/>than<sp/>the<sp/>maximum<sp/>supported<sp/>key<sp/>length<sp/>of<sp/>%ld<sp/>bytes.\n&quot;</highlight><highlight class="normal">,<sp/>keyLen,<sp/><ref refid="rc4_8c_1ad239ce7044c7e43200d20b22f36ead60" kindref="member">RC4KEYLENGTH</ref>);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Please<sp/>enter<sp/>the<sp/>RC4<sp/>key<sp/>in<sp/>ascii<sp/>(plaintext)\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>valid<sp/>=<sp/>scanf(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,key);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>keyLen<sp/>=<sp/>strlen(key);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>isKeyHex<sp/>=<sp/>0;<sp/></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>keyFilePtr<sp/>=<sp/>fopen(keyFile,<sp/></highlight><highlight class="stringliteral">&quot;r&quot;</highlight><highlight class="normal">);<sp/></highlight><highlight class="comment">//read<sp/>as<sp/>a<sp/>binary<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(keyFilePtr<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Error<sp/>-<sp/>Could<sp/>not<sp/>open<sp/>the<sp/>key<sp/>file<sp/>specified<sp/>as<sp/>%s.\nExiting.\n&quot;</highlight><highlight class="normal">,<sp/>keyFile);<sp/></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="rc4_8c_1a0d20b69b0ad703df78459e1033d5c1d4" kindref="member">printHelp</ref>();</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="rc4_8c_1a6870e4cfc68e6c726029a8b89839e2ba" kindref="member">clearMemory</ref>(inputFileName,outputFileName,keyFile,key);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(EXIT_FAILURE);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>read<sp/>the<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fseek(keyFilePtr,0,SEEK_END);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>keyLen<sp/>=<sp/>ftell(keyFilePtr);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>maxKeyLength<sp/>=<sp/>isKeyHex<sp/>==<sp/>0<sp/>?<sp/><ref refid="rc4_8c_1ad239ce7044c7e43200d20b22f36ead60" kindref="member">RC4KEYLENGTH</ref><sp/>:<sp/><ref refid="rc4_8c_1ad239ce7044c7e43200d20b22f36ead60" kindref="member">RC4KEYLENGTH</ref>*2;<sp/></highlight><highlight class="comment">//<sp/>if<sp/>the<sp/>key<sp/>is<sp/>not<sp/>hex<sp/>(0)<sp/>then<sp/>key<sp/>length<sp/>will<sp/>be<sp/>16<sp/>bytes<sp/>else<sp/>double<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(keyLen<sp/>&gt;<sp/>maxKeyLength)<sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Error,<sp/>the<sp/>key<sp/>in<sp/>file<sp/>%s<sp/>is<sp/>%ld<sp/>bytes<sp/>long<sp/>which<sp/>is<sp/>greater<sp/>than<sp/>the<sp/>maximum<sp/>supported<sp/>key<sp/>length<sp/>of<sp/>%ld<sp/>bytes.\n&quot;</highlight><highlight class="normal">,<sp/>keyFile,<sp/>keyLen,<ref refid="rc4_8c_1ad239ce7044c7e43200d20b22f36ead60" kindref="member">RC4KEYLENGTH</ref>);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="rc4_8c_1a0d20b69b0ad703df78459e1033d5c1d4" kindref="member">printHelp</ref>();</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="rc4_8c_1a6870e4cfc68e6c726029a8b89839e2ba" kindref="member">clearMemory</ref>(inputFileName,outputFileName,keyFile,key);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(EXIT_FAILURE);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fseek(keyFilePtr,0,SEEK_SET);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>key<sp/>=<sp/>calloc(keyLen+1,</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>c;<sp/></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>counter<sp/>=<sp/>0;<sp/></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>((c<sp/>=<sp/>fgetc(keyFilePtr))<sp/>!=<sp/>EOF)<sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>key[counter]<sp/>=<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>char)c;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>counter++;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>keyLen<sp/>=<sp/>counter;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>keyLen<sp/>=<sp/>strlen(key);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Summary<sp/>of<sp/>input:\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;The<sp/>inputfile<sp/>is:<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/>inputFileName);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;The<sp/>outputfile<sp/>is:<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/>outputFileName);<sp/></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;The<sp/>key<sp/>is:<sp/>_%s_\n&quot;</highlight><highlight class="normal">,<sp/>key);<sp/></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;The<sp/>key<sp/>length<sp/>is:<sp/>%ld\n\n&quot;</highlight><highlight class="normal">,<sp/>keyLen);<sp/></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Is<sp/>key<sp/>hex<sp/>%d\n&quot;</highlight><highlight class="normal">,<sp/>isKeyHex);<sp/></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>isTextHex<sp/>=<sp/>0;<sp/></highlight><highlight class="comment">//<sp/>text<sp/>is<sp/>not<sp/>hex</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>start<sp/>the<sp/>encryption</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structrc4ctx__t" kindref="compound">rc4ctx_t</ref>*<sp/>rc4Ctx<sp/>=<sp/><ref refid="rc4_lib_8c_1a2d3a139e4437494b462422ff2355b409" kindref="member">constructRc4Context</ref>();</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="rc4_lib_8c_1adf2f7c39612e593f25961008b04cb22f" kindref="member">rc4Init</ref>(rc4Ctx,key,keyLen,isKeyHex);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="rc4_lib_8c_1ad5d6c36612836b2ef2cce2a11e069b81" kindref="member">performRc4</ref>(inputFileName,<sp/>outputFileName,<sp/>rc4Ctx,<sp/>isTextHex);<sp/></highlight><highlight class="comment">//<sp/>text<sp/>is<sp/>not<sp/>hex</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="rc4_lib_8c_1aaead699517d29af2819f4dd9ea36cd2d" kindref="member">destroyRc4Context</ref>(rc4Ctx);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>cleanup</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(keyFilePtr<sp/>!=<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fclose(keyFilePtr);<sp/></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="rc4_8c_1a6870e4cfc68e6c726029a8b89839e2ba" kindref="member">clearMemory</ref>(inputFileName,outputFileName,keyFile,key);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;<sp/></highlight></codeline>
+<codeline lineno="143"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="148" refid="rsakeygen_8h_1a0d20b69b0ad703df78459e1033d5c1d4" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="rc4_8c_1a0d20b69b0ad703df78459e1033d5c1d4" kindref="member">printHelp</ref>()</highlight></codeline>
+<codeline lineno="149"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;RC4<sp/>Encryption<sp/>and<sp/>Decryption<sp/>Utility\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\nUsage<sp/>./rc4<sp/>&lt;paramters&gt;<sp/>&lt;arguments&gt;<sp/>\nIf<sp/>no<sp/>arguments<sp/>are<sp/>specified<sp/>the<sp/>default<sp/>parameter<sp/>values<sp/>are<sp/>used.\n\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Example<sp/>usage:<sp/>./rc4<sp/>-fi<sp/>inputfile<sp/>-fo<sp/>outputfile<sp/>-kf<sp/>keyfile\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;-h<sp/><sp/><sp/>\t<sp/>\t<sp/>Prints<sp/>out<sp/>the<sp/>help<sp/>menu<sp/>\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;-fi<sp/><sp/>\t<sp/>\t<sp/>Specifies<sp/>the<sp/>file<sp/>to<sp/>encrypt<sp/>or<sp/>decrypt<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\t<sp/>Default:<sp/>None\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;-fo<sp/><sp/>\t<sp/>\t<sp/>Specifies<sp/>the<sp/>file<sp/>to<sp/>write<sp/>the<sp/>encrypted<sp/>or<sp/>decrypted<sp/>result<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\t<sp/>Default:<sp/>None\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;-kf<sp/><sp/>\t<sp/>\t<sp/>Specifies<sp/>the<sp/>path<sp/>to<sp/>the<sp/>encryption<sp/>key<sp/>for<sp/>initialization<sp/>of<sp/>the<sp/>RNG<sp/>(ascii<sp/>by<sp/>default)\t<sp/>Default:<sp/>None\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;-hex<sp/>\t<sp/>\t<sp/>Specifies<sp/>that<sp/>the<sp/>key<sp/>used<sp/>is<sp/>in<sp/>hex<sp/>instead<sp/>of<sp/>ascii<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\t<sp/>Default:<sp/>ascii\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;**<sp/>If<sp/>no<sp/>key<sp/>is<sp/>specified<sp/>the<sp/>user<sp/>will<sp/>be<sp/>prompted<sp/>for<sp/>a<sp/>key\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;**<sp/>All<sp/>keys<sp/>must<sp/>have<sp/>a<sp/>maximum<sp/>size<sp/>of<sp/>16<sp/>bytes\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165" refid="rsakeygen_8h_1a82ced0abad03e5aeb16753d36b2090ca" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="rc4_8c_1a6870e4cfc68e6c726029a8b89839e2ba" kindref="member">clearMemory</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>inputFileName,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="namespacerc4_test_1aaae3bfdd654e72f5b6cca95ce6467170" kindref="member">outputFileName</ref>,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="namespacerc4_test_1a399a06f7a52ec2592bd7dc1fe0998548" kindref="member">keyFile</ref>,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="namespacersa_key_gen_tester_1aa8fa75d45876bcbe59f33f49e7d3572d" kindref="member">key</ref><sp/>)</highlight></codeline>
+<codeline lineno="166"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(inputFileName<sp/>!=<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(inputFileName);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>inputFileName<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(outputFileName<sp/>!=<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(outputFileName);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>outputFileName<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(keyFile<sp/>!=<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(keyFile);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>keyFile<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(key<sp/>!=<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(key);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>key<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="186"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="194" refid="rsakeygen_8h_1ad09bd2f098bcd4eb97823dd5059b8a93" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="rc4_8c_1ad09bd2f098bcd4eb97823dd5059b8a93" kindref="member">verifyArgument</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>argCounter,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>parameter)</highlight></codeline>
+<codeline lineno="195"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(argCounter+1<sp/>&gt;=<sp/>argc)<sp/>{</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Error<sp/>no<sp/>%s<sp/>specified\n&quot;</highlight><highlight class="normal">,<sp/>parameter);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="rc4_8c_1a0d20b69b0ad703df78459e1033d5c1d4" kindref="member">printHelp</ref>();</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(EXIT_FAILURE);<sp/></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="201"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="rc4.c"/>
+  </compounddef>
+</doxygen>

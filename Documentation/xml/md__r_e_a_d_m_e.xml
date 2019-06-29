@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="md__r_e_a_d_m_e" kind="page">
+    <compoundname>md_README</compoundname>
+    <title>EHN 410 - Group 7</title>
+    <detaileddescription>
+<para><heading level="2">Group members</heading>
+</para><para><itemizedlist>
+<listitem><para>Mohamed Ameen Omar (u16055323)</para></listitem><listitem><para>Douglas Healy (u16018100)</para></listitem><listitem><para>Llewellyn Moyse (u15100708)</para></listitem></itemizedlist>
+</para><para><hruler/>
+</para><para><heading level="2">RSA Key Generation</heading>
+</para><para><orderedlist>
+<listitem><para>Open a Linux Terminal.</para></listitem><listitem><para>Navigate to the root directory containing the <emphasis>rsakeygen</emphasis> source code.</para></listitem><listitem><para>Run the *&quot;make rsakeygen&quot;* command.</para></listitem><listitem><para>An executable called <emphasis>rsakeygen</emphasis> will be created.</para></listitem><listitem><para>Use *&quot;./rsakeygen&quot;* to run the RSA Key Generation program (if no input parameters are specified, a help menu will be displayed)</para></listitem><listitem><para>A list of input parameters and respective default values can be seen below:</para></listitem></orderedlist>
+</para><para><table rows="8" cols="3"><row>
+<entry thead="yes"><para>Parameter </para></entry><entry thead="yes"><para>Description </para></entry><entry thead="yes"><para>Default Value  </para></entry></row>
+<row>
+<entry thead="no"><para>-h </para></entry><entry thead="no"><para>Prints out the help menu </para></entry><entry thead="no"><para></para></entry></row>
+<row>
+<entry thead="no"><para>-b </para></entry><entry thead="no"><para>Specifies the number of bits for the public/private keys to be generated </para></entry><entry thead="no"><para>None </para></entry></row>
+<row>
+<entry thead="no"><para>-KU </para></entry><entry thead="no"><para>Specifies the file to which the <bold>public</bold> key will be written </para></entry><entry thead="no"><para>None </para></entry></row>
+<row>
+<entry thead="no"><para>-KR </para></entry><entry thead="no"><para>Specifies the file to which the <bold>private</bold> key will be written </para></entry><entry thead="no"><para>None </para></entry></row>
+<row>
+<entry thead="no"><para>-key </para></entry><entry thead="no"><para>Specifies the key for the initialisation of the RNG (in hex by default) </para></entry><entry thead="no"><para>None </para></entry></row>
+<row>
+<entry thead="no"><para>-kf </para></entry><entry thead="no"><para>Specifies the path to the key for the initialisation of the RNG (hex by default) </para></entry><entry thead="no"><para>None </para></entry></row>
+<row>
+<entry thead="no"><para>-ascii </para></entry><entry thead="no"><para>Specifies that the key used is in ascii instead of hex </para></entry><entry thead="no"><para>Hex </para></entry></row>
+</table>
+<heading level="3">RSA Key Generation Usage Example</heading>
+</para><para><programlisting><codeline><highlight class="normal">./rsakeygen<sp/>-b<sp/>bits<sp/>-KU<sp/>public_key_file<sp/>-KR<sp/>private_key_file<sp/>-key<sp/>key</highlight></codeline>
+</programlisting></para><para><hruler/>
+</para><para><heading level="2">RSA Encryption</heading>
+</para><para><orderedlist>
+<listitem><para>Open a Linux Terminal.</para></listitem><listitem><para>Navigate to the root directory containing the <emphasis>rsaencrypt</emphasis> source code.</para></listitem><listitem><para>Run the *&quot;make rsaencrypt&quot;* command.</para></listitem><listitem><para>An executable called <emphasis>rsaencrypt</emphasis> will be created.</para></listitem><listitem><para>Use *&quot;./rsaencrypt&quot;* to run the RSA Encryption program (if no input parameters are specified, a help menu will be displayed)</para></listitem><listitem><para>A list of input parameters and respective default values can be seen below:</para></listitem></orderedlist>
+</para><para><table rows="7" cols="3"><row>
+<entry thead="yes"><para>Parameter </para></entry><entry thead="yes"><para>Description </para></entry><entry thead="yes"><para>Default Value  </para></entry></row>
+<row>
+<entry thead="no"><para>-h </para></entry><entry thead="no"><para>Prints out the help menu </para></entry><entry thead="no"><para></para></entry></row>
+<row>
+<entry thead="no"><para>-key </para></entry><entry thead="no"><para>Specifies the RC4 key to encrypt/decrypt </para></entry><entry thead="no"><para>None </para></entry></row>
+<row>
+<entry thead="no"><para>-fo </para></entry><entry thead="no"><para>Specifies the file to write the encrypted result to </para></entry><entry thead="no"><para>None </para></entry></row>
+<row>
+<entry thead="no"><para>-KU </para></entry><entry thead="no"><para>Specifies the RSA public key file to use for encryption </para></entry><entry thead="no"><para>None </para></entry></row>
+<row>
+<entry thead="no"><para>-kf </para></entry><entry thead="no"><para>Specifies the path to the RC4 key to encrypt/decrypt </para></entry><entry thead="no"><para>None </para></entry></row>
+<row>
+<entry thead="no"><para>-hex </para></entry><entry thead="no"><para>Specifies that the key used is in hex instead of ascii </para></entry><entry thead="no"><para>ascii </para></entry></row>
+</table>
+<heading level="3">RSA Encryption Usage Example</heading>
+</para><para><programlisting><codeline><highlight class="normal">./rsaencrypt<sp/>-key<sp/>key<sp/>-fo<sp/>outputfile<sp/>-KU<sp/>public_key_file</highlight></codeline>
+</programlisting></para><para><hruler/>
+</para><para><heading level="2">RSA Decryption</heading>
+</para><para><orderedlist>
+<listitem><para>Open a Linux Terminal.</para></listitem><listitem><para>Navigate to the root directory containing the <emphasis>rsadecrypt</emphasis> source code.</para></listitem><listitem><para>Run the *&quot;make rsadecrypt&quot;* command.</para></listitem><listitem><para>An executable called <emphasis>rsadecrypt</emphasis> will be created.</para></listitem><listitem><para>Use *&quot;./rsadecrypt&quot;* to run the RSA Decryption program (if no input parameters are specified, a help menu will be displayed)</para></listitem><listitem><para>A list of input parameters and respective default values can be seen below:</para></listitem></orderedlist>
+</para><para><table rows="6" cols="3"><row>
+<entry thead="yes"><para>Parameter </para></entry><entry thead="yes"><para>Description </para></entry><entry thead="yes"><para>Default Value  </para></entry></row>
+<row>
+<entry thead="no"><para>-h </para></entry><entry thead="no"><para>Prints out the help menu </para></entry><entry thead="no"><para></para></entry></row>
+<row>
+<entry thead="no"><para>-fi </para></entry><entry thead="no"><para>Specifies the path to the key to decrypt </para></entry><entry thead="no"><para>None </para></entry></row>
+<row>
+<entry thead="no"><para>-key </para></entry><entry thead="no"><para>Specifies the key to decrypt </para></entry><entry thead="no"><para>None </para></entry></row>
+<row>
+<entry thead="no"><para>-KR </para></entry><entry thead="no"><para>Specifies the RSA private key file to use for decryption </para></entry><entry thead="no"><para>None </para></entry></row>
+<row>
+<entry thead="no"><para>-fo </para></entry><entry thead="no"><para>Specifies the file to write the decrypted result to </para></entry><entry thead="no"><para>None </para></entry></row>
+</table>
+<heading level="3">RSA Decryption Usage Example</heading>
+</para><para><programlisting><codeline><highlight class="normal">./rsadecrypt<sp/>-fi<sp/>inputfile<sp/>-KR<sp/>private_key_file<sp/>-fo<sp/>outputfile</highlight></codeline>
+</programlisting></para><para><hruler/>
+</para><para><heading level="2">RC4</heading>
+</para><para><orderedlist>
+<listitem><para>Open a Linux Terminal.</para></listitem><listitem><para>Navigate to the root directory containing the <emphasis>rc4</emphasis> source code.</para></listitem><listitem><para>Run the *&quot;make rc4&quot;* command.</para></listitem><listitem><para>An executable called <emphasis>rc4</emphasis> will be created.</para></listitem><listitem><para>Use *&quot;./rc4&quot;* to run the RC4 Encryption/Decryption Program (if no input parameters are specified, a help menu will be displayed)</para></listitem><listitem><para>A list of input parameters and respective default values can be seen below:</para></listitem></orderedlist>
+</para><para><table rows="6" cols="3"><row>
+<entry thead="yes"><para>Parameter </para></entry><entry thead="yes"><para>Description </para></entry><entry thead="yes"><para>Default Value  </para></entry></row>
+<row>
+<entry thead="no"><para>-h </para></entry><entry thead="no"><para>Prints out the help menu </para></entry><entry thead="no"><para></para></entry></row>
+<row>
+<entry thead="no"><para>-fi </para></entry><entry thead="no"><para>Specifies the file to encrypt/decrypt </para></entry><entry thead="no"><para>None </para></entry></row>
+<row>
+<entry thead="no"><para>-fo </para></entry><entry thead="no"><para>Specifies the file to write the encrypted/decrypted result to </para></entry><entry thead="no"><para>None </para></entry></row>
+<row>
+<entry thead="no"><para>-kf </para></entry><entry thead="no"><para>Specifies the path to the encryption key for the initialisation of the RNG (ascii by default) </para></entry><entry thead="no"><para>None </para></entry></row>
+<row>
+<entry thead="no"><para>-hex </para></entry><entry thead="no"><para>Specifies that the key used is in hex instead of ascii </para></entry><entry thead="no"><para>ascii </para></entry></row>
+</table>
+&gt;* If no key is specified by the command line parameters then the user will be prompted for a key at runtime. &gt;* All keys must have a maximum size of 16 bytes.</para><para><heading level="3">RC4 Encryption/Decryption Usage Example</heading>
+</para><para><programlisting><codeline><highlight class="normal">./rc4<sp/>-fi<sp/>inputfile<sp/>-fo<sp/>outputfile<sp/>-kf<sp/>keyfile</highlight></codeline>
+</programlisting></para><para><hruler/>
+ </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

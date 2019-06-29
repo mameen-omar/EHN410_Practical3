@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="rc4_test_8py" kind="file" language="Python">
+    <compoundname>rc4Test.py</compoundname>
+    <innernamespace refid="namespacerc4_test">rc4Test</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="namespacerc4_test" refkind="compound"><highlight class="comment">#!/usr/bin/env<sp/>python3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>subprocess</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">subprocess.call([</highlight><highlight class="stringliteral">&quot;make&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;rc4&quot;</highlight><highlight class="normal">])</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">#./rc4<sp/>-fi<sp/>inputfile<sp/>-fo<sp/>outputfile<sp/>-kf<sp/>keyfile<sp/>-hex</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">print(</highlight><highlight class="stringliteral">&quot;************<sp/>Start<sp/>Testing<sp/>Rc4<sp/>*******************\n&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="10" refid="namespacerc4_test_1ab08eaf3f1d5d16116f416e0968df63f6" refkind="member"><highlight class="normal">inputfileName<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;temp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="namespacerc4_test_1aaae3bfdd654e72f5b6cca95ce6467170" refkind="member"><highlight class="normal">outputFileName<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;temp2&quot;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="12" refid="namespacerc4_test_1a399a06f7a52ec2592bd7dc1fe0998548" refkind="member"><highlight class="normal">keyFile<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="namespacerc4_test_1a905c521e05ec8042631a912b71d0454e" refkind="member"><highlight class="normal">temp<sp/>=<sp/>subprocess.call([</highlight><highlight class="stringliteral">&quot;./rc4&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;-fi&quot;</highlight><highlight class="normal">,<sp/>inputfileName,<sp/></highlight><highlight class="stringliteral">&quot;-fo&quot;</highlight><highlight class="normal">,<sp/>outputFileName])</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">print(</highlight><highlight class="stringliteral">&quot;\n************<sp/>End<sp/>Testing<sp/>Rc4<sp/>*******************&quot;</highlight><highlight class="normal">)</highlight></codeline>
+    </programlisting>
+    <location file="rc4Test.py"/>
+  </compounddef>
+</doxygen>

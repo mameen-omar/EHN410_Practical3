@@ -1,0 +1,272 @@
+\hypertarget{rc4_lib_8c}{}\section{rc4\+Lib.\+c File Reference}
+\label{rc4_lib_8c}\index{rc4\+Lib.\+c@{rc4\+Lib.\+c}}
+
+
+R\+C4 library implementation file. This file is used to perform encryption/decryption using the rc4 stream cipher. First an R\+C4 context is created using the construct\+Rc4\+Context function. rc4 is then initialised with the rc4\+Init -\/ by passing in the init key + key length and indicating if the key is hex or not. A byte of the key stream is received using the rc4\+Get\+Byte (with the rc4 context) or encrypted/decrypted by using the appropriate function with the input and output file passed in.  
+
+
+{\ttfamily \#include \char`\"{}rc4\+Lib.\+h\char`\"{}}\newline
+Include dependency graph for rc4\+Lib.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rc4_lib_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structrc4ctx__t}{rc4ctx\+\_\+t} $\ast$ \hyperlink{rc4_lib_8c_a2d3a139e4437494b462422ff2355b409}{construct\+Rc4\+Context} ()
+\begin{DoxyCompactList}\small\item\em construct\+Rc4\+Context -\/ Function to construct the R\+C4 context structure and construct the state vector used for R\+C4 byte generation. The user must use the function in order to initialize the R\+C4 state. The caller must also ensure that they use the member function destroy\+Rc4\+Context in order to deallocate all memory once the R\+C4 structure is no longer needed. \end{DoxyCompactList}\item 
+void \hyperlink{rc4_lib_8c_aaead699517d29af2819f4dd9ea36cd2d}{destroy\+Rc4\+Context} (\hyperlink{structrc4ctx__t}{rc4ctx\+\_\+t} $\ast$rc4\+Ctx)
+\begin{DoxyCompactList}\small\item\em destroy\+Rc4\+Context -\/ Function used to deallocate all memory allocated for the rc4 context structure passed in as \end{DoxyCompactList}\item 
+void \hyperlink{rc4_lib_8c_adf2f7c39612e593f25961008b04cb22f}{rc4\+Init} (\hyperlink{structrc4ctx__t}{rc4ctx\+\_\+t} $\ast$rc4\+Ctx, \hyperlink{rc4_lib_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} $\ast$key, int keylen, uint8\+\_\+t is\+Key\+Hex)
+\begin{DoxyCompactList}\small\item\em rc4\+Init -\/ Function used to initialize the state of the R\+C4 context and the state vector used for the R\+C4 byte generate. Requires the use of the function construct\+Rc4\+Context in order to generate a R\+C4 context. If the initialization key provided in \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{rc4_lib_8c_a13e5254ff57f1390856238cb4c4d71bb}{rc4\+Get\+Byte} (\hyperlink{structrc4ctx__t}{rc4ctx\+\_\+t} $\ast$rc4\+Ctx)
+\begin{DoxyCompactList}\small\item\em rc4\+Get\+Byte -\/ Function used to generate a single byte of the R\+C4 key stream for the R\+C4 context passed in as \end{DoxyCompactList}\item 
+void \hyperlink{rc4_lib_8c_abb929ea4bb5c1b41eaa7f3d067700c38}{swap\+State\+Elements} (\hyperlink{rc4_lib_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} $\ast$val1, \hyperlink{rc4_lib_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} $\ast$val2)
+\begin{DoxyCompactList}\small\item\em swap\+State\+Elements -\/ Function to swap the contents of the uint8\+\_\+t pointers passed in as parameters \end{DoxyCompactList}\item 
+void \hyperlink{rc4_lib_8c_ad5d6c36612836b2ef2cce2a11e069b81}{perform\+Rc4} (unsigned char $\ast$input\+File\+Name, unsigned char $\ast$output\+File\+Name, \hyperlink{structrc4ctx__t}{rc4ctx\+\_\+t} $\ast$rc4\+Ctx, int is\+Text\+Hex)
+\begin{DoxyCompactList}\small\item\em perform\+Rc4 -\/ Function used to encrypt or decrypt the contents of the file \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+R\+C4 library implementation file. This file is used to perform encryption/decryption using the rc4 stream cipher. First an R\+C4 context is created using the construct\+Rc4\+Context function. rc4 is then initialised with the rc4\+Init -\/ by passing in the init key + key length and indicating if the key is hex or not. A byte of the key stream is received using the rc4\+Get\+Byte (with the rc4 context) or encrypted/decrypted by using the appropriate function with the input and output file passed in. 
+
+\begin{DoxyAuthor}{Authors}
+Mohamed Ameen Omar (u16055323) 
+
+Douglas Healy (u16018100) 
+
+Llewellyn Moyse (u15100708) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2019-\/05-\/22
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2019 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{rc4_lib_8c_a2d3a139e4437494b462422ff2355b409}\label{rc4_lib_8c_a2d3a139e4437494b462422ff2355b409}} 
+\index{rc4\+Lib.\+c@{rc4\+Lib.\+c}!construct\+Rc4\+Context@{construct\+Rc4\+Context}}
+\index{construct\+Rc4\+Context@{construct\+Rc4\+Context}!rc4\+Lib.\+c@{rc4\+Lib.\+c}}
+\subsubsection{\texorpdfstring{construct\+Rc4\+Context()}{constructRc4Context()}}
+{\footnotesize\ttfamily \hyperlink{structrc4ctx__t}{rc4ctx\+\_\+t}$\ast$ construct\+Rc4\+Context (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+construct\+Rc4\+Context -\/ Function to construct the R\+C4 context structure and construct the state vector used for R\+C4 byte generation. The user must use the function in order to initialize the R\+C4 state. The caller must also ensure that they use the member function destroy\+Rc4\+Context in order to deallocate all memory once the R\+C4 structure is no longer needed. 
+
+\begin{DoxyReturn}{Returns}
+rc4ctx\+\_\+t$\ast$ -\/ a pointer to the rc4 context object created. 
+\end{DoxyReturn}
+
+
+Definition at line 28 of file rc4\+Lib.\+c.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rc4_lib_8c_a2d3a139e4437494b462422ff2355b409_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{rc4_lib_8c_aaead699517d29af2819f4dd9ea36cd2d}\label{rc4_lib_8c_aaead699517d29af2819f4dd9ea36cd2d}} 
+\index{rc4\+Lib.\+c@{rc4\+Lib.\+c}!destroy\+Rc4\+Context@{destroy\+Rc4\+Context}}
+\index{destroy\+Rc4\+Context@{destroy\+Rc4\+Context}!rc4\+Lib.\+c@{rc4\+Lib.\+c}}
+\subsubsection{\texorpdfstring{destroy\+Rc4\+Context()}{destroyRc4Context()}}
+{\footnotesize\ttfamily void destroy\+Rc4\+Context (\begin{DoxyParamCaption}\item[{\hyperlink{structrc4ctx__t}{rc4ctx\+\_\+t} $\ast$}]{rc4\+Ctx }\end{DoxyParamCaption})}
+
+
+
+destroy\+Rc4\+Context -\/ Function used to deallocate all memory allocated for the rc4 context structure passed in as 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rc4\+Ctx.} & Sets the parameter \\
+\hline
+{\em rc4\+Ctx} & to N\+U\+LL.\\
+\hline
+{\em rc4\+Ctx} & -\/ The R\+C4 context structure to deallocate and clean. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 49 of file rc4\+Lib.\+c.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rc4_lib_8c_aaead699517d29af2819f4dd9ea36cd2d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{rc4_lib_8c_ad5d6c36612836b2ef2cce2a11e069b81}\label{rc4_lib_8c_ad5d6c36612836b2ef2cce2a11e069b81}} 
+\index{rc4\+Lib.\+c@{rc4\+Lib.\+c}!perform\+Rc4@{perform\+Rc4}}
+\index{perform\+Rc4@{perform\+Rc4}!rc4\+Lib.\+c@{rc4\+Lib.\+c}}
+\subsubsection{\texorpdfstring{perform\+Rc4()}{performRc4()}}
+{\footnotesize\ttfamily void perform\+Rc4 (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{input\+File\+Name,  }\item[{unsigned char $\ast$}]{output\+File\+Name,  }\item[{\hyperlink{structrc4ctx__t}{rc4ctx\+\_\+t} $\ast$}]{rc4\+Ctx,  }\item[{int}]{is\+Text\+Hex }\end{DoxyParamCaption})}
+
+
+
+perform\+Rc4 -\/ Function used to encrypt or decrypt the contents of the file 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+File\+Name} & and write the result to the file \\
+\hline
+{\em output\+File\+Name.} & The encryption or decryption is done using R\+C4 encryption or decryption. Each character in the input file is read in and a single byte for the R\+C4 key stream is generated. A single byte for the plaintext or Ciphertext and X\+OR\textquotesingle{}ed with a single byte from the R\+C4 key stream to generate a the corresponding ciphertext or plaintext. The bytes used during the R\+C4 encryption or decryption are generated from the R\+C4 context passed in as \\
+\hline
+{\em rc4\+Ctx.} & R\+C4 encryption\\
+\hline
+{\em input\+File\+Name} & -\/ unsigned char$\ast$ -\/ pointer to a string containing the path to the input file. \\
+\hline
+{\em output\+File\+Name} & -\/ unsigned char$\ast$ -\/ pointer to a string containing the path to the output file. \\
+\hline
+{\em rc4\+Ctx} & -\/ rc4ctx\+\_\+t$\ast$ -\/ a pointer to the R\+C4 context to use during encryption or decryption. \\
+\hline
+{\em is\+Text\+Hex} & -\/ flag used to determine if the input is encoded using ascii or hex encoding. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 140 of file rc4\+Lib.\+c.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rc4_lib_8c_ad5d6c36612836b2ef2cce2a11e069b81_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{rc4_lib_8c_ad5d6c36612836b2ef2cce2a11e069b81_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{rc4_lib_8c_a13e5254ff57f1390856238cb4c4d71bb}\label{rc4_lib_8c_a13e5254ff57f1390856238cb4c4d71bb}} 
+\index{rc4\+Lib.\+c@{rc4\+Lib.\+c}!rc4\+Get\+Byte@{rc4\+Get\+Byte}}
+\index{rc4\+Get\+Byte@{rc4\+Get\+Byte}!rc4\+Lib.\+c@{rc4\+Lib.\+c}}
+\subsubsection{\texorpdfstring{rc4\+Get\+Byte()}{rc4GetByte()}}
+{\footnotesize\ttfamily uint8\+\_\+t rc4\+Get\+Byte (\begin{DoxyParamCaption}\item[{\hyperlink{structrc4ctx__t}{rc4ctx\+\_\+t} $\ast$}]{rc4\+Ctx }\end{DoxyParamCaption})}
+
+
+
+rc4\+Get\+Byte -\/ Function used to generate a single byte of the R\+C4 key stream for the R\+C4 context passed in as 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rc4\+Ctx.} & Returns the single byte as a single uint8\+\_\+t.\\
+\hline
+{\em rc4\+Ctx} & -\/ rc4ctx\+\_\+t$\ast$ -\/ a pointer to the R\+C4 context from which to generate the single byte. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t -\/ A single byte in the R\+C4 key stream. 
+\end{DoxyReturn}
+
+
+Definition at line 105 of file rc4\+Lib.\+c.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=286pt]{rc4_lib_8c_a13e5254ff57f1390856238cb4c4d71bb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rc4_lib_8c_a13e5254ff57f1390856238cb4c4d71bb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{rc4_lib_8c_adf2f7c39612e593f25961008b04cb22f}\label{rc4_lib_8c_adf2f7c39612e593f25961008b04cb22f}} 
+\index{rc4\+Lib.\+c@{rc4\+Lib.\+c}!rc4\+Init@{rc4\+Init}}
+\index{rc4\+Init@{rc4\+Init}!rc4\+Lib.\+c@{rc4\+Lib.\+c}}
+\subsubsection{\texorpdfstring{rc4\+Init()}{rc4Init()}}
+{\footnotesize\ttfamily void rc4\+Init (\begin{DoxyParamCaption}\item[{\hyperlink{structrc4ctx__t}{rc4ctx\+\_\+t} $\ast$}]{rc4\+Ctx,  }\item[{\hyperlink{rc4_lib_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} $\ast$}]{key,  }\item[{int}]{keylen,  }\item[{uint8\+\_\+t}]{is\+Key\+Hex }\end{DoxyParamCaption})}
+
+
+
+rc4\+Init -\/ Function used to initialize the state of the R\+C4 context and the state vector used for the R\+C4 byte generate. Requires the use of the function construct\+Rc4\+Context in order to generate a R\+C4 context. If the initialization key provided in 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & is a hex string, it is converted to ascii string before initialization.\\
+\hline
+{\em rc4\+Ctx} & -\/ rc4ctx\+\_\+t$\ast$ -\/ a pointer to the R\+C4 context structure to initialize. \\
+\hline
+{\em key} & -\/ uint8\+\_\+t$\ast$ -\/ a pointer to the initialization key to be used. \\
+\hline
+{\em keylen} & -\/ int -\/ the length of the key provided \\
+\hline
+{\em key.} & \\
+\hline
+{\em is\+Key\+Hex} & -\/ uint8\+\_\+t -\/ a flag to determine if the key passed in as \\
+\hline
+{\em key} & is a hex string or ascii string. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 68 of file rc4\+Lib.\+c.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rc4_lib_8c_adf2f7c39612e593f25961008b04cb22f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rc4_lib_8c_adf2f7c39612e593f25961008b04cb22f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{rc4_lib_8c_abb929ea4bb5c1b41eaa7f3d067700c38}\label{rc4_lib_8c_abb929ea4bb5c1b41eaa7f3d067700c38}} 
+\index{rc4\+Lib.\+c@{rc4\+Lib.\+c}!swap\+State\+Elements@{swap\+State\+Elements}}
+\index{swap\+State\+Elements@{swap\+State\+Elements}!rc4\+Lib.\+c@{rc4\+Lib.\+c}}
+\subsubsection{\texorpdfstring{swap\+State\+Elements()}{swapStateElements()}}
+{\footnotesize\ttfamily void swap\+State\+Elements (\begin{DoxyParamCaption}\item[{\hyperlink{rc4_lib_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} $\ast$}]{val1,  }\item[{\hyperlink{rc4_lib_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} $\ast$}]{val2 }\end{DoxyParamCaption})}
+
+
+
+swap\+State\+Elements -\/ Function to swap the contents of the uint8\+\_\+t pointers passed in as parameters 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val1} & and \\
+\hline
+{\em val2.} & \\
+\hline
+{\em val1} & -\/ uint8\+\_\+t$\ast$ -\/ pointer to a uint8\+\_\+t variable whose contents to switch with \\
+\hline
+{\em val2.} & \\
+\hline
+{\em val2} & -\/ uint8\+\_\+t$\ast$ -\/ pointer to a uint8\+\_\+t variable whose contents to switch with \\
+\hline
+{\em val1.} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 120 of file rc4\+Lib.\+c.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rc4_lib_8c_abb929ea4bb5c1b41eaa7f3d067700c38_icgraph}
+\end{center}
+\end{figure}

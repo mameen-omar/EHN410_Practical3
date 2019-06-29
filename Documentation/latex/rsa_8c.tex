@@ -1,0 +1,373 @@
+\hypertarget{rsa_8c}{}\section{rsa.\+c File Reference}
+\label{rsa_8c}\index{rsa.\+c@{rsa.\+c}}
+
+
+R\+SA library implementation file. This file contains the necessary functionality to perform R\+SA key generation as well as encryption/decryption. The functions in this file consist of R\+SA key generation, R\+SA encryption, R\+SA decryption, Getting prime numbers and writing the keys to a file.  
+
+
+{\ttfamily \#include \char`\"{}rsa.\+h\char`\"{}}\newline
+Include dependency graph for rsa.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rsa_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structrsactx__t}{rsactx\+\_\+t} $\ast$ \hyperlink{rsa_8c_a32b449824145177f99b25444768d5d3d}{construct\+R\+S\+A\+Context} (unsigned char $\ast$init\+Key, uint8\+\_\+t init\+Key\+Length, int is\+Key\+Hex, int num\+Bits)
+\begin{DoxyCompactList}\small\item\em construct\+R\+S\+A\+Context -\/ Function used to construct the R\+SA context structure used for R\+SA key-\/pair generation. The function allocates all memory required. In addition, the function initializes the random number generator (R\+C4 key stream) using the key passed in as \end{DoxyCompactList}\item 
+void \hyperlink{rsa_8c_a41e602bedc2bfcd50c6e35bfb6279ab5}{rsa\+Init} (\hyperlink{structrsactx__t}{rsactx\+\_\+t} $\ast$rsa\+Ctx)
+\begin{DoxyCompactList}\small\item\em rsa\+Init -\/ Function used to initialize the R\+SA context state structure passed in as \end{DoxyCompactList}\item 
+void \hyperlink{rsa_8c_ac2eb184f89ce2e058ce11f75d2babdd4}{generate\+Rsa\+Keys} (\hyperlink{structrsactx__t}{rsactx\+\_\+t} $\ast$rsa\+Ctx)
+\begin{DoxyCompactList}\small\item\em generate\+Rsa\+Keys -\/ Function used to generate the R\+SA public and private key-\/pair according to the specifications within the R\+SA state passed in as \end{DoxyCompactList}\item 
+void \hyperlink{rsa_8c_aed0dce0633aa439d9479beab9822c6b8}{get\+Prime} (mpz\+\_\+t p, int bits)
+\begin{DoxyCompactList}\small\item\em get\+Prime -\/ Function used to generate a prime number of length \end{DoxyCompactList}\item 
+void \hyperlink{rsa_8c_a94acde740fd5f6523c71d9310074e1ca}{rsa\+Encrypt} (unsigned char $\ast$output\+File, unsigned char $\ast$public\+Key\+File, unsigned char $\ast$plain\+Text, size\+\_\+t is\+Plaintext\+Hex)
+\begin{DoxyCompactList}\small\item\em rsa\+Encrypt -\/ Function used to encrypt the plaintext passed in as \end{DoxyCompactList}\item 
+void \hyperlink{rsa_8c_a7195163cfaccb994f5b3f28655d6e280}{rsa\+Decrypt} (unsigned char $\ast$output\+File, unsigned char $\ast$private\+Key\+File, unsigned char $\ast$cipher\+Text)
+\begin{DoxyCompactList}\small\item\em rsa\+Decrypt -\/ Function used to decrypt the ciphertext passed in as \end{DoxyCompactList}\item 
+void \hyperlink{rsa_8c_a00fa4aa44618d82f5ef6ec9523cbc165}{rsa\+Write\+Keys\+To\+File} (\hyperlink{structrsactx__t}{rsactx\+\_\+t} $\ast$rsa\+Ctx, unsigned char $\ast$public\+Key\+File\+Name, unsigned char $\ast$private\+Key\+File\+Name)
+\begin{DoxyCompactList}\small\item\em rsa\+Write\+Keys\+To\+File -\/ Function used to write the public and private keys store in the R\+SA Context passed in as \end{DoxyCompactList}\item 
+void \hyperlink{rsa_8c_a89855ab18349364b596e545d789ba03d}{rsa\+Clean} (\hyperlink{structrsactx__t}{rsactx\+\_\+t} $\ast$rsa\+Ctx)
+\begin{DoxyCompactList}\small\item\em rsa\+Clean -\/ Function used to deallocate all memory allocated for the R\+SA context state structure in \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int64\+\_\+t \hyperlink{rsa_8c_a13b747bc378147fe06b9ddbb9e5850d6}{C\+O\+N\+S\+T\+A\+N\+TE} = 65537
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+R\+SA library implementation file. This file contains the necessary functionality to perform R\+SA key generation as well as encryption/decryption. The functions in this file consist of R\+SA key generation, R\+SA encryption, R\+SA decryption, Getting prime numbers and writing the keys to a file. 
+
+\begin{DoxyAuthor}{Authors}
+Mohamed Ameen Omar (u16055323) 
+
+Douglas Healy (u16018100) 
+
+Llewellyn Moyse (u15100708) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2019-\/05-\/22
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2019 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{rsa_8c_a32b449824145177f99b25444768d5d3d}\label{rsa_8c_a32b449824145177f99b25444768d5d3d}} 
+\index{rsa.\+c@{rsa.\+c}!construct\+R\+S\+A\+Context@{construct\+R\+S\+A\+Context}}
+\index{construct\+R\+S\+A\+Context@{construct\+R\+S\+A\+Context}!rsa.\+c@{rsa.\+c}}
+\subsubsection{\texorpdfstring{construct\+R\+S\+A\+Context()}{constructRSAContext()}}
+{\footnotesize\ttfamily \hyperlink{structrsactx__t}{rsactx\+\_\+t}$\ast$ construct\+R\+S\+A\+Context (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{init\+Key,  }\item[{uint8\+\_\+t}]{init\+Key\+Length,  }\item[{int}]{is\+Key\+Hex,  }\item[{int}]{num\+Bits }\end{DoxyParamCaption})}
+
+
+
+construct\+R\+S\+A\+Context -\/ Function used to construct the R\+SA context structure used for R\+SA key-\/pair generation. The function allocates all memory required. In addition, the function initializes the random number generator (R\+C4 key stream) using the key passed in as 
+
+
+\begin{DoxyParams}{Parameters}
+{\em init\+Key,used} & for the generation of the R\+SA key-\/pairs. The function calls rsa\+Init function to aid in initialization. The caller must use clean\+R\+SA in order to deallocate all memory once the key-\/pair has been generated.\\
+\hline
+{\em unsigned} & char$\ast$ -\/ init\+Key -\/ The key used to initialize the random number generator. \\
+\hline
+{\em init\+Key\+Length} & -\/ uint8\+\_\+t -\/ The length of the key passed in as \\
+\hline
+{\em init\+Key.} & \\
+\hline
+{\em is\+Key\+Hex} & -\/ int -\/ a flag indicating whether the key \\
+\hline
+{\em init\+Key} & is a hex string or ascii encoded string. \\
+\hline
+{\em num\+Bits} & -\/ int -\/ the number of bits required for the public and private R\+SA key pair to be generated. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+rsactx\+\_\+t$\ast$ -\/ A pointer to the R\+SA context structure used to store the state of the R\+SA key generation. 
+\end{DoxyReturn}
+
+
+Definition at line 35 of file rsa.\+c.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rsa_8c_a32b449824145177f99b25444768d5d3d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=267pt]{rsa_8c_a32b449824145177f99b25444768d5d3d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{rsa_8c_ac2eb184f89ce2e058ce11f75d2babdd4}\label{rsa_8c_ac2eb184f89ce2e058ce11f75d2babdd4}} 
+\index{rsa.\+c@{rsa.\+c}!generate\+Rsa\+Keys@{generate\+Rsa\+Keys}}
+\index{generate\+Rsa\+Keys@{generate\+Rsa\+Keys}!rsa.\+c@{rsa.\+c}}
+\subsubsection{\texorpdfstring{generate\+Rsa\+Keys()}{generateRsaKeys()}}
+{\footnotesize\ttfamily void generate\+Rsa\+Keys (\begin{DoxyParamCaption}\item[{\hyperlink{structrsactx__t}{rsactx\+\_\+t} $\ast$}]{rsa\+Ctx }\end{DoxyParamCaption})}
+
+
+
+generate\+Rsa\+Keys -\/ Function used to generate the R\+SA public and private key-\/pair according to the specifications within the R\+SA state passed in as 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rsa\+Ctx.} & Makes use of the mpz libraries in order to compute the prime numbers used for the p and q variables used during R\+SA key generation. The function does check for negative values for the \char`\"{}d\char`\"{} parameter as a result of under and overflows and makes the required adjustments. Stores the R\+SA key pair and the parameters used during R\+SA key generation in the R\+SA state structure.\\
+\hline
+{\em rsa\+Ctx} & -\/ rsactx\+\_\+t$\ast$ -\/ The R\+SA context state to use for the R\+SA key-\/pair generation. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 77 of file rsa.\+c.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rsa_8c_ac2eb184f89ce2e058ce11f75d2babdd4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{rsa_8c_ac2eb184f89ce2e058ce11f75d2babdd4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{rsa_8c_aed0dce0633aa439d9479beab9822c6b8}\label{rsa_8c_aed0dce0633aa439d9479beab9822c6b8}} 
+\index{rsa.\+c@{rsa.\+c}!get\+Prime@{get\+Prime}}
+\index{get\+Prime@{get\+Prime}!rsa.\+c@{rsa.\+c}}
+\subsubsection{\texorpdfstring{get\+Prime()}{getPrime()}}
+{\footnotesize\ttfamily void get\+Prime (\begin{DoxyParamCaption}\item[{mpz\+\_\+t}]{p,  }\item[{int}]{bits }\end{DoxyParamCaption})}
+
+
+
+get\+Prime -\/ Function used to generate a prime number of length 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bits} & and store it in \\
+\hline
+{\em p.} & Used for R\+SA key-\/pair generation. \\
+\hline
+{\em bits} & should be half the length of the total length of the key required for the R\+SA keys. The function generates \\
+\hline
+{\em bits} & -\/ 1 random numbers using the R\+C4 random key stream generator and uses the L\+SB of each random number generated as a bit in the in the final prime number. Once the random number of bits length is generated, the mpz\+\_\+nextprime is used to get the closest prime number to the random number generated and store it in \\
+\hline
+{\em p.} & \\
+\hline
+{\em p} & \\
+\hline
+{\em bits} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 133 of file rsa.\+c.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rsa_8c_aed0dce0633aa439d9479beab9822c6b8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{rsa_8c_aed0dce0633aa439d9479beab9822c6b8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{rsa_8c_a89855ab18349364b596e545d789ba03d}\label{rsa_8c_a89855ab18349364b596e545d789ba03d}} 
+\index{rsa.\+c@{rsa.\+c}!rsa\+Clean@{rsa\+Clean}}
+\index{rsa\+Clean@{rsa\+Clean}!rsa.\+c@{rsa.\+c}}
+\subsubsection{\texorpdfstring{rsa\+Clean()}{rsaClean()}}
+{\footnotesize\ttfamily void rsa\+Clean (\begin{DoxyParamCaption}\item[{\hyperlink{structrsactx__t}{rsactx\+\_\+t} $\ast$}]{rsa\+Ctx }\end{DoxyParamCaption})}
+
+
+
+rsa\+Clean -\/ Function used to deallocate all memory allocated for the R\+SA context state structure in 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rsa\+Ctx.} & In addition deallocates all memory used for the random number generator. \\
+\hline
+{\em rsa\+Ctx} & -\/ rsactx\+\_\+t$\ast$ -\/ The R\+SA context state to deallocate. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 382 of file rsa.\+c.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rsa_8c_a89855ab18349364b596e545d789ba03d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{rsa_8c_a89855ab18349364b596e545d789ba03d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{rsa_8c_a7195163cfaccb994f5b3f28655d6e280}\label{rsa_8c_a7195163cfaccb994f5b3f28655d6e280}} 
+\index{rsa.\+c@{rsa.\+c}!rsa\+Decrypt@{rsa\+Decrypt}}
+\index{rsa\+Decrypt@{rsa\+Decrypt}!rsa.\+c@{rsa.\+c}}
+\subsubsection{\texorpdfstring{rsa\+Decrypt()}{rsaDecrypt()}}
+{\footnotesize\ttfamily void rsa\+Decrypt (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{output\+File,  }\item[{unsigned char $\ast$}]{private\+Key\+File,  }\item[{unsigned char $\ast$}]{cipher\+Text }\end{DoxyParamCaption})}
+
+
+
+rsa\+Decrypt -\/ Function used to decrypt the ciphertext passed in as 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cipher\+Text} & using R\+SA decryption and write the resulting plaintext to the file \\
+\hline
+{\em output\+File} & as a string using ascii plaintext encoding. Function treats the entire cipher\+Text as the a single decimal value and performs the R\+SA decryption. The function reads in the private key and writes the result to the output file.\\
+\hline
+{\em output\+File} & -\/ unsigned char$\ast$ -\/ File to write the plaintext to. \\
+\hline
+{\em private\+Key\+File} & -\/ unsigned char$\ast$ -\/ The file containing the private key to use during R\+SA decryption. The \char`\"{}n\char`\"{} paramter should be on the first line, followed by the newline character thereafter the \char`\"{}d\char`\"{} paramter should be placed in the private key file. \\
+\hline
+{\em cipher\+Text} & -\/ unsigned char$\ast$ -\/ The ciphertext to decrypt. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 256 of file rsa.\+c.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{rsa_8c_a7195163cfaccb994f5b3f28655d6e280_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{rsa_8c_a94acde740fd5f6523c71d9310074e1ca}\label{rsa_8c_a94acde740fd5f6523c71d9310074e1ca}} 
+\index{rsa.\+c@{rsa.\+c}!rsa\+Encrypt@{rsa\+Encrypt}}
+\index{rsa\+Encrypt@{rsa\+Encrypt}!rsa.\+c@{rsa.\+c}}
+\subsubsection{\texorpdfstring{rsa\+Encrypt()}{rsaEncrypt()}}
+{\footnotesize\ttfamily void rsa\+Encrypt (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{output\+File,  }\item[{unsigned char $\ast$}]{public\+Key\+File,  }\item[{unsigned char $\ast$}]{plain\+Text,  }\item[{size\+\_\+t}]{is\+Plaintext\+Hex }\end{DoxyParamCaption})}
+
+
+
+rsa\+Encrypt -\/ Function used to encrypt the plaintext passed in as 
+
+
+\begin{DoxyParams}{Parameters}
+{\em plain\+Text} & using R\+SA encryption and write the resulting ciphertext to the file \\
+\hline
+{\em output\+File} & in decimal. Function treats the entire plain\+Text as the a single decimal value and performs the R\+SA encryption. The function reads in the public key and writes the result to the output file.\\
+\hline
+{\em output\+File} & -\/ unsigned char$\ast$ -\/ File to write the ciphertext to. \\
+\hline
+{\em public\+Key\+File} & -\/ unsigned char$\ast$ -\/ The file containing the public key to use during R\+SA encryption. The \char`\"{}n\char`\"{} paramter should be on the first line, followed by the newline character thereafter the \char`\"{}e\char`\"{} paramter should be placed in the public key file. \\
+\hline
+{\em plain\+Text} & -\/ unsigned char$\ast$ -\/ The plaintext to encrypt. \\
+\hline
+{\em is\+Plaintext\+Hex} & -\/ size\+\_\+t -\/ a flag used to indicate if the plaintext is encoded using ascii or hex encoding. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 175 of file rsa.\+c.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{rsa_8c_a94acde740fd5f6523c71d9310074e1ca_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{rsa_8c_a41e602bedc2bfcd50c6e35bfb6279ab5}\label{rsa_8c_a41e602bedc2bfcd50c6e35bfb6279ab5}} 
+\index{rsa.\+c@{rsa.\+c}!rsa\+Init@{rsa\+Init}}
+\index{rsa\+Init@{rsa\+Init}!rsa.\+c@{rsa.\+c}}
+\subsubsection{\texorpdfstring{rsa\+Init()}{rsaInit()}}
+{\footnotesize\ttfamily void rsa\+Init (\begin{DoxyParamCaption}\item[{\hyperlink{structrsactx__t}{rsactx\+\_\+t} $\ast$}]{rsa\+Ctx }\end{DoxyParamCaption})}
+
+
+
+rsa\+Init -\/ Function used to initialize the R\+SA context state structure passed in as 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rsa\+Ctx.} & Used as a helper function for the construct\+R\+S\+A\+Context function. Does not need to be explicitly called by the user. Initializes all mpz library variables used as required.\\
+\hline
+{\em rsa\+Ctx} & -\/ rsactx\+\_\+t$\ast$ -\/ A pointer to the R\+SA context state structure to initialize. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 54 of file rsa.\+c.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=347pt]{rsa_8c_a41e602bedc2bfcd50c6e35bfb6279ab5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{rsa_8c_a00fa4aa44618d82f5ef6ec9523cbc165}\label{rsa_8c_a00fa4aa44618d82f5ef6ec9523cbc165}} 
+\index{rsa.\+c@{rsa.\+c}!rsa\+Write\+Keys\+To\+File@{rsa\+Write\+Keys\+To\+File}}
+\index{rsa\+Write\+Keys\+To\+File@{rsa\+Write\+Keys\+To\+File}!rsa.\+c@{rsa.\+c}}
+\subsubsection{\texorpdfstring{rsa\+Write\+Keys\+To\+File()}{rsaWriteKeysToFile()}}
+{\footnotesize\ttfamily void rsa\+Write\+Keys\+To\+File (\begin{DoxyParamCaption}\item[{\hyperlink{structrsactx__t}{rsactx\+\_\+t} $\ast$}]{rsa\+Ctx,  }\item[{unsigned char $\ast$}]{public\+Key\+File\+Name,  }\item[{unsigned char $\ast$}]{private\+Key\+File\+Name }\end{DoxyParamCaption})}
+
+
+
+rsa\+Write\+Keys\+To\+File -\/ Function used to write the public and private keys store in the R\+SA Context passed in as 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rsa\+Ctx,to} & the \\
+\hline
+{\em public\+Key\+File\+Name} & and \\
+\hline
+{\em private\+Key\+File\+Name} & respectively. The R\+SA private and public keys are written to the files in accordance with the practical specification. With the n paramter followed by a newline character, followed by d/e and finally a newline character.\\
+\hline
+{\em rsa\+Ctx} & -\/ rsactx\+\_\+t$\ast$ -\/ The R\+SA context containing the public and private key pair to be written. \\
+\hline
+{\em public\+Key\+File\+Name} & -\/ unsigned char$\ast$ -\/ The file to write the R\+SA public key to. \\
+\hline
+{\em private\+Key\+File\+Name} & -\/ unsigned char$\ast$ -\/ The file to write the R\+SA private key to. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 345 of file rsa.\+c.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=257pt]{rsa_8c_a00fa4aa44618d82f5ef6ec9523cbc165_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{rsa_8c_a13b747bc378147fe06b9ddbb9e5850d6}\label{rsa_8c_a13b747bc378147fe06b9ddbb9e5850d6}} 
+\index{rsa.\+c@{rsa.\+c}!C\+O\+N\+S\+T\+A\+N\+TE@{C\+O\+N\+S\+T\+A\+N\+TE}}
+\index{C\+O\+N\+S\+T\+A\+N\+TE@{C\+O\+N\+S\+T\+A\+N\+TE}!rsa.\+c@{rsa.\+c}}
+\subsubsection{\texorpdfstring{C\+O\+N\+S\+T\+A\+N\+TE}{CONSTANTE}}
+{\footnotesize\ttfamily const int64\+\_\+t C\+O\+N\+S\+T\+A\+N\+TE = 65537}
+
+
+
+Definition at line 21 of file rsa.\+c.
+

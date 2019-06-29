@@ -1,0 +1,244 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="random_number_generator_8c" kind="file" language="C++">
+    <compoundname>randomNumberGenerator.c</compoundname>
+    <includes refid="random_number_generator_8h" local="yes">randomNumberGenerator.h</includes>
+    <incdepgraph>
+      <node id="19">
+        <label>stdbool.h</label>
+      </node>
+      <node id="14">
+        <label>stdarg.h</label>
+      </node>
+      <node id="16">
+        <label>stdint.h</label>
+      </node>
+      <node id="18">
+        <label>stdlib.h</label>
+      </node>
+      <node id="20">
+        <label>textConverter.h</label>
+        <link refid="text_converter_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>string.h</label>
+      </node>
+      <node id="11">
+        <label>rc4Lib.h</label>
+        <link refid="rc4_lib_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>gmp.h</label>
+      </node>
+      <node id="15">
+        <label>obstack.h</label>
+      </node>
+      <node id="12">
+        <label>stdio.h</label>
+      </node>
+      <node id="9">
+        <label>randomNumberGenerator.c</label>
+        <link refid="random_number_generator_8c"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>randomNumberGenerator.h</label>
+        <link refid="random_number_generator_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="random_number_generator_8c_1a9cd5594ced4089811e0be0ff233c844c" prot="public" static="no" mutable="no">
+        <type><ref refid="structrc4ctx__t" kindref="compound">rc4ctx_t</ref> *</type>
+        <definition>rc4ctx_t* rngContext</definition>
+        <argsstring></argsstring>
+        <name>rngContext</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+<para>var - rngContext - The RC4 context state used for random number generation. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="randomNumberGenerator.c" line="22" column="1" bodyfile="randomNumberGenerator.c" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="random_number_generator_8c_1ab5420f1783a3b4d2801c80232daaac65" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rseed</definition>
+        <argsstring>(U8 *key, int keylen, int isKeyHex)</argsstring>
+        <name>rseed</name>
+        <param>
+          <type><ref refid="rc4_lib_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref> *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>keylen</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>isKeyHex</declname>
+        </param>
+        <briefdescription>
+<para>rseed - Function used to create a random number generator object and set the seed for the random number generator. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- uint8_t* - The key used to seed the random number generator. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keylen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The length of the key </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key.</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>isKeyHex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- flag used to indicate if the key </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is hex or ascii encoded. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="randomNumberGenerator.c" line="32" column="1" bodyfile="randomNumberGenerator.c" bodystart="32" bodyend="39"/>
+        <references refid="random_number_generator_8c_1af6cd3a9729eb08f182d0b2df8bd8c7d8" compoundref="random_number_generator_8c" startline="61" endline="67">destroyRNG</references>
+        <references refid="rc4_lib_8c_1a2d3a139e4437494b462422ff2355b409" compoundref="rc4_lib_8c" startline="28" endline="40">constructRc4Context</references>
+        <references refid="rc4_lib_8c_1adf2f7c39612e593f25961008b04cb22f" compoundref="rc4_lib_8c" startline="68" endline="96">rc4Init</references>
+        <referencedby refid="rng_tester_8c_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="rng_tester_8c" startline="17" endline="49">main</referencedby>
+        <referencedby refid="rsa_8h_1a32b449824145177f99b25444768d5d3d" compoundref="rsa_8c" startline="35" endline="46">constructRSAContext</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="random_number_generator_8c_1a23a480165b4fdecf428a20ab7fbf3bcc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="rc4_lib_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref></type>
+        <definition>U8 rrand</definition>
+        <argsstring>()</argsstring>
+        <name>rrand</name>
+        <briefdescription>
+<para>rrand - Function used to generate a random number of a single byte long. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>U8 - A random number of 8 bits long. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="randomNumberGenerator.c" line="45" column="1" bodyfile="randomNumberGenerator.c" bodystart="45" bodyend="54"/>
+        <references refid="rc4_lib_8c_1a13e5254ff57f1390856238cb4c4d71bb" compoundref="rc4_lib_8c" startline="105" endline="111">rc4GetByte</references>
+        <referencedby refid="rng_tester_8c_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="rng_tester_8c" startline="17" endline="49">main</referencedby>
+        <referencedby refid="rsa_8h_1aed0dce0633aa439d9479beab9822c6b8" compoundref="rsa_8c" startline="133" endline="162">getPrime</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="random_number_generator_8c_1af6cd3a9729eb08f182d0b2df8bd8c7d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void destroyRNG</definition>
+        <argsstring>()</argsstring>
+        <name>destroyRNG</name>
+        <briefdescription>
+<para>destroyRNG - Function used to deallocate all memory allocated for the random number generator, specifically the RC4 key stream state context structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="randomNumberGenerator.c" line="61" column="1" bodyfile="randomNumberGenerator.c" bodystart="61" bodyend="67"/>
+        <references refid="rc4_lib_8c_1aaead699517d29af2819f4dd9ea36cd2d" compoundref="rc4_lib_8c" startline="49" endline="56">destroyRc4Context</references>
+        <referencedby refid="random_number_generator_8h_1ab5420f1783a3b4d2801c80232daaac65" compoundref="random_number_generator_8c" startline="32" endline="39">rseed</referencedby>
+        <referencedby refid="rng_tester_8c_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="rng_tester_8c" startline="17" endline="49">main</referencedby>
+        <referencedby refid="rsa_8h_1a89855ab18349364b596e545d789ba03d" compoundref="rsa_8c" startline="382" endline="407">rsaClean</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Random number generator implementation file. This file is used to generate random numbers to be used in the RSA generation. The random number generator takes in a specified seed value. rseed is used to initialise. The rrand is used to retrieve a single byte from the random number generator. After completion, the destroyRNG function must be executed. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="authors"><para>Mohamed Ameen Omar (u16055323) </para></simplesect>
+<simplesect kind="authors"><para>Douglas Healy (u16018100) </para></simplesect>
+<simplesect kind="authors"><para>Llewellyn Moyse (u15100708) </para></simplesect>
+<simplesect kind="version"><para>0.1 </para></simplesect>
+<simplesect kind="date"><para>2019-05-22</para></simplesect>
+<simplesect kind="copyright"><para>Copyright (c) 2019 </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="17"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="random_number_generator_8h" kindref="compound">randomNumberGenerator.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="random_number_generator_8c_1a9cd5594ced4089811e0be0ff233c844c" refkind="member"><highlight class="normal"><ref refid="structrc4ctx__t" kindref="compound">rc4ctx_t</ref>*<sp/><ref refid="random_number_generator_8c_1a9cd5594ced4089811e0be0ff233c844c" kindref="member">rngContext</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="random_number_generator_8h_1ab5420f1783a3b4d2801c80232daaac65" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="random_number_generator_8c_1ab5420f1783a3b4d2801c80232daaac65" kindref="member">rseed</ref>(<ref refid="rc4_lib_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref>*<sp/><ref refid="namespacersa_key_gen_tester_1aa8fa75d45876bcbe59f33f49e7d3572d" kindref="member">key</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>keylen,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>isKeyHex)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(rngContext<sp/>!=<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="random_number_generator_8c_1af6cd3a9729eb08f182d0b2df8bd8c7d8" kindref="member">destroyRNG</ref>();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>rngContext<sp/>=<sp/><ref refid="rc4_lib_8c_1a2d3a139e4437494b462422ff2355b409" kindref="member">constructRc4Context</ref>();</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="rc4_lib_8c_1adf2f7c39612e593f25961008b04cb22f" kindref="member">rc4Init</ref>(rngContext,<sp/>key,<sp/>keylen,<sp/>isKeyHex);<sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="random_number_generator_8h_1a23a480165b4fdecf428a20ab7fbf3bcc" refkind="member"><highlight class="normal"><ref refid="rc4_lib_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref><sp/><ref refid="random_number_generator_8c_1a23a480165b4fdecf428a20ab7fbf3bcc" kindref="member">rrand</ref>()</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(rngContext<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Error,<sp/>random<sp/>number<sp/>generator<sp/>not<sp/>initialized\n&quot;</highlight><highlight class="normal">);<sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Program<sp/>will<sp/>now<sp/>exit&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(EXIT_FAILURE);<sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="rc4_lib_8c_1a13e5254ff57f1390856238cb4c4d71bb" kindref="member">rc4GetByte</ref>(rngContext);<sp/></highlight></codeline>
+<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="random_number_generator_8h_1af6cd3a9729eb08f182d0b2df8bd8c7d8" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="random_number_generator_8c_1af6cd3a9729eb08f182d0b2df8bd8c7d8" kindref="member">destroyRNG</ref>()</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(rngContext<sp/>!=<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="rc4_lib_8c_1aaead699517d29af2819f4dd9ea36cd2d" kindref="member">destroyRc4Context</ref>(rngContext);<sp/></highlight><highlight class="comment">//<sp/>will<sp/>free<sp/>this<sp/>memory<sp/>allocated<sp/>for<sp/>rngConext<sp/>-<sp/>hence<sp/>no<sp/>free<sp/>again</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rngContext<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="67"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="randomNumberGenerator.c"/>
+  </compounddef>
+</doxygen>

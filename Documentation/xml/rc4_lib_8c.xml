@@ -1,0 +1,576 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="rc4_lib_8c" kind="file" language="C++">
+    <compoundname>rc4Lib.c</compoundname>
+    <includes refid="rc4_lib_8h" local="yes">rc4Lib.h</includes>
+    <incdepgraph>
+      <node id="84">
+        <label>stdbool.h</label>
+      </node>
+      <node id="79">
+        <label>stdarg.h</label>
+      </node>
+      <node id="81">
+        <label>stdint.h</label>
+      </node>
+      <node id="83">
+        <label>stdlib.h</label>
+      </node>
+      <node id="85">
+        <label>textConverter.h</label>
+        <link refid="text_converter_8h"/>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="84" relation="include">
+        </childnode>
+      </node>
+      <node id="82">
+        <label>string.h</label>
+      </node>
+      <node id="75">
+        <label>rc4Lib.c</label>
+        <link refid="rc4_lib_8c"/>
+        <childnode refid="76" relation="include">
+        </childnode>
+      </node>
+      <node id="76">
+        <label>rc4Lib.h</label>
+        <link refid="rc4_lib_8h"/>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="84" relation="include">
+        </childnode>
+        <childnode refid="85" relation="include">
+        </childnode>
+      </node>
+      <node id="78">
+        <label>gmp.h</label>
+      </node>
+      <node id="80">
+        <label>obstack.h</label>
+      </node>
+      <node id="77">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="rc4_lib_8c_1a2d3a139e4437494b462422ff2355b409" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structrc4ctx__t" kindref="compound">rc4ctx_t</ref> *</type>
+        <definition>rc4ctx_t* constructRc4Context</definition>
+        <argsstring>()</argsstring>
+        <name>constructRc4Context</name>
+        <briefdescription>
+<para>constructRc4Context - Function to construct the RC4 context structure and construct the state vector used for RC4 byte generation. The user must use the function in order to initialize the RC4 state. The caller must also ensure that they use the member function destroyRc4Context in order to deallocate all memory once the RC4 structure is no longer needed. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>rc4ctx_t* - a pointer to the rc4 context object created. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rc4Lib.c" line="28" column="1" bodyfile="rc4Lib.c" bodystart="28" bodyend="40"/>
+        <references refid="namespacemod_1a6150e0515f7202e2fb518f7206ed97dc" compoundref="mod_8py" startline="1">mod.x</references>
+        <references refid="rc4_lib_8h_1a50a27b8e7008b8ae28f34a5e082905ef" compoundref="rc4_lib_8h" startline="30">RC4_STATE_SIZE</references>
+        <references refid="structrc4ctx__t_1ae94ca6cdd84cf2335fa9cf7680e9154b" compoundref="rc4_lib_8h" startline="39">rc4ctx_t::state</references>
+        <references refid="structrc4ctx__t_1aa75f446f1da3d9e49c9479a4bece1468" compoundref="rc4_lib_8h" startline="40">rc4ctx_t::index1</references>
+        <references refid="structrc4ctx__t_1ae5fd30b17cbf40407158aa026b0caaf7" compoundref="rc4_lib_8h" startline="41">rc4ctx_t::index2</references>
+        <referencedby refid="random_number_generator_8h_1ab5420f1783a3b4d2801c80232daaac65" compoundref="random_number_generator_8c" startline="32" endline="39">rseed</referencedby>
+        <referencedby refid="rc4_8c_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="rc4_8c" startline="18" endline="143">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="rc4_lib_8c_1aaead699517d29af2819f4dd9ea36cd2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void destroyRc4Context</definition>
+        <argsstring>(rc4ctx_t *rc4Ctx)</argsstring>
+        <name>destroyRc4Context</name>
+        <param>
+          <type><ref refid="structrc4ctx__t" kindref="compound">rc4ctx_t</ref> *</type>
+          <declname>rc4Ctx</declname>
+        </param>
+        <briefdescription>
+<para>destroyRc4Context - Function used to deallocate all memory allocated for the rc4 context structure passed in as </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rc4Ctx.</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sets the parameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rc4Ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>to NULL.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rc4Ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The RC4 context structure to deallocate and clean. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rc4Lib.c" line="49" column="1" bodyfile="rc4Lib.c" bodystart="49" bodyend="56"/>
+        <referencedby refid="random_number_generator_8h_1af6cd3a9729eb08f182d0b2df8bd8c7d8" compoundref="random_number_generator_8c" startline="61" endline="67">destroyRNG</referencedby>
+        <referencedby refid="rc4_8c_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="rc4_8c" startline="18" endline="143">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="rc4_lib_8c_1adf2f7c39612e593f25961008b04cb22f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rc4Init</definition>
+        <argsstring>(rc4ctx_t *rc4Ctx, U8 *key, int keylen, uint8_t isKeyHex)</argsstring>
+        <name>rc4Init</name>
+        <param>
+          <type><ref refid="structrc4ctx__t" kindref="compound">rc4ctx_t</ref> *</type>
+          <declname>rc4Ctx</declname>
+        </param>
+        <param>
+          <type><ref refid="rc4_lib_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref> *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>keylen</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>isKeyHex</declname>
+        </param>
+        <briefdescription>
+<para>rc4Init - Function used to initialize the state of the RC4 context and the state vector used for the RC4 byte generate. Requires the use of the function constructRc4Context in order to generate a RC4 context. If the initialization key provided in </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is a hex string, it is converted to ascii string before initialization.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rc4Ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- rc4ctx_t* - a pointer to the RC4 context structure to initialize. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- uint8_t* - a pointer to the initialization key to be used. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keylen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- int - the length of the key provided </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key.</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>isKeyHex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- uint8_t - a flag to determine if the key passed in as </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is a hex string or ascii string. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rc4Lib.c" line="68" column="1" bodyfile="rc4Lib.c" bodystart="68" bodyend="96"/>
+        <references refid="text_converter_8c_1afba897e91364663f883cc51ed309dc92" compoundref="text_converter_8c" startline="104" endline="111">keyHexToAscii</references>
+        <references refid="namespacersa_key_gen_tester_1aa8fa75d45876bcbe59f33f49e7d3572d" compoundref="rsa_key_gen_tester_8py" startline="11">rsaKeyGenTester.key</references>
+        <references refid="structrc4ctx__t_1aa75f446f1da3d9e49c9479a4bece1468" compoundref="rc4_lib_8h" startline="40">rc4ctx_t::index1</references>
+        <references refid="rc4_lib_8h_1a50a27b8e7008b8ae28f34a5e082905ef" compoundref="rc4_lib_8h" startline="30">RC4_STATE_SIZE</references>
+        <references refid="structrc4ctx__t_1ae94ca6cdd84cf2335fa9cf7680e9154b" compoundref="rc4_lib_8h" startline="39">rc4ctx_t::state</references>
+        <references refid="structrc4ctx__t_1ae5fd30b17cbf40407158aa026b0caaf7" compoundref="rc4_lib_8h" startline="41">rc4ctx_t::index2</references>
+        <references refid="rc4_lib_8c_1abb929ea4bb5c1b41eaa7f3d067700c38" compoundref="rc4_lib_8c" startline="120" endline="125">swapStateElements</references>
+        <referencedby refid="random_number_generator_8h_1ab5420f1783a3b4d2801c80232daaac65" compoundref="random_number_generator_8c" startline="32" endline="39">rseed</referencedby>
+        <referencedby refid="rc4_8c_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="rc4_8c" startline="18" endline="143">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="rc4_lib_8c_1a13e5254ff57f1390856238cb4c4d71bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t rc4GetByte</definition>
+        <argsstring>(rc4ctx_t *rc4Ctx)</argsstring>
+        <name>rc4GetByte</name>
+        <param>
+          <type><ref refid="structrc4ctx__t" kindref="compound">rc4ctx_t</ref> *</type>
+          <declname>rc4Ctx</declname>
+        </param>
+        <briefdescription>
+<para>rc4GetByte - Function used to generate a single byte of the RC4 key stream for the RC4 context passed in as </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rc4Ctx.</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Returns the single byte as a single uint8_t.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rc4Ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- rc4ctx_t* - a pointer to the RC4 context from which to generate the single byte. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>uint8_t - A single byte in the RC4 key stream. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rc4Lib.c" line="105" column="1" bodyfile="rc4Lib.c" bodystart="105" bodyend="111"/>
+        <references refid="structrc4ctx__t_1aa75f446f1da3d9e49c9479a4bece1468" compoundref="rc4_lib_8h" startline="40">rc4ctx_t::index1</references>
+        <references refid="structrc4ctx__t_1ae5fd30b17cbf40407158aa026b0caaf7" compoundref="rc4_lib_8h" startline="41">rc4ctx_t::index2</references>
+        <references refid="structrc4ctx__t_1ae94ca6cdd84cf2335fa9cf7680e9154b" compoundref="rc4_lib_8h" startline="39">rc4ctx_t::state</references>
+        <references refid="rc4_lib_8c_1abb929ea4bb5c1b41eaa7f3d067700c38" compoundref="rc4_lib_8c" startline="120" endline="125">swapStateElements</references>
+        <referencedby refid="random_number_generator_8h_1a23a480165b4fdecf428a20ab7fbf3bcc" compoundref="random_number_generator_8c" startline="45" endline="54">rrand</referencedby>
+        <referencedby refid="rc4_lib_8h_1ad5d6c36612836b2ef2cce2a11e069b81" compoundref="rc4_lib_8c" startline="140" endline="212">performRc4</referencedby>
+        <referencedby refid="rc4_lib_tester_8c_1a45ee3912f327f052df2df90c7bc2693b" compoundref="rc4_lib_tester_8c" startline="16" endline="24">print16Bytes</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="rc4_lib_8c_1abb929ea4bb5c1b41eaa7f3d067700c38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void swapStateElements</definition>
+        <argsstring>(U8 *val1, U8 *val2)</argsstring>
+        <name>swapStateElements</name>
+        <param>
+          <type><ref refid="rc4_lib_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref> *</type>
+          <declname>val1</declname>
+        </param>
+        <param>
+          <type><ref refid="rc4_lib_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref> *</type>
+          <declname>val2</declname>
+        </param>
+        <briefdescription>
+<para>swapStateElements - Function to swap the contents of the uint8_t pointers passed in as parameters </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>val1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>and </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val2.</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- uint8_t* - pointer to a uint8_t variable whose contents to switch with </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val2.</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- uint8_t* - pointer to a uint8_t variable whose contents to switch with </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val1.</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rc4Lib.c" line="120" column="1" bodyfile="rc4Lib.c" bodystart="120" bodyend="125"/>
+        <references refid="namespacerc4_test_1a905c521e05ec8042631a912b71d0454e" compoundref="rc4_test_8py" startline="14">rc4Test.temp</references>
+        <referencedby refid="rc4_lib_8h_1adf2f7c39612e593f25961008b04cb22f" compoundref="rc4_lib_8c" startline="68" endline="96">rc4Init</referencedby>
+        <referencedby refid="rc4_lib_8h_1adc00f9727e665572aa92d24194577f6f" compoundref="rc4_lib_8c" startline="105" endline="111">rc4GetByte</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="rc4_lib_8c_1ad5d6c36612836b2ef2cce2a11e069b81" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void performRc4</definition>
+        <argsstring>(unsigned char *inputFileName, unsigned char *outputFileName, rc4ctx_t *rc4Ctx, int isTextHex)</argsstring>
+        <name>performRc4</name>
+        <param>
+          <type>unsigned char *</type>
+          <declname>inputFileName</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>outputFileName</declname>
+        </param>
+        <param>
+          <type><ref refid="structrc4ctx__t" kindref="compound">rc4ctx_t</ref> *</type>
+          <declname>rc4Ctx</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>isTextHex</declname>
+        </param>
+        <briefdescription>
+<para>performRc4 - Function used to encrypt or decrypt the contents of the file </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>inputFileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>and write the result to the file </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>outputFileName.</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The encryption or decryption is done using RC4 encryption or decryption. Each character in the input file is read in and a single byte for the RC4 key stream is generated. A single byte for the plaintext or Ciphertext and XOR&apos;ed with a single byte from the RC4 key stream to generate a the corresponding ciphertext or plaintext. The bytes used during the RC4 encryption or decryption are generated from the RC4 context passed in as </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rc4Ctx.</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>RC4 encryption</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>inputFileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- unsigned char* - pointer to a string containing the path to the input file. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>outputFileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- unsigned char* - pointer to a string containing the path to the output file. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rc4Ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- rc4ctx_t* - a pointer to the RC4 context to use during encryption or decryption. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>isTextHex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- flag used to determine if the input is encoded using ascii or hex encoding. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rc4Lib.c" line="140" column="1" bodyfile="rc4Lib.c" bodystart="140" bodyend="212"/>
+        <references refid="text_converter_8c_1ad697cbb5d9e462b3017df1f1d939ee96" compoundref="text_converter_8c" startline="61" endline="74">hexToAsciiString</references>
+        <references refid="rc4_lib_8c_1a13e5254ff57f1390856238cb4c4d71bb" compoundref="rc4_lib_8c" startline="105" endline="111">rc4GetByte</references>
+        <references refid="namespacerc4_test_1a905c521e05ec8042631a912b71d0454e" compoundref="rc4_test_8py" startline="14">rc4Test.temp</references>
+        <referencedby refid="rc4_8c_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="rc4_8c" startline="18" endline="143">main</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>RC4 library implementation file. This file is used to perform encryption/decryption using the rc4 stream cipher. First an RC4 context is created using the constructRc4Context function. rc4 is then initialised with the rc4Init - by passing in the init key + key length and indicating if the key is hex or not. A byte of the key stream is received using the rc4GetByte (with the rc4 context) or encrypted/decrypted by using the appropriate function with the input and output file passed in. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="authors"><para>Mohamed Ameen Omar (u16055323) </para></simplesect>
+<simplesect kind="authors"><para>Douglas Healy (u16018100) </para></simplesect>
+<simplesect kind="authors"><para>Llewellyn Moyse (u15100708) </para></simplesect>
+<simplesect kind="version"><para>0.1 </para></simplesect>
+<simplesect kind="date"><para>2019-05-22</para></simplesect>
+<simplesect kind="copyright"><para>Copyright (c) 2019 </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="17"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="rc4_lib_8h" kindref="compound">rc4Lib.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="rc4_lib_8h_1a2d3a139e4437494b462422ff2355b409" refkind="member"><highlight class="normal"><ref refid="structrc4ctx__t" kindref="compound">rc4ctx_t</ref><sp/>*<sp/><ref refid="rc4_lib_8c_1a2d3a139e4437494b462422ff2355b409" kindref="member">constructRc4Context</ref>()<sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Constructing<sp/>RC4<sp/>Context\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structrc4ctx__t" kindref="compound">rc4ctx_t</ref>*<sp/>rc4Ctx<sp/>=<sp/>malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structrc4ctx__t" kindref="compound">rc4ctx_t</ref>));</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="namespacemod_1a6150e0515f7202e2fb518f7206ed97dc" kindref="member">x</ref><sp/>=<sp/>0;<sp/><ref refid="namespacemod_1a6150e0515f7202e2fb518f7206ed97dc" kindref="member">x</ref><sp/>&lt;<sp/><ref refid="rc4_lib_8h_1a50a27b8e7008b8ae28f34a5e082905ef" kindref="member">RC4_STATE_SIZE</ref>;<sp/><ref refid="namespacemod_1a6150e0515f7202e2fb518f7206ed97dc" kindref="member">x</ref>++)<sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rc4Ctx-&gt;<ref refid="structrc4ctx__t_1ae94ca6cdd84cf2335fa9cf7680e9154b" kindref="member">state</ref>[<ref refid="namespacemod_1a6150e0515f7202e2fb518f7206ed97dc" kindref="member">x</ref>]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>rc4Ctx-&gt;<ref refid="structrc4ctx__t_1aa75f446f1da3d9e49c9479a4bece1468" kindref="member">index1</ref><sp/>=<sp/>0;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>rc4Ctx-&gt;<ref refid="structrc4ctx__t_1ae5fd30b17cbf40407158aa026b0caaf7" kindref="member">index2</ref><sp/>=<sp/>0;<sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>rc4Ctx;<sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="rc4_lib_8h_1aaead699517d29af2819f4dd9ea36cd2d" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="rc4_lib_8c_1aaead699517d29af2819f4dd9ea36cd2d" kindref="member">destroyRc4Context</ref>(<ref refid="structrc4ctx__t" kindref="compound">rc4ctx_t</ref><sp/>*<sp/>rc4Ctx)</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(rc4Ctx<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;<sp/></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>free(rc4Ctx);<sp/></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>rc4Ctx<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="rc4_lib_8h_1adf2f7c39612e593f25961008b04cb22f" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="rc4_lib_8c_1adf2f7c39612e593f25961008b04cb22f" kindref="member">rc4Init</ref>(<ref refid="structrc4ctx__t" kindref="compound">rc4ctx_t</ref>*<sp/>rc4Ctx,<sp/><ref refid="rc4_lib_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref>*<sp/><ref refid="namespacersa_key_gen_tester_1aa8fa75d45876bcbe59f33f49e7d3572d" kindref="member">key</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>keylen,<sp/>uint8_t<sp/>isKeyHex)</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>asciiKey;<sp/></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>hex<sp/>convert<sp/>to<sp/>ascii</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(isKeyHex)<sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>asciiKey<sp/>=<sp/><ref refid="text_converter_8c_1afba897e91364663f883cc51ed309dc92" kindref="member">keyHexToAscii</ref>(key,keylen);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>keylen<sp/>=<sp/>keylen/2;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>asciiKey<sp/>=<sp/><ref refid="namespacersa_key_gen_tester_1aa8fa75d45876bcbe59f33f49e7d3572d" kindref="member">key</ref>;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(rc4Ctx-&gt;<ref refid="structrc4ctx__t_1aa75f446f1da3d9e49c9479a4bece1468" kindref="member">index1</ref><sp/>=<sp/>0;<sp/>rc4Ctx-&gt;<ref refid="structrc4ctx__t_1aa75f446f1da3d9e49c9479a4bece1468" kindref="member">index1</ref><sp/>&lt;<sp/><ref refid="rc4_lib_8h_1a50a27b8e7008b8ae28f34a5e082905ef" kindref="member">RC4_STATE_SIZE</ref>;<sp/>rc4Ctx-&gt;<ref refid="structrc4ctx__t_1aa75f446f1da3d9e49c9479a4bece1468" kindref="member">index1</ref>++)<sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rc4Ctx-&gt;<ref refid="structrc4ctx__t_1ae94ca6cdd84cf2335fa9cf7680e9154b" kindref="member">state</ref>[rc4Ctx-&gt;<ref refid="structrc4ctx__t_1aa75f446f1da3d9e49c9479a4bece1468" kindref="member">index1</ref>]<sp/>=<sp/><sp/>rc4Ctx-&gt;<ref refid="structrc4ctx__t_1aa75f446f1da3d9e49c9479a4bece1468" kindref="member">index1</ref>;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>rc4Ctx-&gt;<ref refid="structrc4ctx__t_1ae5fd30b17cbf40407158aa026b0caaf7" kindref="member">index2</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(rc4Ctx-&gt;<ref refid="structrc4ctx__t_1aa75f446f1da3d9e49c9479a4bece1468" kindref="member">index1</ref><sp/>=<sp/>0;<sp/>rc4Ctx-&gt;<ref refid="structrc4ctx__t_1aa75f446f1da3d9e49c9479a4bece1468" kindref="member">index1</ref><sp/>&lt;<sp/><ref refid="rc4_lib_8h_1a50a27b8e7008b8ae28f34a5e082905ef" kindref="member">RC4_STATE_SIZE</ref>;<sp/>rc4Ctx-&gt;<ref refid="structrc4ctx__t_1aa75f446f1da3d9e49c9479a4bece1468" kindref="member">index1</ref>++)<sp/>{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rc4Ctx-&gt;<ref refid="structrc4ctx__t_1ae5fd30b17cbf40407158aa026b0caaf7" kindref="member">index2</ref><sp/>=<sp/>(rc4Ctx-&gt;<ref refid="structrc4ctx__t_1ae5fd30b17cbf40407158aa026b0caaf7" kindref="member">index2</ref><sp/>+<sp/>rc4Ctx-&gt;<ref refid="structrc4ctx__t_1ae94ca6cdd84cf2335fa9cf7680e9154b" kindref="member">state</ref>[rc4Ctx-&gt;<ref refid="structrc4ctx__t_1aa75f446f1da3d9e49c9479a4bece1468" kindref="member">index1</ref>]<sp/>+<sp/>asciiKey[rc4Ctx-&gt;<ref refid="structrc4ctx__t_1aa75f446f1da3d9e49c9479a4bece1468" kindref="member">index1</ref><sp/>%<sp/>keylen])<sp/>%<sp/>256;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="rc4_lib_8c_1abb929ea4bb5c1b41eaa7f3d067700c38" kindref="member">swapStateElements</ref>(&amp;rc4Ctx-&gt;<ref refid="structrc4ctx__t_1ae94ca6cdd84cf2335fa9cf7680e9154b" kindref="member">state</ref>[rc4Ctx-&gt;<ref refid="structrc4ctx__t_1aa75f446f1da3d9e49c9479a4bece1468" kindref="member">index1</ref>],<sp/>&amp;rc4Ctx-&gt;<ref refid="structrc4ctx__t_1ae94ca6cdd84cf2335fa9cf7680e9154b" kindref="member">state</ref>[rc4Ctx-&gt;<ref refid="structrc4ctx__t_1ae5fd30b17cbf40407158aa026b0caaf7" kindref="member">index2</ref>]);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>rc4Ctx-&gt;<ref refid="structrc4ctx__t_1ae5fd30b17cbf40407158aa026b0caaf7" kindref="member">index2</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>rc4Ctx-&gt;<ref refid="structrc4ctx__t_1aa75f446f1da3d9e49c9479a4bece1468" kindref="member">index1</ref><sp/>=<sp/>0;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(isKeyHex)<sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(asciiKey);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="rc4_lib_8h_1adc00f9727e665572aa92d24194577f6f" refkind="member"><highlight class="normal">uint8_t<sp/><ref refid="rc4_lib_8c_1a13e5254ff57f1390856238cb4c4d71bb" kindref="member">rc4GetByte</ref>(<ref refid="structrc4ctx__t" kindref="compound">rc4ctx_t</ref>*<sp/>rc4Ctx)<sp/></highlight></codeline>
+<codeline lineno="106"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>rc4Ctx-&gt;<ref refid="structrc4ctx__t_1aa75f446f1da3d9e49c9479a4bece1468" kindref="member">index1</ref><sp/>=<sp/>(rc4Ctx-&gt;<ref refid="structrc4ctx__t_1aa75f446f1da3d9e49c9479a4bece1468" kindref="member">index1</ref><sp/>+<sp/>1)<sp/>%<sp/>256;<sp/></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>rc4Ctx-&gt;<ref refid="structrc4ctx__t_1ae5fd30b17cbf40407158aa026b0caaf7" kindref="member">index2</ref><sp/>=<sp/>(rc4Ctx-&gt;<ref refid="structrc4ctx__t_1ae5fd30b17cbf40407158aa026b0caaf7" kindref="member">index2</ref><sp/>+<sp/>rc4Ctx-&gt;<ref refid="structrc4ctx__t_1ae94ca6cdd84cf2335fa9cf7680e9154b" kindref="member">state</ref>[rc4Ctx-&gt;<ref refid="structrc4ctx__t_1aa75f446f1da3d9e49c9479a4bece1468" kindref="member">index1</ref>])<sp/>%<sp/>256;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="rc4_lib_8c_1abb929ea4bb5c1b41eaa7f3d067700c38" kindref="member">swapStateElements</ref>(&amp;rc4Ctx-&gt;<ref refid="structrc4ctx__t_1ae94ca6cdd84cf2335fa9cf7680e9154b" kindref="member">state</ref>[rc4Ctx-&gt;<ref refid="structrc4ctx__t_1aa75f446f1da3d9e49c9479a4bece1468" kindref="member">index1</ref>],<sp/>&amp;rc4Ctx-&gt;<ref refid="structrc4ctx__t_1ae94ca6cdd84cf2335fa9cf7680e9154b" kindref="member">state</ref>[rc4Ctx-&gt;<ref refid="structrc4ctx__t_1ae5fd30b17cbf40407158aa026b0caaf7" kindref="member">index2</ref>]);<sp/></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="rc4_lib_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref>)<sp/>rc4Ctx-&gt;<ref refid="structrc4ctx__t_1ae94ca6cdd84cf2335fa9cf7680e9154b" kindref="member">state</ref>[(rc4Ctx-&gt;<ref refid="structrc4ctx__t_1ae94ca6cdd84cf2335fa9cf7680e9154b" kindref="member">state</ref>[rc4Ctx-&gt;<ref refid="structrc4ctx__t_1aa75f446f1da3d9e49c9479a4bece1468" kindref="member">index1</ref>]<sp/>+<sp/>rc4Ctx-&gt;<ref refid="structrc4ctx__t_1ae94ca6cdd84cf2335fa9cf7680e9154b" kindref="member">state</ref>[rc4Ctx-&gt;<ref refid="structrc4ctx__t_1ae5fd30b17cbf40407158aa026b0caaf7" kindref="member">index2</ref>])<sp/>%<sp/>256];<sp/></highlight></codeline>
+<codeline lineno="111"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120" refid="rc4_lib_8h_1abb929ea4bb5c1b41eaa7f3d067700c38" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="rc4_lib_8c_1abb929ea4bb5c1b41eaa7f3d067700c38" kindref="member">swapStateElements</ref>(<ref refid="rc4_lib_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref>*<sp/>val1,<sp/><ref refid="rc4_lib_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref>*<sp/>val2)</highlight></codeline>
+<codeline lineno="121"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="namespacerc4_test_1a905c521e05ec8042631a912b71d0454e" kindref="member">temp</ref><sp/>=<sp/>*val1;<sp/></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>*val1<sp/>=<sp/>*val2;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>*val2<sp/>=<sp/><ref refid="namespacerc4_test_1a905c521e05ec8042631a912b71d0454e" kindref="member">temp</ref>;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140" refid="rc4_lib_8h_1ad5d6c36612836b2ef2cce2a11e069b81" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="rc4_lib_8c_1ad5d6c36612836b2ef2cce2a11e069b81" kindref="member">performRc4</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>inputFileName,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="namespacerc4_test_1aaae3bfdd654e72f5b6cca95ce6467170" kindref="member">outputFileName</ref>,<sp/><ref refid="structrc4ctx__t" kindref="compound">rc4ctx_t</ref>*<sp/>rc4Ctx,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>isTextHex)</highlight></codeline>
+<codeline lineno="141"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Start<sp/>RC4<sp/>File<sp/>Encryption<sp/>or<sp/>decryption\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>FILE<sp/>*inputFilePointer;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>inputFilePointer<sp/>=<sp/>fopen(inputFileName,<sp/></highlight><highlight class="stringliteral">&quot;rb&quot;</highlight><highlight class="normal">);<sp/></highlight><highlight class="comment">//read<sp/>as<sp/>a<sp/>binary<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(inputFilePointer<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Error:<sp/>Inputfile<sp/>not<sp/>found,<sp/>exiting\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(EXIT_FAILURE);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>FILE<sp/>*outputFilePointer;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>outputFilePointer<sp/>=<sp/>fopen(outputFileName,<sp/></highlight><highlight class="stringliteral">&quot;wb&quot;</highlight><highlight class="normal">);<sp/></highlight><highlight class="comment">//<sp/>open<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(outputFilePointer<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Error:<sp/>Could<sp/>not<sp/>create<sp/>output<sp/>file,<sp/>exiting\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(EXIT_FAILURE);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>plainTextBlock;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>readBufferLength;<sp/></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(isTextHex)<sp/>{</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>tempText<sp/>=<sp/>calloc(2,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>readBufferLength<sp/>=<sp/>fread(tempText,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">),<sp/>2,<sp/>inputFilePointer);<sp/></highlight><highlight class="comment">//<sp/>read<sp/>2<sp/>hex<sp/>vals<sp/>at<sp/>a<sp/>time</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>plainTextBlock<sp/>=<sp/>calloc(1,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>readBufferLength<sp/>=<sp/>readBufferLength/2;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="text_converter_8c_1ad697cbb5d9e462b3017df1f1d939ee96" kindref="member">hexToAsciiString</ref>(tempText,plainTextBlock,readBufferLength*2);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(tempText);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>plainTextBlock<sp/>=<sp/>calloc(1,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>readBufferLength<sp/>=<sp/>fread(plainTextBlock,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">),<sp/>1,<sp/>inputFilePointer);<sp/></highlight><highlight class="comment">//<sp/>read<sp/>1<sp/>chars<sp/>at<sp/>a<sp/>time<sp/>-<sp/>128<sp/>bits</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>cipherTextBlock;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>counter<sp/>=<sp/>0;<sp/></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(readBufferLength<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>encrypt<sp/>result</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>tempKey<sp/>=<sp/><ref refid="rc4_lib_8c_1a13e5254ff57f1390856238cb4c4d71bb" kindref="member">rc4GetByte</ref>(rc4Ctx);<sp/></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cipherTextBlock<sp/>=<sp/>*plainTextBlock<sp/>^<sp/>tempKey;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;------------------------------------------------\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Encrypting/Decrypting<sp/>Block<sp/>number<sp/>:<sp/>%d\n&quot;</highlight><highlight class="normal">,<sp/>counter+1);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Block<sp/>to<sp/>be<sp/>encrypted/decrypted<sp/>(hex):<sp/>%X\n&quot;</highlight><highlight class="normal">,<sp/>plainTextBlock[0]);<sp/></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Key<sp/>to<sp/>use<sp/>for<sp/>current<sp/>block(hex):<sp/>%X\n&quot;</highlight><highlight class="normal">,<sp/>tempKey);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Result<sp/>of<sp/>encryption/decryption<sp/>(in<sp/>hex):<sp/>%X\n&quot;</highlight><highlight class="normal">,<sp/>cipherTextBlock);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>counter++;<sp/></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;------------------------------------------------\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>write<sp/>only<sp/>the<sp/>ascii</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="namespacerc4_test_1a905c521e05ec8042631a912b71d0454e" kindref="member">temp</ref><sp/>=<sp/>fwrite(&amp;cipherTextBlock,</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">),1,<sp/>outputFilePointer);<sp/></highlight><highlight class="comment">//<sp/>write<sp/>one<sp/>char<sp/>at<sp/>a<sp/>time<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(plainTextBlock);<sp/></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>read<sp/>next<sp/>plaintext<sp/>block</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(isTextHex)<sp/>{</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>tempText<sp/>=<sp/>calloc(2,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>readBufferLength<sp/>=<sp/>fread(tempText,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">),<sp/>2,<sp/>inputFilePointer);<sp/></highlight><highlight class="comment">//<sp/>read<sp/>2<sp/>hex<sp/>vals<sp/>at<sp/>a<sp/>time</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>plainTextBlock<sp/>=<sp/>calloc(1,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>readBufferLength<sp/>=<sp/>readBufferLength/2;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="text_converter_8c_1ad697cbb5d9e462b3017df1f1d939ee96" kindref="member">hexToAsciiString</ref>(tempText,plainTextBlock,readBufferLength*2);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(tempText);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>plainTextBlock<sp/>=<sp/>calloc(1,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>readBufferLength<sp/>=<sp/>fread(plainTextBlock,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">),<sp/>1,<sp/>inputFilePointer);<sp/></highlight><highlight class="comment">//<sp/>read<sp/>1<sp/>chars<sp/>at<sp/>a<sp/>time</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;End<sp/>RC4<sp/>File<sp/>Encryption<sp/>or<sp/>decryption\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/>free(plainTextBlock);<sp/></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/>fclose(outputFilePointer);<sp/></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/>fclose(inputFilePointer);<sp/></highlight></codeline>
+<codeline lineno="212"><highlight class="normal">}<sp/><sp/><sp/></highlight></codeline>
+    </programlisting>
+    <location file="rc4Lib.c"/>
+  </compounddef>
+</doxygen>

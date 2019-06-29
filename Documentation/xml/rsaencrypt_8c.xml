@@ -1,0 +1,431 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="rsaencrypt_8c" kind="file" language="C++">
+    <compoundname>rsaencrypt.c</compoundname>
+    <includes refid="rsaencrypt_8h" local="yes">rsaencrypt.h</includes>
+    <incdepgraph>
+      <node id="224">
+        <label>stdbool.h</label>
+      </node>
+      <node id="219">
+        <label>stdarg.h</label>
+      </node>
+      <node id="212">
+        <label>rsaencrypt.c</label>
+        <link refid="rsaencrypt_8c"/>
+        <childnode refid="213" relation="include">
+        </childnode>
+      </node>
+      <node id="213">
+        <label>rsaencrypt.h</label>
+        <link refid="rsaencrypt_8h"/>
+        <childnode refid="214" relation="include">
+        </childnode>
+      </node>
+      <node id="221">
+        <label>stdint.h</label>
+      </node>
+      <node id="223">
+        <label>stdlib.h</label>
+      </node>
+      <node id="214">
+        <label>rsa.h</label>
+        <link refid="rsa_8h"/>
+        <childnode refid="215" relation="include">
+        </childnode>
+        <childnode refid="226" relation="include">
+        </childnode>
+      </node>
+      <node id="225">
+        <label>textConverter.h</label>
+        <link refid="text_converter_8h"/>
+        <childnode refid="217" relation="include">
+        </childnode>
+        <childnode refid="221" relation="include">
+        </childnode>
+        <childnode refid="222" relation="include">
+        </childnode>
+        <childnode refid="223" relation="include">
+        </childnode>
+        <childnode refid="224" relation="include">
+        </childnode>
+      </node>
+      <node id="222">
+        <label>string.h</label>
+      </node>
+      <node id="216">
+        <label>rc4Lib.h</label>
+        <link refid="rc4_lib_8h"/>
+        <childnode refid="217" relation="include">
+        </childnode>
+        <childnode refid="218" relation="include">
+        </childnode>
+        <childnode refid="219" relation="include">
+        </childnode>
+        <childnode refid="220" relation="include">
+        </childnode>
+        <childnode refid="221" relation="include">
+        </childnode>
+        <childnode refid="222" relation="include">
+        </childnode>
+        <childnode refid="223" relation="include">
+        </childnode>
+        <childnode refid="224" relation="include">
+        </childnode>
+        <childnode refid="225" relation="include">
+        </childnode>
+      </node>
+      <node id="226">
+        <label>math.h</label>
+      </node>
+      <node id="218">
+        <label>gmp.h</label>
+      </node>
+      <node id="220">
+        <label>obstack.h</label>
+      </node>
+      <node id="217">
+        <label>stdio.h</label>
+      </node>
+      <node id="215">
+        <label>randomNumberGenerator.h</label>
+        <link refid="random_number_generator_8h"/>
+        <childnode refid="216" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="rsaencrypt_8c_1a0ddf1224851353fc92bfbff6f499fa97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char *argv[])</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>argv</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rsaencrypt.c" line="17" column="1" bodyfile="rsaencrypt.c" bodystart="17" bodyend="158"/>
+        <references refid="rsaencrypt_8c_1a0d20b69b0ad703df78459e1033d5c1d4" compoundref="rsaencrypt_8c" startline="164" endline="176">printHelp</references>
+        <references refid="rc4_8c_1ad239ce7044c7e43200d20b22f36ead60" compoundref="rc4_8c" startline="16">RC4KEYLENGTH</references>
+        <references refid="namespacersa_key_gen_tester_1aadfca7c8e87311f9a2de04174ef81764" compoundref="rsa_key_gen_tester_8py" startline="8">rsaKeyGenTester.publickeyfile</references>
+        <references refid="namespacerc4_test_1a399a06f7a52ec2592bd7dc1fe0998548" compoundref="rc4_test_8py" startline="12">rc4Test.keyFile</references>
+        <references refid="namespacersa_key_gen_tester_1aa8fa75d45876bcbe59f33f49e7d3572d" compoundref="rsa_key_gen_tester_8py" startline="11">rsaKeyGenTester.key</references>
+        <references refid="namespacemod_1a6150e0515f7202e2fb518f7206ed97dc" compoundref="mod_8py" startline="1">mod.x</references>
+        <references refid="rsaencrypt_8c_1ad09bd2f098bcd4eb97823dd5059b8a93" compoundref="rsaencrypt_8c" startline="211" endline="218">verifyArgument</references>
+        <references refid="rsaencrypt_8c_1af4281a2d885e84cab62d73096f86f46b" compoundref="rsaencrypt_8c" startline="181" endline="202">clearMemory</references>
+        <references refid="rsa_8c_1a94acde740fd5f6523c71d9310074e1ca" compoundref="rsa_8c" startline="175" endline="244">rsaEncrypt</references>
+      </memberdef>
+      <memberdef kind="function" id="rsaencrypt_8c_1a0d20b69b0ad703df78459e1033d5c1d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void printHelp</definition>
+        <argsstring>()</argsstring>
+        <name>printHelp</name>
+        <briefdescription>
+<para>printHelp - Function used to print the help menu for the rsa encrypt utility </para>        </briefdescription>
+        <detaileddescription>
+<para>printHelp - Function used to print the help menu for the rsa kegen utility</para><para>printHelp - Function used to print the help menu for the rsa decrypt utility</para><para>printHelp - Function used to print the help menu for the rc4 utility </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rsaencrypt.c" line="164" column="1" bodyfile="rsaencrypt.c" bodystart="164" bodyend="176"/>
+        <referencedby refid="rsaencrypt_8c_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="rsaencrypt_8c" startline="17" endline="158">main</referencedby>
+        <referencedby refid="rsaencrypt_8c_1ad09bd2f098bcd4eb97823dd5059b8a93" compoundref="rsaencrypt_8c" startline="211" endline="218">verifyArgument</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="rsaencrypt_8c_1af4281a2d885e84cab62d73096f86f46b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void clearMemory</definition>
+        <argsstring>(unsigned char *publickeyfile, unsigned char *outputfileName, unsigned char *keyFile, unsigned char *key)</argsstring>
+        <name>clearMemory</name>
+        <param>
+          <type>unsigned char *</type>
+          <declname>publickeyfile</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>outputfileName</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>keyFile</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>clearMemory - Function used to deallocate all memory allocated for the rsa encryption utility. </para>        </briefdescription>
+        <detaileddescription>
+<para>clearMemory - Function used to deallocate all memory allocated for the rsa keygen utility.</para><para>clearMemory - Function used to deallocate all memory allocated for the rsa decryption utility.</para><para>clearMemory - Function used to deallocate all memory allocated for the rc4 utility. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rsaencrypt.c" line="181" column="1" bodyfile="rsaencrypt.c" bodystart="181" bodyend="202"/>
+        <referencedby refid="rsaencrypt_8c_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="rsaencrypt_8c" startline="17" endline="158">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="rsaencrypt_8c_1ad09bd2f098bcd4eb97823dd5059b8a93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void verifyArgument</definition>
+        <argsstring>(size_t argCounter, size_t argc, char *parameter)</argsstring>
+        <name>verifyArgument</name>
+        <param>
+          <type>size_t</type>
+          <declname>argCounter</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>parameter</declname>
+        </param>
+        <briefdescription>
+<para>verifyArgument - Function used to verify if a paramter has an argument or not. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>argCounter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The current index being verified for the commandline paramters. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>argc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The total number of commandline arguments. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>parameter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The parameter whose argument is being verified. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rsaencrypt.c" line="211" column="1" bodyfile="rsaencrypt.c" bodystart="211" bodyend="218"/>
+        <references refid="rsaencrypt_8c_1a0d20b69b0ad703df78459e1033d5c1d4" compoundref="rsaencrypt_8c" startline="164" endline="176">printHelp</references>
+        <referencedby refid="rsaencrypt_8c_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="rsaencrypt_8c" startline="17" endline="158">main</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="authors"><para>Mohamed Ameen Omar (u16055323) </para></simplesect>
+<simplesect kind="authors"><para>Douglas Healy (u16018100) </para></simplesect>
+<simplesect kind="authors"><para>Llewellyn Moyse (u15100708) </para></simplesect>
+<simplesect kind="version"><para>0.1 </para></simplesect>
+<simplesect kind="date"><para>2019-05-22</para></simplesect>
+<simplesect kind="copyright"><para>Copyright (c) 2019 </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="13"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="rsaencrypt_8h" kindref="compound">rsaencrypt.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>valgrind<sp/>--leak-check=full<sp/>--show-leak-kinds=all<sp/>-v</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="rsaencrypt_8c_1a0ddf1224851353fc92bfbff6f499fa97" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="rsaencrypt_8c_1a0ddf1224851353fc92bfbff6f499fa97" kindref="member">main</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>argv[])<sp/></highlight></codeline>
+<codeline lineno="18"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(argc<sp/>&lt;=<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="rsaencrypt_8c_1a0d20b69b0ad703df78459e1033d5c1d4" kindref="member">printHelp</ref>();</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(EXIT_FAILURE);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="rc4_8c_1ad239ce7044c7e43200d20b22f36ead60" kindref="member">RC4KEYLENGTH</ref><sp/>=<sp/>16;<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>isKeyHex<sp/>=<sp/>0;<sp/></highlight><highlight class="comment">//<sp/>default<sp/>is<sp/>not<sp/>hex</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="namespacersa_key_gen_tester_1aadfca7c8e87311f9a2de04174ef81764" kindref="member">publickeyfile</ref><sp/>=<sp/>NULL;<sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>outputfileName<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="namespacerc4_test_1a399a06f7a52ec2592bd7dc1fe0998548" kindref="member">keyFile</ref><sp/>=<sp/>NULL;<sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="namespacersa_key_gen_tester_1aa8fa75d45876bcbe59f33f49e7d3572d" kindref="member">key</ref><sp/>=<sp/>NULL;<sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>keyLen<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">//<sp/>usage<sp/>./rsaencrypt<sp/>-key<sp/>key<sp/>-fo<sp/>outputfile<sp/>-KU<sp/>public_key_file<sp/>optionally<sp/>-kf<sp/>for<sp/>the<sp/>key<sp/>file<sp/>-hex<sp/>if<sp/>key<sp/>is<sp/>hex<sp/>(that<sp/>is<sp/>the<sp/>input<sp/>plaintext<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">//<sp/>**<sp/>key<sp/>is<sp/>what<sp/>is<sp/>being<sp/>encrypted</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="namespacemod_1a6150e0515f7202e2fb518f7206ed97dc" kindref="member">x</ref><sp/>=<sp/>1;<sp/><ref refid="namespacemod_1a6150e0515f7202e2fb518f7206ed97dc" kindref="member">x</ref><sp/>&lt;<sp/>argc;)<sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(strcmp(argv[<ref refid="namespacemod_1a6150e0515f7202e2fb518f7206ed97dc" kindref="member">x</ref>],<sp/></highlight><highlight class="stringliteral">&quot;-key&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="rsaencrypt_8c_1ad09bd2f098bcd4eb97823dd5059b8a93" kindref="member">verifyArgument</ref>(x,argc,</highlight><highlight class="stringliteral">&quot;key&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>key<sp/>=<sp/>calloc(RC4KEYLENGTH+1,</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">));<sp/></highlight><highlight class="comment">//<sp/>always<sp/>padded</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strncpy(key,argv[x+1],strlen(argv[x+1]));</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;key<sp/>specified<sp/>as<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/>key);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>keyLen<sp/>=<sp/>strlen(key);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x+=2;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(strcmp(argv[x],<sp/></highlight><highlight class="stringliteral">&quot;-fo&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="rsaencrypt_8c_1ad09bd2f098bcd4eb97823dd5059b8a93" kindref="member">verifyArgument</ref>(x,argc,</highlight><highlight class="stringliteral">&quot;output<sp/>file<sp/>name&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>outputfileName<sp/>=<sp/>calloc(strlen(argv[x+1])+1,</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strncpy(outputfileName,argv[x+1],strlen(argv[x+1]));</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;outputfile<sp/>specified<sp/>as<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/>outputfileName);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x+=2;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(strcmp(argv[x],<sp/></highlight><highlight class="stringliteral">&quot;-KU&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="rsaencrypt_8c_1ad09bd2f098bcd4eb97823dd5059b8a93" kindref="member">verifyArgument</ref>(x,argc,</highlight><highlight class="stringliteral">&quot;public<sp/>key<sp/>file&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>publickeyfile<sp/>=<sp/>calloc(strlen(argv[x+1])+1,</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strncpy(publickeyfile,argv[x+1],strlen(argv[x+1]));</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;public<sp/>key<sp/>file<sp/>specified<sp/>as<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/>publickeyfile);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x+=2;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(strcmp(argv[x],<sp/></highlight><highlight class="stringliteral">&quot;-kf&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="rsaencrypt_8c_1ad09bd2f098bcd4eb97823dd5059b8a93" kindref="member">verifyArgument</ref>(x,argc,</highlight><highlight class="stringliteral">&quot;key<sp/>file&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>keyFile<sp/>=<sp/>calloc(strlen(argv[x+1])+1,</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strncpy(keyFile,argv[x+1],strlen(argv[x+1]));</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;key<sp/>file<sp/>specified<sp/>as<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/>keyFile);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x+=2;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(strcmp(argv[x],<sp/></highlight><highlight class="stringliteral">&quot;-hex&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>isKeyHex<sp/>=<sp/>1;<sp/></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Key<sp/>(plaintext)<sp/>is<sp/>specified<sp/>as<sp/>hex\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x+=2;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(strcmp(argv[x],<sp/></highlight><highlight class="stringliteral">&quot;-h&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Help<sp/>menu<sp/>requested\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="rsaencrypt_8c_1a0d20b69b0ad703df78459e1033d5c1d4" kindref="member">printHelp</ref>();</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="rsaencrypt_8c_1af4281a2d885e84cab62d73096f86f46b" kindref="member">clearMemory</ref>(publickeyfile,<sp/>outputfileName,<sp/>keyFile,<sp/>key<sp/>);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(EXIT_SUCCESS);<sp/></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Argument<sp/>%s<sp/>is<sp/>not<sp/>recognized\n&quot;</highlight><highlight class="normal">,<sp/>argv[x]);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="rsaencrypt_8c_1a0d20b69b0ad703df78459e1033d5c1d4" kindref="member">printHelp</ref>();</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="rsaencrypt_8c_1af4281a2d885e84cab62d73096f86f46b" kindref="member">clearMemory</ref>(publickeyfile,<sp/>outputfileName,<sp/>keyFile,<sp/>key<sp/>);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(EXIT_FAILURE);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>verify<sp/>if<sp/>all<sp/>required<sp/>parameters<sp/>have<sp/>been<sp/>specified</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(publickeyfile<sp/>==<sp/>NULL<sp/>||<sp/>strlen(publickeyfile)<sp/>&lt;=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Error<sp/>public<sp/>key<sp/>file<sp/>has<sp/>not<sp/>been<sp/>specified\n&quot;</highlight><highlight class="normal">);<sp/></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="rsaencrypt_8c_1a0d20b69b0ad703df78459e1033d5c1d4" kindref="member">printHelp</ref>();</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="rsaencrypt_8c_1af4281a2d885e84cab62d73096f86f46b" kindref="member">clearMemory</ref>(publickeyfile,<sp/>outputfileName,<sp/>keyFile,<sp/>key<sp/>);<sp/></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(EXIT_FAILURE);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(outputfileName<sp/>==<sp/>NULL<sp/>||<sp/>strlen(outputfileName)<sp/>&lt;=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Error<sp/>outputfile<sp/>has<sp/>not<sp/>been<sp/>specified\n&quot;</highlight><highlight class="normal">);<sp/></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="rsaencrypt_8c_1a0d20b69b0ad703df78459e1033d5c1d4" kindref="member">printHelp</ref>();</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="rsaencrypt_8c_1af4281a2d885e84cab62d73096f86f46b" kindref="member">clearMemory</ref>(publickeyfile,<sp/>outputfileName,<sp/>keyFile,<sp/>key<sp/>);<sp/></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(EXIT_FAILURE);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(key<sp/>==<sp/>NULL<sp/>&amp;&amp;<sp/>keyFile<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Error<sp/>both<sp/>key<sp/>and<sp/>a<sp/>key<sp/>file<sp/>have<sp/>been<sp/>specified\n&quot;</highlight><highlight class="normal">);<sp/></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="rsaencrypt_8c_1a0d20b69b0ad703df78459e1033d5c1d4" kindref="member">printHelp</ref>();</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="rsaencrypt_8c_1af4281a2d885e84cab62d73096f86f46b" kindref="member">clearMemory</ref>(publickeyfile,<sp/>outputfileName,<sp/>keyFile,<sp/>key<sp/>);<sp/></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(EXIT_FAILURE);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(key<sp/>!=<sp/>NULL<sp/>&amp;&amp;<sp/>strlen(key)<sp/>&lt;=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Error<sp/>invalid<sp/>key<sp/>has<sp/>been<sp/>specified\n&quot;</highlight><highlight class="normal">);<sp/></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="rsaencrypt_8c_1a0d20b69b0ad703df78459e1033d5c1d4" kindref="member">printHelp</ref>();</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="rsaencrypt_8c_1af4281a2d885e84cab62d73096f86f46b" kindref="member">clearMemory</ref>(publickeyfile,<sp/>outputfileName,<sp/>keyFile,<sp/>key<sp/>);<sp/></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(EXIT_FAILURE);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>FILE<sp/>*keyFilePtr<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>check<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(key<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(keyFile<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;No<sp/>key<sp/>file<sp/>and<sp/>no<sp/>key<sp/>has<sp/>been<sp/>specified\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="rsaencrypt_8c_1a0d20b69b0ad703df78459e1033d5c1d4" kindref="member">printHelp</ref>();</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(EXIT_FAILURE);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>keyFilePtr<sp/>=<sp/>fopen(keyFile,<sp/></highlight><highlight class="stringliteral">&quot;r&quot;</highlight><highlight class="normal">);<sp/></highlight><highlight class="comment">//read<sp/>as<sp/>a<sp/>binary<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(keyFilePtr<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Error<sp/>-<sp/>Could<sp/>not<sp/>open<sp/>the<sp/>key<sp/>file<sp/>specified<sp/>as<sp/>%s.\nExiting.\n&quot;</highlight><highlight class="normal">,<sp/>keyFile);<sp/></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="rsaencrypt_8c_1af4281a2d885e84cab62d73096f86f46b" kindref="member">clearMemory</ref>(publickeyfile,<sp/>outputfileName,<sp/>keyFile,<sp/>key<sp/>);<sp/></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(EXIT_FAILURE);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>read<sp/>the<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fseek(keyFilePtr,0,SEEK_END);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>keyLen<sp/>=<sp/>ftell(keyFilePtr);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>maxKeyLength<sp/>=<sp/>isKeyHex<sp/>==<sp/>0<sp/>?<sp/><ref refid="rc4_8c_1ad239ce7044c7e43200d20b22f36ead60" kindref="member">RC4KEYLENGTH</ref><sp/>:<sp/>RC4KEYLENGTH*2;<sp/></highlight><highlight class="comment">//<sp/>if<sp/>the<sp/>key<sp/>is<sp/>not<sp/>hex<sp/>(0)<sp/>then<sp/>key<sp/>length<sp/>will<sp/>be<sp/>16<sp/>bytes<sp/>else<sp/>double<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(keyLen<sp/>&gt;<sp/>maxKeyLength)<sp/>{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Error,<sp/>the<sp/>key<sp/>in<sp/>file<sp/>%s<sp/>is<sp/>%ld<sp/>bytes<sp/>long<sp/>which<sp/>is<sp/>greater<sp/>than<sp/>the<sp/>maximum<sp/>supported<sp/>key<sp/>length<sp/>of<sp/>%ld<sp/>bytes.\n&quot;</highlight><highlight class="normal">,<sp/>keyFile,<sp/>keyLen,RC4KEYLENGTH);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="rsaencrypt_8c_1a0d20b69b0ad703df78459e1033d5c1d4" kindref="member">printHelp</ref>();</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="rsaencrypt_8c_1af4281a2d885e84cab62d73096f86f46b" kindref="member">clearMemory</ref>(publickeyfile,<sp/>outputfileName,<sp/>keyFile,<sp/>key<sp/>);<sp/></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(EXIT_FAILURE);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fseek(keyFilePtr,0,SEEK_SET);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>key<sp/>=<sp/>calloc(RC4KEYLENGTH+1,</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">));<sp/></highlight><highlight class="comment">//<sp/>always<sp/>padded<sp/>to<sp/>null<sp/>chars<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>c;<sp/></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>counter<sp/>=<sp/>0;<sp/></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>((c<sp/>=<sp/>fgetc(keyFilePtr))<sp/>!=<sp/>EOF)<sp/>{</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>key[counter]<sp/>=<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>char)c;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>counter++;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>keyLen<sp/>=<sp/><ref refid="rc4_8c_1ad239ce7044c7e43200d20b22f36ead60" kindref="member">RC4KEYLENGTH</ref>;<sp/></highlight><highlight class="comment">//<sp/>input<sp/>key<sp/>is<sp/>always<sp/>padded<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>summary<sp/>of<sp/>crap</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Public<sp/>key<sp/>file<sp/>specified<sp/>is<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/>publickeyfile);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Output<sp/>specified<sp/>is<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/>outputfileName);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;key<sp/>specified<sp/>as<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/>key);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Key<sp/>length<sp/>is<sp/>%ld\n&quot;</highlight><highlight class="normal">,<sp/>keyLen);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Key<sp/>file<sp/>specified<sp/>as:<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/>keyFile);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Is<sp/>key<sp/>(plaintext)<sp/>hex:<sp/>%d\n&quot;</highlight><highlight class="normal">,<sp/>isKeyHex);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="rsa_8c_1a94acde740fd5f6523c71d9310074e1ca" kindref="member">rsaEncrypt</ref>(outputfileName,<sp/>publickeyfile,<sp/>key,<sp/>isKeyHex);<sp/></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>temp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="rsaencrypt_8c_1af4281a2d885e84cab62d73096f86f46b" kindref="member">clearMemory</ref>(publickeyfile,outputfileName,keyFile,key);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(keyFilePtr<sp/>!=<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fclose(keyFilePtr);<sp/></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164" refid="rsaencrypt_8c_1a0d20b69b0ad703df78459e1033d5c1d4" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="rsaencrypt_8c_1a0d20b69b0ad703df78459e1033d5c1d4" kindref="member">printHelp</ref>()</highlight></codeline>
+<codeline lineno="165"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;RSA<sp/>Encryption<sp/>Utility\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\nUsage<sp/>./rsaencrypt<sp/>&lt;paramters&gt;<sp/>&lt;arguments&gt;<sp/>\nIf<sp/>no<sp/>arguments<sp/>are<sp/>specified<sp/>the<sp/>default<sp/>parameter<sp/>values<sp/>are<sp/>used.\n\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Example<sp/>usage:<sp/>./rsaencrypt<sp/>-key<sp/>key<sp/>-fo<sp/>outputfile<sp/>-KU<sp/>public_key_file\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;-h<sp/><sp/><sp/>\t<sp/>\t<sp/>Prints<sp/>out<sp/>the<sp/>help<sp/>menu<sp/>\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;-key<sp/>\t<sp/>\t<sp/>Specifies<sp/>the<sp/>RC4<sp/>key<sp/>to<sp/>encrypt<sp/>or<sp/>decrypt<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\t<sp/>Default:<sp/>None\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;-fo<sp/><sp/>\t<sp/>\t<sp/>Specifies<sp/>the<sp/>file<sp/>to<sp/>write<sp/>the<sp/>encrypted<sp/>result<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\t<sp/>Default:<sp/>None\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;-KU<sp/><sp/>\t<sp/>\t<sp/>Specifies<sp/>the<sp/>RSA<sp/>public<sp/>key<sp/>file<sp/>to<sp/>use<sp/>for<sp/>encryption<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\t<sp/>Default:<sp/>None\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;-kf<sp/><sp/>\t<sp/>\t<sp/>Specifies<sp/>the<sp/>path<sp/>to<sp/>the<sp/>RC4<sp/>key<sp/>to<sp/>encrypt<sp/>or<sp/>decrypt<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\t<sp/>Default:<sp/>None\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;-hex<sp/>\t<sp/>\t<sp/>Specifies<sp/>that<sp/>the<sp/>key<sp/>used<sp/>is<sp/>in<sp/>hex<sp/>instead<sp/>of<sp/>ascii<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\t<sp/>Default:<sp/>ascii\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;**<sp/>All<sp/>keys<sp/>must<sp/>have<sp/>a<sp/>maximum<sp/>size<sp/>of<sp/>16<sp/>bytes<sp/>(16<sp/>characters<sp/>of<sp/>plaintext)<sp/>\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181" refid="rsaencrypt_8c_1af4281a2d885e84cab62d73096f86f46b" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="rsaencrypt_8c_1af4281a2d885e84cab62d73096f86f46b" kindref="member">clearMemory</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="namespacersa_key_gen_tester_1aadfca7c8e87311f9a2de04174ef81764" kindref="member">publickeyfile</ref>,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>outputfileName,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="namespacerc4_test_1a399a06f7a52ec2592bd7dc1fe0998548" kindref="member">keyFile</ref>,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="namespacersa_key_gen_tester_1aa8fa75d45876bcbe59f33f49e7d3572d" kindref="member">key</ref><sp/>)</highlight></codeline>
+<codeline lineno="182"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(publickeyfile<sp/>!=<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(publickeyfile);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>publickeyfile<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(outputfileName<sp/>!=<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(outputfileName);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>outputfileName<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(keyFile<sp/>!=<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(keyFile);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>keyFile<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(key<sp/>!=<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(key);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>key<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="202"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211" refid="rsaencrypt_8c_1ad09bd2f098bcd4eb97823dd5059b8a93" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="rsaencrypt_8c_1ad09bd2f098bcd4eb97823dd5059b8a93" kindref="member">verifyArgument</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>argCounter,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>parameter)</highlight></codeline>
+<codeline lineno="212"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(argCounter+1<sp/>&gt;=<sp/>argc)<sp/>{</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Error<sp/>no<sp/>%s<sp/>specified\n&quot;</highlight><highlight class="normal">,<sp/>parameter);</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="rsaencrypt_8c_1a0d20b69b0ad703df78459e1033d5c1d4" kindref="member">printHelp</ref>();</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(EXIT_FAILURE);<sp/></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="218"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="rsaencrypt.c"/>
+  </compounddef>
+</doxygen>

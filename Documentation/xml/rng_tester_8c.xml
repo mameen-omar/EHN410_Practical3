@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="rng_tester_8c" kind="file" language="C++">
+    <compoundname>rngTester.c</compoundname>
+    <includes refid="random_number_generator_8h" local="yes">randomNumberGenerator.h</includes>
+    <incdepgraph>
+      <node id="140">
+        <label>stdbool.h</label>
+      </node>
+      <node id="135">
+        <label>stdarg.h</label>
+      </node>
+      <node id="137">
+        <label>stdint.h</label>
+      </node>
+      <node id="139">
+        <label>stdlib.h</label>
+      </node>
+      <node id="141">
+        <label>textConverter.h</label>
+        <link refid="text_converter_8h"/>
+        <childnode refid="133" relation="include">
+        </childnode>
+        <childnode refid="137" relation="include">
+        </childnode>
+        <childnode refid="138" relation="include">
+        </childnode>
+        <childnode refid="139" relation="include">
+        </childnode>
+        <childnode refid="140" relation="include">
+        </childnode>
+      </node>
+      <node id="130">
+        <label>rngTester.c</label>
+        <link refid="rng_tester_8c"/>
+        <childnode refid="131" relation="include">
+        </childnode>
+      </node>
+      <node id="138">
+        <label>string.h</label>
+      </node>
+      <node id="132">
+        <label>rc4Lib.h</label>
+        <link refid="rc4_lib_8h"/>
+        <childnode refid="133" relation="include">
+        </childnode>
+        <childnode refid="134" relation="include">
+        </childnode>
+        <childnode refid="135" relation="include">
+        </childnode>
+        <childnode refid="136" relation="include">
+        </childnode>
+        <childnode refid="137" relation="include">
+        </childnode>
+        <childnode refid="138" relation="include">
+        </childnode>
+        <childnode refid="139" relation="include">
+        </childnode>
+        <childnode refid="140" relation="include">
+        </childnode>
+        <childnode refid="141" relation="include">
+        </childnode>
+      </node>
+      <node id="134">
+        <label>gmp.h</label>
+      </node>
+      <node id="136">
+        <label>obstack.h</label>
+      </node>
+      <node id="133">
+        <label>stdio.h</label>
+      </node>
+      <node id="131">
+        <label>randomNumberGenerator.h</label>
+        <link refid="random_number_generator_8h"/>
+        <childnode refid="132" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="rng_tester_8c_1a0ddf1224851353fc92bfbff6f499fa97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char *argv[])</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>argv</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rngTester.c" line="17" column="1" bodyfile="rngTester.c" bodystart="17" bodyend="49"/>
+        <references refid="namespacersa_key_gen_tester_1aa8fa75d45876bcbe59f33f49e7d3572d" compoundref="rsa_key_gen_tester_8py" startline="11">rsaKeyGenTester.key</references>
+        <references refid="random_number_generator_8c_1ab5420f1783a3b4d2801c80232daaac65" compoundref="random_number_generator_8c" startline="32" endline="39">rseed</references>
+        <references refid="namespacemod_1a6150e0515f7202e2fb518f7206ed97dc" compoundref="mod_8py" startline="1">mod.x</references>
+        <references refid="random_number_generator_8c_1a23a480165b4fdecf428a20ab7fbf3bcc" compoundref="random_number_generator_8c" startline="45" endline="54">rrand</references>
+        <references refid="random_number_generator_8c_1af6cd3a9729eb08f182d0b2df8bd8c7d8" compoundref="random_number_generator_8c" startline="61" endline="67">destroyRNG</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="authors"><para>Mohamed Ameen Omar (u16055323) </para></simplesect>
+<simplesect kind="authors"><para>Douglas Healy (u16018100) </para></simplesect>
+<simplesect kind="authors"><para>Llewellyn Moyse (u15100708) </para></simplesect>
+<simplesect kind="version"><para>0.1 </para></simplesect>
+<simplesect kind="date"><para>2019-05-23</para></simplesect>
+<simplesect kind="copyright"><para>Copyright (c) 2019 </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="13"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="random_number_generator_8h" kindref="compound">randomNumberGenerator.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>valgrind<sp/>--leak-check=full<sp/>--show-leak-kinds=all<sp/>-v<sp/>./rngTester</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="rng_tester_8c_1a0ddf1224851353fc92bfbff6f499fa97" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="rng_tester_8c_1a0ddf1224851353fc92bfbff6f499fa97" kindref="member">main</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>argv[])<sp/></highlight></codeline>
+<codeline lineno="18"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Random<sp/>number<sp/>generator\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Testing<sp/>with<sp/>input<sp/>key<sp/>64<sp/>bits\n&quot;</highlight><highlight class="normal">);<sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="namespacersa_key_gen_tester_1aa8fa75d45876bcbe59f33f49e7d3572d" kindref="member">key</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0123456789ABCDEF&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>keylength<sp/>=<sp/>strlen(key)<sp/>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="random_number_generator_8c_1ab5420f1783a3b4d2801c80232daaac65" kindref="member">rseed</ref>(key,<sp/>keylength,1);<sp/></highlight><highlight class="comment">//<sp/>is<sp/>hex</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="namespacemod_1a6150e0515f7202e2fb518f7206ed97dc" kindref="member">x</ref><sp/>=0;<sp/><ref refid="namespacemod_1a6150e0515f7202e2fb518f7206ed97dc" kindref="member">x</ref>&lt;10;<sp/><ref refid="namespacemod_1a6150e0515f7202e2fb518f7206ed97dc" kindref="member">x</ref>++)<sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="rc4_lib_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref><sp/>randomByte<sp/>=<sp/><ref refid="random_number_generator_8c_1a23a480165b4fdecf428a20ab7fbf3bcc" kindref="member">rrand</ref>();<sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Byte<sp/>%d<sp/>is<sp/>%02X\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="namespacemod_1a6150e0515f7202e2fb518f7206ed97dc" kindref="member">x</ref>+1,<sp/>randomByte);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="random_number_generator_8c_1af6cd3a9729eb08f182d0b2df8bd8c7d8" kindref="member">destroyRNG</ref>();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\nTesting<sp/>with<sp/>input<sp/>key<sp/>128<sp/>bits\n&quot;</highlight><highlight class="normal">);<sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>key<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0102030405060708090a0b0c0d0e0f10&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>keylength<sp/>=<sp/>strlen(key)<sp/>;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="random_number_generator_8c_1ab5420f1783a3b4d2801c80232daaac65" kindref="member">rseed</ref>(key,<sp/>keylength,1);<sp/></highlight><highlight class="comment">//<sp/>is<sp/>hex</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="namespacemod_1a6150e0515f7202e2fb518f7206ed97dc" kindref="member">x</ref><sp/>=0;<sp/><ref refid="namespacemod_1a6150e0515f7202e2fb518f7206ed97dc" kindref="member">x</ref>&lt;12;<sp/><ref refid="namespacemod_1a6150e0515f7202e2fb518f7206ed97dc" kindref="member">x</ref>++)<sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="rc4_lib_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref><sp/>randomByte<sp/>=<sp/><ref refid="random_number_generator_8c_1a23a480165b4fdecf428a20ab7fbf3bcc" kindref="member">rrand</ref>();<sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Byte<sp/>%d<sp/>is<sp/>%02X\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="namespacemod_1a6150e0515f7202e2fb518f7206ed97dc" kindref="member">x</ref>+1,<sp/>randomByte);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="random_number_generator_8c_1af6cd3a9729eb08f182d0b2df8bd8c7d8" kindref="member">destroyRNG</ref>();</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;<sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="rngTester.c"/>
+  </compounddef>
+</doxygen>

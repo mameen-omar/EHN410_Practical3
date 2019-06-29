@@ -1,0 +1,5 @@
+<map id="keyHexToAscii" name="keyHexToAscii">
+<area shape="rect" id="node2" href="$text_converter_8c.html#ad697cbb5d9e462b3017df1f1d939ee96" title="hexToAsciiString &#45; Function that converts a given string of hex values into its ASCII equivalent..." alt="" coords="164,5,285,32"/>
+<area shape="rect" id="node3" href="$text_converter_8c.html#aa177516503b10de65b504a3714073ad7" title="hexToAscii &#45; Function that converts a given hex value to its ASCII equivalent. " alt="" coords="333,5,420,32"/>
+<area shape="rect" id="node4" href="$text_converter_8c.html#a7e5ab2188af44718071074f450963568" title="hexToInt &#45; Function that converts a given hex value into an integer. " alt="" coords="468,5,541,32"/>
+</map>

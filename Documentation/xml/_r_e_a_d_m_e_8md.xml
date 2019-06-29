@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>EHN<sp/>410<sp/>-<sp/>Group<sp/>7</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Group<sp/>members</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>Mohamed<sp/>Ameen<sp/>Omar<sp/>(u16055323)</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Douglas<sp/>Healy<sp/>(u16018100)</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Llewellyn<sp/>Moyse<sp/>(u15100708)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">***</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>RSA<sp/>Key<sp/>Generation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">1.<sp/>Open<sp/>a<sp/>Linux<sp/>Terminal.</highlight></codeline>
+<codeline><highlight class="normal">2.<sp/>Navigate<sp/>to<sp/>the<sp/>root<sp/>directory<sp/>containing<sp/>the<sp/>*rsakeygen*<sp/>source<sp/>code.</highlight></codeline>
+<codeline><highlight class="normal">3.<sp/>Run<sp/>the<sp/>*&quot;make<sp/>rsakeygen&quot;*<sp/>command.</highlight></codeline>
+<codeline><highlight class="normal">4.<sp/>An<sp/>executable<sp/>called<sp/>*rsakeygen*<sp/>will<sp/>be<sp/>created.</highlight></codeline>
+<codeline><highlight class="normal">5.<sp/>Use<sp/>*&quot;./rsakeygen&quot;*<sp/>to<sp/>run<sp/>the<sp/>RSA<sp/>Key<sp/>Generation<sp/>program<sp/>(if<sp/>no<sp/>input<sp/>parameters<sp/>are<sp/>specified,<sp/>a<sp/>help<sp/>menu<sp/>will<sp/>be<sp/>displayed)</highlight></codeline>
+<codeline><highlight class="normal">6.<sp/>A<sp/>list<sp/>of<sp/>input<sp/>parameters<sp/>and<sp/>respective<sp/>default<sp/>values<sp/>can<sp/>be<sp/>seen<sp/>below:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">|<sp/>Parameter<sp/>|<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Description<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Default<sp/>Value<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|:---------:|:--------------------------------------------------------------------------------:|:-------------:|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>-h<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Prints<sp/>out<sp/>the<sp/>help<sp/>menu<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>-b<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Specifies<sp/>the<sp/>number<sp/>of<sp/>bits<sp/>for<sp/>the<sp/>public/private<sp/>keys<sp/>to<sp/>be<sp/>generated<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>None<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>-KU<sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Specifies<sp/>the<sp/>file<sp/>to<sp/>which<sp/>the<sp/>**public**<sp/>key<sp/>will<sp/>be<sp/>written<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>None<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>-KR<sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Specifies<sp/>the<sp/>file<sp/>to<sp/>which<sp/>the<sp/>**private**<sp/>key<sp/>will<sp/>be<sp/>written<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>None<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>-key<sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Specifies<sp/>the<sp/>key<sp/>for<sp/>the<sp/>initialisation<sp/>of<sp/>the<sp/>RNG<sp/>(in<sp/>hex<sp/>by<sp/>default)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>None<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>-kf<sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Specifies<sp/>the<sp/>path<sp/>to<sp/>the<sp/>key<sp/>for<sp/>the<sp/>initialisation<sp/>of<sp/>the<sp/>RNG<sp/>(hex<sp/>by<sp/>default)<sp/>|<sp/>None<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>-ascii<sp/><sp/><sp/><sp/>|<sp/>Specifies<sp/>that<sp/>the<sp/>key<sp/>used<sp/>is<sp/>in<sp/>ascii<sp/>instead<sp/>of<sp/>hex<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Hex<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>RSA<sp/>Key<sp/>Generation<sp/>Usage<sp/>Example</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```console</highlight></codeline>
+<codeline><highlight class="normal">./rsakeygen<sp/>-b<sp/>bits<sp/>-KU<sp/>public_key_file<sp/>-KR<sp/>private_key_file<sp/>-key<sp/>key</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">***</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>RSA<sp/>Encryption</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">1.<sp/>Open<sp/>a<sp/>Linux<sp/>Terminal.</highlight></codeline>
+<codeline><highlight class="normal">2.<sp/>Navigate<sp/>to<sp/>the<sp/>root<sp/>directory<sp/>containing<sp/>the<sp/>*rsaencrypt*<sp/>source<sp/>code.</highlight></codeline>
+<codeline><highlight class="normal">3.<sp/>Run<sp/>the<sp/>*&quot;make<sp/>rsaencrypt&quot;*<sp/>command.</highlight></codeline>
+<codeline><highlight class="normal">4.<sp/>An<sp/>executable<sp/>called<sp/>*rsaencrypt*<sp/>will<sp/>be<sp/>created.</highlight></codeline>
+<codeline><highlight class="normal">5.<sp/>Use<sp/>*&quot;./rsaencrypt&quot;*<sp/>to<sp/>run<sp/>the<sp/>RSA<sp/>Encryption<sp/>program<sp/>(if<sp/>no<sp/>input<sp/>parameters<sp/>are<sp/>specified,<sp/>a<sp/>help<sp/>menu<sp/>will<sp/>be<sp/>displayed)</highlight></codeline>
+<codeline><highlight class="normal">6.<sp/>A<sp/>list<sp/>of<sp/>input<sp/>parameters<sp/>and<sp/>respective<sp/>default<sp/>values<sp/>can<sp/>be<sp/>seen<sp/>below:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">|<sp/>Parameter<sp/>|<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Description<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Default<sp/>Value<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|:---------:|:-------------------------------------------------------:|:-------------:|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>-h<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Prints<sp/>out<sp/>the<sp/>help<sp/>menu<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>-key<sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Specifies<sp/>the<sp/>RC4<sp/>key<sp/>to<sp/>encrypt/decrypt<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>None<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>-fo<sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Specifies<sp/>the<sp/>file<sp/>to<sp/>write<sp/>the<sp/>encrypted<sp/>result<sp/>to<sp/><sp/><sp/><sp/><sp/>|<sp/>None<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>-KU<sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Specifies<sp/>the<sp/>RSA<sp/>public<sp/>key<sp/>file<sp/>to<sp/>use<sp/>for<sp/>encryption<sp/>|<sp/>None<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>-kf<sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Specifies<sp/>the<sp/>path<sp/>to<sp/>the<sp/>RC4<sp/>key<sp/>to<sp/>encrypt/decrypt<sp/><sp/><sp/><sp/>|<sp/>None<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>-hex<sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Specifies<sp/>that<sp/>the<sp/>key<sp/>used<sp/>is<sp/>in<sp/>hex<sp/>instead<sp/>of<sp/>ascii<sp/><sp/>|<sp/>ascii<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>RSA<sp/>Encryption<sp/>Usage<sp/>Example</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```console</highlight></codeline>
+<codeline><highlight class="normal">./rsaencrypt<sp/>-key<sp/>key<sp/>-fo<sp/>outputfile<sp/>-KU<sp/>public_key_file</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">***</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>RSA<sp/>Decryption</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">1.<sp/>Open<sp/>a<sp/>Linux<sp/>Terminal.</highlight></codeline>
+<codeline><highlight class="normal">2.<sp/>Navigate<sp/>to<sp/>the<sp/>root<sp/>directory<sp/>containing<sp/>the<sp/>*rsadecrypt*<sp/>source<sp/>code.</highlight></codeline>
+<codeline><highlight class="normal">3.<sp/>Run<sp/>the<sp/>*&quot;make<sp/>rsadecrypt&quot;*<sp/>command.</highlight></codeline>
+<codeline><highlight class="normal">4.<sp/>An<sp/>executable<sp/>called<sp/>*rsadecrypt*<sp/>will<sp/>be<sp/>created.</highlight></codeline>
+<codeline><highlight class="normal">5.<sp/>Use<sp/>*&quot;./rsadecrypt&quot;*<sp/>to<sp/>run<sp/>the<sp/>RSA<sp/>Decryption<sp/>program<sp/>(if<sp/>no<sp/>input<sp/>parameters<sp/>are<sp/>specified,<sp/>a<sp/>help<sp/>menu<sp/>will<sp/>be<sp/>displayed)</highlight></codeline>
+<codeline><highlight class="normal">6.<sp/>A<sp/>list<sp/>of<sp/>input<sp/>parameters<sp/>and<sp/>respective<sp/>default<sp/>values<sp/>can<sp/>be<sp/>seen<sp/>below:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">|<sp/>Parameter<sp/>|<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Description<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Default<sp/>Value<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|:---------:|:--------------------------------------------------------:|:-------------:|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>-h<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Prints<sp/>out<sp/>the<sp/>help<sp/>menu<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>-fi<sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Specifies<sp/>the<sp/>path<sp/>to<sp/>the<sp/>key<sp/>to<sp/>decrypt<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>None<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>-key<sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Specifies<sp/>the<sp/>key<sp/>to<sp/>decrypt<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>None<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>-KR<sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Specifies<sp/>the<sp/>RSA<sp/>private<sp/>key<sp/>file<sp/>to<sp/>use<sp/>for<sp/>decryption<sp/>|<sp/>None<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>-fo<sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Specifies<sp/>the<sp/>file<sp/>to<sp/>write<sp/>the<sp/>decrypted<sp/>result<sp/>to<sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>None<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>RSA<sp/>Decryption<sp/>Usage<sp/>Example</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```console</highlight></codeline>
+<codeline><highlight class="normal">./rsadecrypt<sp/>-fi<sp/>inputfile<sp/>-KR<sp/>private_key_file<sp/>-fo<sp/>outputfile</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">***</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>RC4</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">1.<sp/>Open<sp/>a<sp/>Linux<sp/>Terminal.</highlight></codeline>
+<codeline><highlight class="normal">2.<sp/>Navigate<sp/>to<sp/>the<sp/>root<sp/>directory<sp/>containing<sp/>the<sp/>*rc4*<sp/>source<sp/>code.</highlight></codeline>
+<codeline><highlight class="normal">3.<sp/>Run<sp/>the<sp/>*&quot;make<sp/>rc4&quot;*<sp/>command.</highlight></codeline>
+<codeline><highlight class="normal">4.<sp/>An<sp/>executable<sp/>called<sp/>*rc4*<sp/>will<sp/>be<sp/>created.</highlight></codeline>
+<codeline><highlight class="normal">5.<sp/>Use<sp/>*&quot;./rc4&quot;*<sp/>to<sp/>run<sp/>the<sp/>RC4<sp/>Encryption/Decryption<sp/>Program<sp/>(if<sp/>no<sp/>input<sp/>parameters<sp/>are<sp/>specified,<sp/>a<sp/>help<sp/>menu<sp/>will<sp/>be<sp/>displayed)</highlight></codeline>
+<codeline><highlight class="normal">6.<sp/>A<sp/>list<sp/>of<sp/>input<sp/>parameters<sp/>and<sp/>respective<sp/>default<sp/>values<sp/>can<sp/>be<sp/>seen<sp/>below:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">|<sp/>Parameter<sp/>|<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Description<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Default<sp/>Value<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|:---------:|:---------------------------------------------------------------------------------------------:|:-------------:|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>-h<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Prints<sp/>out<sp/>the<sp/>help<sp/>menu<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>-fi<sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Specifies<sp/>the<sp/>file<sp/>to<sp/>encrypt/decrypt<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>None<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>-fo<sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Specifies<sp/>the<sp/>file<sp/>to<sp/>write<sp/>the<sp/>encrypted/decrypted<sp/>result<sp/>to<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>None<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>-kf<sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Specifies<sp/>the<sp/>path<sp/>to<sp/>the<sp/>encryption<sp/>key<sp/>for<sp/>the<sp/>initialisation<sp/>of<sp/>the<sp/>RNG<sp/>(ascii<sp/>by<sp/>default)<sp/>|<sp/>None<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>-hex<sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Specifies<sp/>that<sp/>the<sp/>key<sp/>used<sp/>is<sp/>in<sp/>hex<sp/>instead<sp/>of<sp/>ascii<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>ascii<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&gt;*<sp/>If<sp/>no<sp/>key<sp/>is<sp/>specified<sp/>by<sp/>the<sp/>command<sp/>line<sp/>parameters<sp/>then<sp/>the<sp/>user<sp/>will<sp/>be<sp/>prompted<sp/>for<sp/>a<sp/>key<sp/>at<sp/>runtime.</highlight></codeline>
+<codeline><highlight class="normal">&gt;*<sp/>All<sp/>keys<sp/>must<sp/>have<sp/>a<sp/>maximum<sp/>size<sp/>of<sp/>16<sp/>bytes.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>RC4<sp/>Encryption/Decryption<sp/>Usage<sp/>Example</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```console</highlight></codeline>
+<codeline><highlight class="normal">./rc4<sp/>-fi<sp/>inputfile<sp/>-fo<sp/>outputfile<sp/>-kf<sp/>keyfile</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">***</highlight></codeline>
+    </programlisting>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

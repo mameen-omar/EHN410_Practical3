@@ -1,0 +1,203 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structrsactx__t" kind="struct" language="C++" prot="public">
+    <compoundname>rsactx_t</compoundname>
+    <includes refid="rsa_8h" local="no">rsa.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structrsactx__t_1a0e4c86a571e946d9d6a5160989713989" prot="public" static="no" mutable="no">
+        <type>mpz_t</type>
+        <definition>mpz_t p</definition>
+        <argsstring></argsstring>
+        <name>p</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rsa.h" line="21" column="1" bodyfile="rsa.h" bodystart="21" bodyend="-1"/>
+        <referencedby refid="rsa_8h_1a41e602bedc2bfcd50c6e35bfb6279ab5" compoundref="rsa_8c" startline="54" endline="67">rsaInit</referencedby>
+        <referencedby refid="rsa_8h_1ac2eb184f89ce2e058ce11f75d2babdd4" compoundref="rsa_8c" startline="77" endline="120">generateRsaKeys</referencedby>
+        <referencedby refid="rsa_8h_1a89855ab18349364b596e545d789ba03d" compoundref="rsa_8c" startline="382" endline="407">rsaClean</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structrsactx__t_1aba94275944de73c899dbeb5f987c82cd" prot="public" static="no" mutable="no">
+        <type>mpz_t</type>
+        <definition>mpz_t q</definition>
+        <argsstring></argsstring>
+        <name>q</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rsa.h" line="22" column="1" bodyfile="rsa.h" bodystart="22" bodyend="-1"/>
+        <referencedby refid="rsa_8h_1a41e602bedc2bfcd50c6e35bfb6279ab5" compoundref="rsa_8c" startline="54" endline="67">rsaInit</referencedby>
+        <referencedby refid="rsa_8h_1ac2eb184f89ce2e058ce11f75d2babdd4" compoundref="rsa_8c" startline="77" endline="120">generateRsaKeys</referencedby>
+        <referencedby refid="rsa_8h_1a89855ab18349364b596e545d789ba03d" compoundref="rsa_8c" startline="382" endline="407">rsaClean</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structrsactx__t_1a61aae5341c97210088a1480fa6bc2db4" prot="public" static="no" mutable="no">
+        <type>mpz_t</type>
+        <definition>mpz_t e</definition>
+        <argsstring></argsstring>
+        <name>e</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rsa.h" line="23" column="1" bodyfile="rsa.h" bodystart="23" bodyend="-1"/>
+        <referencedby refid="rsa_8h_1a41e602bedc2bfcd50c6e35bfb6279ab5" compoundref="rsa_8c" startline="54" endline="67">rsaInit</referencedby>
+        <referencedby refid="rsa_8h_1ac2eb184f89ce2e058ce11f75d2babdd4" compoundref="rsa_8c" startline="77" endline="120">generateRsaKeys</referencedby>
+        <referencedby refid="rsa_8h_1a89855ab18349364b596e545d789ba03d" compoundref="rsa_8c" startline="382" endline="407">rsaClean</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structrsactx__t_1a4e9841cad572137fe14a4d6462c4469a" prot="public" static="no" mutable="no">
+        <type>mpz_t</type>
+        <definition>mpz_t d</definition>
+        <argsstring></argsstring>
+        <name>d</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rsa.h" line="24" column="1" bodyfile="rsa.h" bodystart="24" bodyend="-1"/>
+        <referencedby refid="rsa_8h_1a41e602bedc2bfcd50c6e35bfb6279ab5" compoundref="rsa_8c" startline="54" endline="67">rsaInit</referencedby>
+        <referencedby refid="rsa_8h_1ac2eb184f89ce2e058ce11f75d2babdd4" compoundref="rsa_8c" startline="77" endline="120">generateRsaKeys</referencedby>
+        <referencedby refid="rsa_8h_1a89855ab18349364b596e545d789ba03d" compoundref="rsa_8c" startline="382" endline="407">rsaClean</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structrsactx__t_1ac9a71ce903d1d02bd0850eb017922d80" prot="public" static="no" mutable="no">
+        <type>mpz_t</type>
+        <definition>mpz_t qn</definition>
+        <argsstring></argsstring>
+        <name>qn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rsa.h" line="25" column="1" bodyfile="rsa.h" bodystart="25" bodyend="-1"/>
+        <referencedby refid="rsa_8h_1a41e602bedc2bfcd50c6e35bfb6279ab5" compoundref="rsa_8c" startline="54" endline="67">rsaInit</referencedby>
+        <referencedby refid="rsa_8h_1ac2eb184f89ce2e058ce11f75d2babdd4" compoundref="rsa_8c" startline="77" endline="120">generateRsaKeys</referencedby>
+        <referencedby refid="rsa_8h_1a89855ab18349364b596e545d789ba03d" compoundref="rsa_8c" startline="382" endline="407">rsaClean</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structrsactx__t_1a6202bb3ec0e257e04ba4ac9e9f6b92b0" prot="public" static="no" mutable="no">
+        <type>mpz_t</type>
+        <definition>mpz_t n</definition>
+        <argsstring></argsstring>
+        <name>n</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rsa.h" line="26" column="1" bodyfile="rsa.h" bodystart="26" bodyend="-1"/>
+        <referencedby refid="rsa_8h_1a41e602bedc2bfcd50c6e35bfb6279ab5" compoundref="rsa_8c" startline="54" endline="67">rsaInit</referencedby>
+        <referencedby refid="rsa_8h_1ac2eb184f89ce2e058ce11f75d2babdd4" compoundref="rsa_8c" startline="77" endline="120">generateRsaKeys</referencedby>
+        <referencedby refid="rsa_8h_1a89855ab18349364b596e545d789ba03d" compoundref="rsa_8c" startline="382" endline="407">rsaClean</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structrsactx__t_1a07f83468c3d651766dd2a28e354ee294" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t numBits</definition>
+        <argsstring></argsstring>
+        <name>numBits</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rsa.h" line="27" column="1" bodyfile="rsa.h" bodystart="27" bodyend="-1"/>
+        <referencedby refid="rsa_8h_1a32b449824145177f99b25444768d5d3d" compoundref="rsa_8c" startline="35" endline="46">constructRSAContext</referencedby>
+        <referencedby refid="rsa_8h_1ac2eb184f89ce2e058ce11f75d2babdd4" compoundref="rsa_8c" startline="77" endline="120">generateRsaKeys</referencedby>
+        <referencedby refid="rsa_8h_1a89855ab18349364b596e545d789ba03d" compoundref="rsa_8c" startline="382" endline="407">rsaClean</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structrsactx__t_1a41c5b03ddf5c454d46f17e889ad5182a" prot="public" static="no" mutable="no">
+        <type>unsigned char *</type>
+        <definition>unsigned char* initKey</definition>
+        <argsstring></argsstring>
+        <name>initKey</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rsa.h" line="28" column="1" bodyfile="rsa.h" bodystart="28" bodyend="-1"/>
+        <referencedby refid="rsa_8h_1a32b449824145177f99b25444768d5d3d" compoundref="rsa_8c" startline="35" endline="46">constructRSAContext</referencedby>
+        <referencedby refid="rsa_8h_1a89855ab18349364b596e545d789ba03d" compoundref="rsa_8c" startline="382" endline="407">rsaClean</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structrsactx__t_1abf718bf2d3f32965c978cc96c1b746c2" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t initKeyLength</definition>
+        <argsstring></argsstring>
+        <name>initKeyLength</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rsa.h" line="29" column="1" bodyfile="rsa.h" bodystart="29" bodyend="-1"/>
+        <referencedby refid="rsa_8h_1a32b449824145177f99b25444768d5d3d" compoundref="rsa_8c" startline="35" endline="46">constructRSAContext</referencedby>
+        <referencedby refid="rsa_8h_1a89855ab18349364b596e545d789ba03d" compoundref="rsa_8c" startline="382" endline="407">rsaClean</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structrsactx__t_1a669520018df4fe14d2e2682ed3fb62fb" prot="public" static="no" mutable="no">
+        <type>mpz_t</type>
+        <definition>mpz_t KU[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>KU</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rsa.h" line="30" column="1" bodyfile="rsa.h" bodystart="30" bodyend="-1"/>
+        <referencedby refid="rsa_8h_1a41e602bedc2bfcd50c6e35bfb6279ab5" compoundref="rsa_8c" startline="54" endline="67">rsaInit</referencedby>
+        <referencedby refid="rsa_8h_1ac2eb184f89ce2e058ce11f75d2babdd4" compoundref="rsa_8c" startline="77" endline="120">generateRsaKeys</referencedby>
+        <referencedby refid="rsa_8h_1a00fa4aa44618d82f5ef6ec9523cbc165" compoundref="rsa_8c" startline="345" endline="375">rsaWriteKeysToFile</referencedby>
+        <referencedby refid="rsa_8h_1a89855ab18349364b596e545d789ba03d" compoundref="rsa_8c" startline="382" endline="407">rsaClean</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structrsactx__t_1ab10507120c561dcb2660e5600557be47" prot="public" static="no" mutable="no">
+        <type>mpz_t</type>
+        <definition>mpz_t KR[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>KR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rsa.h" line="31" column="1" bodyfile="rsa.h" bodystart="31" bodyend="-1"/>
+        <referencedby refid="rsa_8h_1a41e602bedc2bfcd50c6e35bfb6279ab5" compoundref="rsa_8c" startline="54" endline="67">rsaInit</referencedby>
+        <referencedby refid="rsa_8h_1ac2eb184f89ce2e058ce11f75d2babdd4" compoundref="rsa_8c" startline="77" endline="120">generateRsaKeys</referencedby>
+        <referencedby refid="rsa_8h_1a00fa4aa44618d82f5ef6ec9523cbc165" compoundref="rsa_8c" startline="345" endline="375">rsaWriteKeysToFile</referencedby>
+        <referencedby refid="rsa_8h_1a89855ab18349364b596e545d789ba03d" compoundref="rsa_8c" startline="382" endline="407">rsaClean</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="rsa.h" line="20" column="1" bodyfile="rsa.h" bodystart="20" bodyend="32"/>
+    <listofallmembers>
+      <member refid="structrsactx__t_1a4e9841cad572137fe14a4d6462c4469a" prot="public" virt="non-virtual"><scope>rsactx_t</scope><name>d</name></member>
+      <member refid="structrsactx__t_1a61aae5341c97210088a1480fa6bc2db4" prot="public" virt="non-virtual"><scope>rsactx_t</scope><name>e</name></member>
+      <member refid="structrsactx__t_1a41c5b03ddf5c454d46f17e889ad5182a" prot="public" virt="non-virtual"><scope>rsactx_t</scope><name>initKey</name></member>
+      <member refid="structrsactx__t_1abf718bf2d3f32965c978cc96c1b746c2" prot="public" virt="non-virtual"><scope>rsactx_t</scope><name>initKeyLength</name></member>
+      <member refid="structrsactx__t_1ab10507120c561dcb2660e5600557be47" prot="public" virt="non-virtual"><scope>rsactx_t</scope><name>KR</name></member>
+      <member refid="structrsactx__t_1a669520018df4fe14d2e2682ed3fb62fb" prot="public" virt="non-virtual"><scope>rsactx_t</scope><name>KU</name></member>
+      <member refid="structrsactx__t_1a6202bb3ec0e257e04ba4ac9e9f6b92b0" prot="public" virt="non-virtual"><scope>rsactx_t</scope><name>n</name></member>
+      <member refid="structrsactx__t_1a07f83468c3d651766dd2a28e354ee294" prot="public" virt="non-virtual"><scope>rsactx_t</scope><name>numBits</name></member>
+      <member refid="structrsactx__t_1a0e4c86a571e946d9d6a5160989713989" prot="public" virt="non-virtual"><scope>rsactx_t</scope><name>p</name></member>
+      <member refid="structrsactx__t_1aba94275944de73c899dbeb5f987c82cd" prot="public" virt="non-virtual"><scope>rsactx_t</scope><name>q</name></member>
+      <member refid="structrsactx__t_1ac9a71ce903d1d02bd0850eb017922d80" prot="public" virt="non-virtual"><scope>rsactx_t</scope><name>qn</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

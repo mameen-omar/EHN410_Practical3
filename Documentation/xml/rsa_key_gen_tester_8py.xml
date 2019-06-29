@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="rsa_key_gen_tester_8py" kind="file" language="Python">
+    <compoundname>rsaKeyGenTester.py</compoundname>
+    <innernamespace refid="namespacersa_key_gen_tester">rsaKeyGenTester</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="namespacersa_key_gen_tester" refkind="compound"><highlight class="comment">#!/usr/bin/env<sp/>python3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>subprocess</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">subprocess.call([</highlight><highlight class="stringliteral">&quot;make&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;rsakeygen&quot;</highlight><highlight class="normal">])</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">#<sp/>./rsakeygen<sp/>-b<sp/>bits<sp/>-ku<sp/>publickeyfile<sp/>-kr<sp/>privatekeyfile<sp/>-key<sp/>key<sp/>-kf<sp/>keyfile<sp/>-ascii<sp/>(to<sp/>specify<sp/>if<sp/>the<sp/>key<sp/>is<sp/>ascii)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="namespacersa_key_gen_tester_1a6023da76f3e2f519f3bf815647980313" refkind="member"><highlight class="normal">bits<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;55&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="namespacersa_key_gen_tester_1aadfca7c8e87311f9a2de04174ef81764" refkind="member"><highlight class="normal">publickeyfile<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;temp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="namespacersa_key_gen_tester_1a3ea08c667ce5a470d757dfab83e7534e" refkind="member"><highlight class="normal">privatekeyfile<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;temp2&quot;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="10" refid="namespacersa_key_gen_tester_1a399a06f7a52ec2592bd7dc1fe0998548" refkind="member"><highlight class="normal">keyFile<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="namespacersa_key_gen_tester_1aa8fa75d45876bcbe59f33f49e7d3572d" refkind="member"><highlight class="normal">key<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">#<sp/>subprocess.call([&quot;./rsakeygen&quot;,<sp/>&quot;-b&quot;,<sp/>bits,<sp/>&quot;-ku&quot;,<sp/>publickeyfile,<sp/>&quot;-kr&quot;<sp/>,<sp/>privatekeyfile<sp/>,<sp/>&quot;-key&quot;<sp/><sp/>,<sp/>key<sp/>,<sp/>&quot;-kf&quot;<sp/>,<sp/>keyFile])</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">subprocess.call([</highlight><highlight class="stringliteral">&quot;make&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;rsakeygen&quot;</highlight><highlight class="normal">])</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">print(</highlight><highlight class="stringliteral">&quot;************<sp/>Start<sp/>Testing<sp/>rsakeygen<sp/>*******************\n&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">print(</highlight><highlight class="stringliteral">&quot;Test<sp/>1<sp/>begin:&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="16" refid="namespacersa_key_gen_tester_1a905c521e05ec8042631a912b71d0454e" refkind="member"><highlight class="normal">temp<sp/>=<sp/>subprocess.call([</highlight><highlight class="stringliteral">&quot;./rsakeygen&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;-b&quot;</highlight><highlight class="normal">,<sp/>bits,<sp/></highlight><highlight class="stringliteral">&quot;-KU&quot;</highlight><highlight class="normal">,<sp/>publickeyfile,<sp/></highlight><highlight class="stringliteral">&quot;-KR&quot;</highlight><highlight class="normal"><sp/>,<sp/>privatekeyfile<sp/>,<sp/></highlight><highlight class="stringliteral">&quot;-key&quot;</highlight><highlight class="normal"><sp/><sp/>,<sp/>key<sp/>,<sp/></highlight><highlight class="stringliteral">&quot;-kf&quot;</highlight><highlight class="normal"><sp/>,<sp/>keyFile])</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">print(</highlight><highlight class="stringliteral">&quot;Return<sp/>code:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>str(temp))</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">print(</highlight><highlight class="stringliteral">&quot;Test<sp/>1<sp/>End.&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">print(</highlight><highlight class="stringliteral">&quot;************<sp/>End<sp/>Testing<sp/>rsakeygen<sp/>*******************\n&quot;</highlight><highlight class="normal">)</highlight></codeline>
+    </programlisting>
+    <location file="rsaKeyGenTester.py"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="rsa_tester_8c" kind="file" language="C++">
+    <compoundname>rsaTester.c</compoundname>
+    <includes refid="rsa_8h" local="yes">rsa.h</includes>
+    <incdepgraph>
+      <node id="291">
+        <label>stdbool.h</label>
+      </node>
+      <node id="286">
+        <label>stdarg.h</label>
+      </node>
+      <node id="280">
+        <label>rsaTester.c</label>
+        <link refid="rsa_tester_8c"/>
+        <childnode refid="281" relation="include">
+        </childnode>
+      </node>
+      <node id="288">
+        <label>stdint.h</label>
+      </node>
+      <node id="290">
+        <label>stdlib.h</label>
+      </node>
+      <node id="281">
+        <label>rsa.h</label>
+        <link refid="rsa_8h"/>
+        <childnode refid="282" relation="include">
+        </childnode>
+        <childnode refid="293" relation="include">
+        </childnode>
+      </node>
+      <node id="292">
+        <label>textConverter.h</label>
+        <link refid="text_converter_8h"/>
+        <childnode refid="284" relation="include">
+        </childnode>
+        <childnode refid="288" relation="include">
+        </childnode>
+        <childnode refid="289" relation="include">
+        </childnode>
+        <childnode refid="290" relation="include">
+        </childnode>
+        <childnode refid="291" relation="include">
+        </childnode>
+      </node>
+      <node id="289">
+        <label>string.h</label>
+      </node>
+      <node id="283">
+        <label>rc4Lib.h</label>
+        <link refid="rc4_lib_8h"/>
+        <childnode refid="284" relation="include">
+        </childnode>
+        <childnode refid="285" relation="include">
+        </childnode>
+        <childnode refid="286" relation="include">
+        </childnode>
+        <childnode refid="287" relation="include">
+        </childnode>
+        <childnode refid="288" relation="include">
+        </childnode>
+        <childnode refid="289" relation="include">
+        </childnode>
+        <childnode refid="290" relation="include">
+        </childnode>
+        <childnode refid="291" relation="include">
+        </childnode>
+        <childnode refid="292" relation="include">
+        </childnode>
+      </node>
+      <node id="293">
+        <label>math.h</label>
+      </node>
+      <node id="285">
+        <label>gmp.h</label>
+      </node>
+      <node id="287">
+        <label>obstack.h</label>
+      </node>
+      <node id="284">
+        <label>stdio.h</label>
+      </node>
+      <node id="282">
+        <label>randomNumberGenerator.h</label>
+        <link refid="random_number_generator_8h"/>
+        <childnode refid="283" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="rsa_tester_8c_1a0ddf1224851353fc92bfbff6f499fa97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char *argv[])</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>argv</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rsaTester.c" line="15" column="1" bodyfile="rsaTester.c" bodystart="15" bodyend="46"/>
+        <references refid="namespacersa_key_gen_tester_1aa8fa75d45876bcbe59f33f49e7d3572d" compoundref="rsa_key_gen_tester_8py" startline="11">rsaKeyGenTester.key</references>
+        <references refid="rsa_8c_1a32b449824145177f99b25444768d5d3d" compoundref="rsa_8c" startline="35" endline="46">constructRSAContext</references>
+        <references refid="rsa_8c_1ac2eb184f89ce2e058ce11f75d2babdd4" compoundref="rsa_8c" startline="77" endline="120">generateRsaKeys</references>
+        <references refid="rsa_8c_1a00fa4aa44618d82f5ef6ec9523cbc165" compoundref="rsa_8c" startline="345" endline="375">rsaWriteKeysToFile</references>
+        <references refid="rsa_8c_1a89855ab18349364b596e545d789ba03d" compoundref="rsa_8c" startline="382" endline="407">rsaClean</references>
+        <references refid="namespacersa_key_gen_tester_1aadfca7c8e87311f9a2de04174ef81764" compoundref="rsa_key_gen_tester_8py" startline="8">rsaKeyGenTester.publickeyfile</references>
+        <references refid="namespacersa_key_gen_tester_1a3ea08c667ce5a470d757dfab83e7534e" compoundref="rsa_key_gen_tester_8py" startline="9">rsaKeyGenTester.privatekeyfile</references>
+        <references refid="rsa_8c_1a94acde740fd5f6523c71d9310074e1ca" compoundref="rsa_8c" startline="175" endline="244">rsaEncrypt</references>
+        <references refid="rsa_8c_1a7195163cfaccb994f5b3f28655d6e280" compoundref="rsa_8c" startline="256" endline="334">rsaDecrypt</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="authors"><para>Mohamed Ameen Omar (u16055323) </para></simplesect>
+<simplesect kind="authors"><para>Douglas Healy (u16018100) </para></simplesect>
+<simplesect kind="authors"><para>Llewellyn Moyse (u15100708) </para></simplesect>
+<simplesect kind="version"><para>0.1 </para></simplesect>
+<simplesect kind="date"><para>2019-05-22</para></simplesect>
+<simplesect kind="copyright"><para>Copyright (c) 2019 </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="13"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="rsa_8h" kindref="compound">rsa.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="rsa_tester_8c_1a0ddf1224851353fc92bfbff6f499fa97" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="rsa_tester_8c_1a0ddf1224851353fc92bfbff6f499fa97" kindref="member">main</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>argv[])<sp/></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Testing<sp/>RSA<sp/>KEY<sp/>GEN<sp/>for<sp/>p<sp/>and<sp/>q<sp/>from<sp/>spec<sp/>-<sp/>Example<sp/>1\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="namespacersa_key_gen_tester_1aa8fa75d45876bcbe59f33f49e7d3572d" kindref="member">key</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0123456789ABCDEF&quot;</highlight><highlight class="normal">;<sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numBits<sp/>=<sp/>18;<sp/></highlight><highlight class="comment">//<sp/>number<sp/>of<sp/>bits<sp/>for<sp/>the<sp/>generated<sp/>key<sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structrsactx__t" kindref="compound">rsactx_t</ref>*<sp/>rsaCtx<sp/>=<sp/><ref refid="rsa_8c_1a32b449824145177f99b25444768d5d3d" kindref="member">constructRSAContext</ref>(key,strlen(key),1,numBits);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="rsa_8c_1ac2eb184f89ce2e058ce11f75d2babdd4" kindref="member">generateRsaKeys</ref>(rsaCtx);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="rsa_8c_1a00fa4aa44618d82f5ef6ec9523cbc165" kindref="member">rsaWriteKeysToFile</ref>(rsaCtx,</highlight><highlight class="stringliteral">&quot;public&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;private&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="rsa_8c_1a89855ab18349364b596e545d789ba03d" kindref="member">rsaClean</ref>(rsaCtx);<sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\nTesting<sp/>RSA<sp/>KEY<sp/>GEN<sp/>for<sp/>p<sp/>and<sp/>q<sp/>from<sp/>spec<sp/>-<sp/>Example<sp/>2\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>key<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;99775533&quot;</highlight><highlight class="normal">;<sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>numBits<sp/>=<sp/>512;<sp/></highlight><highlight class="comment">//<sp/>number<sp/>of<sp/>bits<sp/>for<sp/>the<sp/>generated<sp/>key</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>rsaCtx<sp/>=<sp/><ref refid="rsa_8c_1a32b449824145177f99b25444768d5d3d" kindref="member">constructRSAContext</ref>(key,strlen(key),1,numBits);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="rsa_8c_1ac2eb184f89ce2e058ce11f75d2babdd4" kindref="member">generateRsaKeys</ref>(rsaCtx);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="rsa_8c_1a00fa4aa44618d82f5ef6ec9523cbc165" kindref="member">rsaWriteKeysToFile</ref>(rsaCtx,</highlight><highlight class="stringliteral">&quot;public2.txt&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;private2.txt&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="rsa_8c_1a89855ab18349364b596e545d789ba03d" kindref="member">rsaClean</ref>(rsaCtx);<sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/><ref refid="namespacersa_key_gen_tester_1aadfca7c8e87311f9a2de04174ef81764" kindref="member">publickeyfile</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;public2.txt&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="namespacersa_key_gen_tester_1a3ea08c667ce5a470d757dfab83e7534e" kindref="member">privatekeyfile</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;private2.txt&quot;</highlight><highlight class="normal">;<sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>keyToEncrypt<sp/>=<sp/>calloc(16,</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>strncpy(keyToEncrypt,</highlight><highlight class="stringliteral">&quot;ABCDE&quot;</highlight><highlight class="normal">,<sp/>16);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>isKeyHex<sp/>=<sp/>0;<sp/></highlight><highlight class="comment">//<sp/>not<sp/>hex</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="rsa_8c_1a94acde740fd5f6523c71d9310074e1ca" kindref="member">rsaEncrypt</ref>(</highlight><highlight class="stringliteral">&quot;outputfileName&quot;</highlight><highlight class="normal">,<sp/>publickeyfile,<sp/>keyToEncrypt,<sp/>isKeyHex);<sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>cipherText<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;1393958342843770964882857715243865576338215821071691339527132793070324115118981938752399997903965951290697100436145009528254792521401395109712542266237964&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>free(keyToEncrypt);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="rsa_8c_1a7195163cfaccb994f5b3f28655d6e280" kindref="member">rsaDecrypt</ref>(</highlight><highlight class="stringliteral">&quot;outputFile&quot;</highlight><highlight class="normal">,privatekeyfile,<sp/>cipherText);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;<sp/></highlight></codeline>
+<codeline lineno="46"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="rsaTester.c"/>
+  </compounddef>
+</doxygen>

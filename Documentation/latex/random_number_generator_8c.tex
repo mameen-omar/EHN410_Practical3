@@ -1,0 +1,170 @@
+\hypertarget{random_number_generator_8c}{}\section{random\+Number\+Generator.\+c File Reference}
+\label{random_number_generator_8c}\index{random\+Number\+Generator.\+c@{random\+Number\+Generator.\+c}}
+
+
+Random number generator implementation file. This file is used to generate random numbers to be used in the R\+SA generation. The random number generator takes in a specified seed value. rseed is used to initialise. The rrand is used to retrieve a single byte from the random number generator. After completion, the destroy\+R\+NG function must be executed.  
+
+
+{\ttfamily \#include \char`\"{}random\+Number\+Generator.\+h\char`\"{}}\newline
+Include dependency graph for random\+Number\+Generator.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{random_number_generator_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{random_number_generator_8c_ab5420f1783a3b4d2801c80232daaac65}{rseed} (\hyperlink{rc4_lib_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} $\ast$key, int keylen, int is\+Key\+Hex)
+\begin{DoxyCompactList}\small\item\em rseed -\/ Function used to create a random number generator object and set the seed for the random number generator. \end{DoxyCompactList}\item 
+\hyperlink{rc4_lib_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} \hyperlink{random_number_generator_8c_a23a480165b4fdecf428a20ab7fbf3bcc}{rrand} ()
+\begin{DoxyCompactList}\small\item\em rrand -\/ Function used to generate a random number of a single byte long. \end{DoxyCompactList}\item 
+void \hyperlink{random_number_generator_8c_af6cd3a9729eb08f182d0b2df8bd8c7d8}{destroy\+R\+NG} ()
+\begin{DoxyCompactList}\small\item\em destroy\+R\+NG -\/ Function used to deallocate all memory allocated for the random number generator, specifically the R\+C4 key stream state context structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structrc4ctx__t}{rc4ctx\+\_\+t} $\ast$ \hyperlink{random_number_generator_8c_a9cd5594ced4089811e0be0ff233c844c}{rng\+Context} = N\+U\+LL
+\begin{DoxyCompactList}\small\item\em var -\/ rng\+Context -\/ The R\+C4 context state used for random number generation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Random number generator implementation file. This file is used to generate random numbers to be used in the R\+SA generation. The random number generator takes in a specified seed value. rseed is used to initialise. The rrand is used to retrieve a single byte from the random number generator. After completion, the destroy\+R\+NG function must be executed. 
+
+\begin{DoxyAuthor}{Authors}
+Mohamed Ameen Omar (u16055323) 
+
+Douglas Healy (u16018100) 
+
+Llewellyn Moyse (u15100708) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2019-\/05-\/22
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2019 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{random_number_generator_8c_af6cd3a9729eb08f182d0b2df8bd8c7d8}\label{random_number_generator_8c_af6cd3a9729eb08f182d0b2df8bd8c7d8}} 
+\index{random\+Number\+Generator.\+c@{random\+Number\+Generator.\+c}!destroy\+R\+NG@{destroy\+R\+NG}}
+\index{destroy\+R\+NG@{destroy\+R\+NG}!random\+Number\+Generator.\+c@{random\+Number\+Generator.\+c}}
+\subsubsection{\texorpdfstring{destroy\+R\+N\+G()}{destroyRNG()}}
+{\footnotesize\ttfamily void destroy\+R\+NG (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+destroy\+R\+NG -\/ Function used to deallocate all memory allocated for the random number generator, specifically the R\+C4 key stream state context structure. 
+
+
+
+Definition at line 61 of file random\+Number\+Generator.\+c.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{random_number_generator_8c_af6cd3a9729eb08f182d0b2df8bd8c7d8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{random_number_generator_8c_af6cd3a9729eb08f182d0b2df8bd8c7d8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{random_number_generator_8c_a23a480165b4fdecf428a20ab7fbf3bcc}\label{random_number_generator_8c_a23a480165b4fdecf428a20ab7fbf3bcc}} 
+\index{random\+Number\+Generator.\+c@{random\+Number\+Generator.\+c}!rrand@{rrand}}
+\index{rrand@{rrand}!random\+Number\+Generator.\+c@{random\+Number\+Generator.\+c}}
+\subsubsection{\texorpdfstring{rrand()}{rrand()}}
+{\footnotesize\ttfamily \hyperlink{rc4_lib_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} rrand (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+rrand -\/ Function used to generate a random number of a single byte long. 
+
+\begin{DoxyReturn}{Returns}
+U8 -\/ A random number of 8 bits long. 
+\end{DoxyReturn}
+
+
+Definition at line 45 of file random\+Number\+Generator.\+c.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{random_number_generator_8c_a23a480165b4fdecf428a20ab7fbf3bcc_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{random_number_generator_8c_a23a480165b4fdecf428a20ab7fbf3bcc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{random_number_generator_8c_ab5420f1783a3b4d2801c80232daaac65}\label{random_number_generator_8c_ab5420f1783a3b4d2801c80232daaac65}} 
+\index{random\+Number\+Generator.\+c@{random\+Number\+Generator.\+c}!rseed@{rseed}}
+\index{rseed@{rseed}!random\+Number\+Generator.\+c@{random\+Number\+Generator.\+c}}
+\subsubsection{\texorpdfstring{rseed()}{rseed()}}
+{\footnotesize\ttfamily void rseed (\begin{DoxyParamCaption}\item[{\hyperlink{rc4_lib_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} $\ast$}]{key,  }\item[{int}]{keylen,  }\item[{int}]{is\+Key\+Hex }\end{DoxyParamCaption})}
+
+
+
+rseed -\/ Function used to create a random number generator object and set the seed for the random number generator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & -\/ uint8\+\_\+t$\ast$ -\/ The key used to seed the random number generator. \\
+\hline
+{\em keylen} & -\/ The length of the key \\
+\hline
+{\em key.} & \\
+\hline
+{\em is\+Key\+Hex} & -\/ flag used to indicate if the key \\
+\hline
+{\em key} & is hex or ascii encoded. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 32 of file random\+Number\+Generator.\+c.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{random_number_generator_8c_ab5420f1783a3b4d2801c80232daaac65_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{random_number_generator_8c_ab5420f1783a3b4d2801c80232daaac65_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{random_number_generator_8c_a9cd5594ced4089811e0be0ff233c844c}\label{random_number_generator_8c_a9cd5594ced4089811e0be0ff233c844c}} 
+\index{random\+Number\+Generator.\+c@{random\+Number\+Generator.\+c}!rng\+Context@{rng\+Context}}
+\index{rng\+Context@{rng\+Context}!random\+Number\+Generator.\+c@{random\+Number\+Generator.\+c}}
+\subsubsection{\texorpdfstring{rng\+Context}{rngContext}}
+{\footnotesize\ttfamily \hyperlink{structrc4ctx__t}{rc4ctx\+\_\+t}$\ast$ rng\+Context = N\+U\+LL}
+
+
+
+var -\/ rng\+Context -\/ The R\+C4 context state used for random number generation. 
+
+
+
+Definition at line 22 of file random\+Number\+Generator.\+c.
+

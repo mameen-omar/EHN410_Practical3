@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespacerc4_test" kind="namespace" language="Python">
+    <compoundname>rc4Test</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacerc4_test_1ab08eaf3f1d5d16116f416e0968df63f6" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string inputfileName</definition>
+        <argsstring></argsstring>
+        <name>inputfileName</name>
+        <initializer>=  &quot;temp&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rc4Test.py" line="10" column="1" bodyfile="rc4Test.py" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacerc4_test_1aaae3bfdd654e72f5b6cca95ce6467170" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string outputFileName</definition>
+        <argsstring></argsstring>
+        <name>outputFileName</name>
+        <initializer>=  &quot;temp2&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rc4Test.py" line="11" column="1" bodyfile="rc4Test.py" bodystart="11" bodyend="-1"/>
+        <referencedby refid="rc4_8c_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="rc4_8c" startline="18" endline="143">main</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="namespacerc4_test_1a399a06f7a52ec2592bd7dc1fe0998548" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string keyFile</definition>
+        <argsstring></argsstring>
+        <name>keyFile</name>
+        <initializer>=  &quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rc4Test.py" line="12" column="1" bodyfile="rc4Test.py" bodystart="12" bodyend="-1"/>
+        <referencedby refid="rc4_8c_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="rc4_8c" startline="18" endline="143">main</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="namespacerc4_test_1a905c521e05ec8042631a912b71d0454e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>temp</definition>
+        <argsstring></argsstring>
+        <name>temp</name>
+        <initializer>=  subprocess.call([&quot;./rc4&quot;,&quot;-fi&quot;, inputfileName, &quot;-fo&quot;, outputFileName])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rc4Test.py" line="14" column="1" bodyfile="rc4Test.py" bodystart="14" bodyend="-1"/>
+        <referencedby refid="main_8c_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="main_8c" startline="37" endline="81">main</referencedby>
+        <referencedby refid="rc4_lib_8h_1abb929ea4bb5c1b41eaa7f3d067700c38" compoundref="rc4_lib_8c" startline="120" endline="125">swapStateElements</referencedby>
+        <referencedby refid="rc4_lib_8h_1ad5d6c36612836b2ef2cce2a11e069b81" compoundref="rc4_lib_8c" startline="140" endline="212">performRc4</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="rc4Test.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

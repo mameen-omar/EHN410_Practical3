@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespacetest" kind="namespace" language="Python">
+    <compoundname>test</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacetest_1a6150e0515f7202e2fb518f7206ed97dc" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <initializer>=  88003541953488079566952319866978440447</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test.py" line="2" column="1" bodyfile="test.py" bodystart="2" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetest_1a0a2f84ed7838f07779ae24c5a9086d33" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <initializer>=  49236241020712442839828388720313042593</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test.py" line="3" column="1" bodyfile="test.py" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetest_1a76f11d9a0a47b94f72c2d0e77fb32240" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int n</definition>
+        <argsstring></argsstring>
+        <name>n</name>
+        <initializer>=  166501317222622877548769568260396763403</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test.py" line="4" column="1" bodyfile="test.py" bodystart="4" bodyend="-1"/>
+        <referencedby refid="rsa_8h_1a94acde740fd5f6523c71d9310074e1ca" compoundref="rsa_8c" startline="175" endline="244">rsaEncrypt</referencedby>
+        <referencedby refid="rsa_8h_1a7195163cfaccb994f5b3f28655d6e280" compoundref="rsa_8c" startline="256" endline="334">rsaDecrypt</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="test.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

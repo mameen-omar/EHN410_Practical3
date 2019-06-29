@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="test_8py" kind="file" language="Python">
+    <compoundname>test.py</compoundname>
+    <innernamespace refid="namespacetest">test</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="namespacetest" refkind="compound"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2" refid="namespacetest_1a6150e0515f7202e2fb518f7206ed97dc" refkind="member"><highlight class="normal">x<sp/>=<sp/>88003541953488079566952319866978440447</highlight></codeline>
+<codeline lineno="3" refid="namespacetest_1a0a2f84ed7838f07779ae24c5a9086d33" refkind="member"><highlight class="normal">y<sp/>=<sp/>49236241020712442839828388720313042593</highlight></codeline>
+<codeline lineno="4" refid="namespacetest_1a76f11d9a0a47b94f72c2d0e77fb32240" refkind="member"><highlight class="normal">n<sp/>=<sp/>166501317222622877548769568260396763403</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">print(str((x**y)%n))</highlight></codeline>
+    </programlisting>
+    <location file="test.py"/>
+  </compounddef>
+</doxygen>

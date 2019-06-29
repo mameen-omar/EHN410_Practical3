@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structrc4ctx__t" kind="struct" language="C++" prot="public">
+    <compoundname>rc4ctx_t</compoundname>
+    <includes refid="rc4_lib_8h" local="no">rc4Lib.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structrc4ctx__t_1ae94ca6cdd84cf2335fa9cf7680e9154b" prot="public" static="no" mutable="no">
+        <type><ref refid="rc4_lib_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref></type>
+        <definition>U8 state[RC4_STATE_SIZE]</definition>
+        <argsstring>[RC4_STATE_SIZE]</argsstring>
+        <name>state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rc4Lib.h" line="39" column="1" bodyfile="rc4Lib.h" bodystart="39" bodyend="-1"/>
+        <referencedby refid="rc4_lib_8h_1a2d3a139e4437494b462422ff2355b409" compoundref="rc4_lib_8c" startline="28" endline="40">constructRc4Context</referencedby>
+        <referencedby refid="rc4_lib_8h_1adf2f7c39612e593f25961008b04cb22f" compoundref="rc4_lib_8c" startline="68" endline="96">rc4Init</referencedby>
+        <referencedby refid="rc4_lib_8h_1adc00f9727e665572aa92d24194577f6f" compoundref="rc4_lib_8c" startline="105" endline="111">rc4GetByte</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structrc4ctx__t_1aa75f446f1da3d9e49c9479a4bece1468" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t index1</definition>
+        <argsstring></argsstring>
+        <name>index1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rc4Lib.h" line="40" column="1" bodyfile="rc4Lib.h" bodystart="40" bodyend="-1"/>
+        <referencedby refid="rc4_lib_8h_1a2d3a139e4437494b462422ff2355b409" compoundref="rc4_lib_8c" startline="28" endline="40">constructRc4Context</referencedby>
+        <referencedby refid="rc4_lib_8h_1adf2f7c39612e593f25961008b04cb22f" compoundref="rc4_lib_8c" startline="68" endline="96">rc4Init</referencedby>
+        <referencedby refid="rc4_lib_8h_1adc00f9727e665572aa92d24194577f6f" compoundref="rc4_lib_8c" startline="105" endline="111">rc4GetByte</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structrc4ctx__t_1ae5fd30b17cbf40407158aa026b0caaf7" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t index2</definition>
+        <argsstring></argsstring>
+        <name>index2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rc4Lib.h" line="41" column="1" bodyfile="rc4Lib.h" bodystart="41" bodyend="-1"/>
+        <referencedby refid="rc4_lib_8h_1a2d3a139e4437494b462422ff2355b409" compoundref="rc4_lib_8c" startline="28" endline="40">constructRc4Context</referencedby>
+        <referencedby refid="rc4_lib_8h_1adf2f7c39612e593f25961008b04cb22f" compoundref="rc4_lib_8c" startline="68" endline="96">rc4Init</referencedby>
+        <referencedby refid="rc4_lib_8h_1adc00f9727e665572aa92d24194577f6f" compoundref="rc4_lib_8c" startline="105" endline="111">rc4GetByte</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>struct <ref refid="structrc4ctx__t" kindref="compound">rc4ctx_t</ref> - Structure used to retain the context of the RC4 key stream generator. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="rc4Lib.h" line="38" column="1" bodyfile="rc4Lib.h" bodystart="38" bodyend="43"/>
+    <listofallmembers>
+      <member refid="structrc4ctx__t_1aa75f446f1da3d9e49c9479a4bece1468" prot="public" virt="non-virtual"><scope>rc4ctx_t</scope><name>index1</name></member>
+      <member refid="structrc4ctx__t_1ae5fd30b17cbf40407158aa026b0caaf7" prot="public" virt="non-virtual"><scope>rc4ctx_t</scope><name>index2</name></member>
+      <member refid="structrc4ctx__t_1ae94ca6cdd84cf2335fa9cf7680e9154b" prot="public" virt="non-virtual"><scope>rc4ctx_t</scope><name>state</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

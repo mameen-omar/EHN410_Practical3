@@ -1,0 +1,177 @@
+\subsection*{Group members}
+
+
+\begin{DoxyItemize}
+\item Mohamed Ameen Omar (u16055323)
+\item Douglas Healy (u16018100)
+\item Llewellyn Moyse (u15100708)
+\end{DoxyItemize}
+
+
+
+
+
+\subsection*{R\+SA Key Generation}
+
+
+\begin{DoxyEnumerate}
+\item Open a Linux Terminal.
+\item Navigate to the root directory containing the {\itshape rsakeygen} source code.
+\item Run the $\ast$\char`\"{}make rsakeygen\char`\"{}$\ast$ command.
+\item An executable called {\itshape rsakeygen} will be created.
+\item Use $\ast$\char`\"{}./rsakeygen\char`\"{}$\ast$ to run the R\+SA Key Generation program (if no input parameters are specified, a help menu will be displayed)
+\item A list of input parameters and respective default values can be seen below\+:
+\end{DoxyEnumerate}
+
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}\PBS\centering \textbf{ Parameter }&\PBS\centering \textbf{ Description }&\PBS\centering \textbf{ Default Value  }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\PBS\centering \textbf{ Parameter }&\PBS\centering \textbf{ Description }&\PBS\centering \textbf{ Default Value  }\\\cline{1-3}
+\endhead
+\PBS\centering -\/h &\PBS\centering Prints out the help menu &\PBS\centering \\\cline{1-3}
+\PBS\centering -\/b &\PBS\centering Specifies the number of bits for the public/private keys to be generated &\PBS\centering None \\\cline{1-3}
+\PBS\centering -\/\+KU &\PBS\centering Specifies the file to which the {\bfseries public} key will be written &\PBS\centering None \\\cline{1-3}
+\PBS\centering -\/\+KR &\PBS\centering Specifies the file to which the {\bfseries private} key will be written &\PBS\centering None \\\cline{1-3}
+\PBS\centering -\/key &\PBS\centering Specifies the key for the initialisation of the R\+NG (in hex by default) &\PBS\centering None \\\cline{1-3}
+\PBS\centering -\/kf &\PBS\centering Specifies the path to the key for the initialisation of the R\+NG (hex by default) &\PBS\centering None \\\cline{1-3}
+\PBS\centering -\/ascii &\PBS\centering Specifies that the key used is in ascii instead of hex &\PBS\centering Hex \\\cline{1-3}
+\end{longtabu}
+\subsubsection*{R\+SA Key Generation Usage Example}
+
+
+\begin{DoxyCode}
+./rsakeygen -b bits -KU public\_key\_file -KR private\_key\_file -key key
+\end{DoxyCode}
+
+
+
+
+
+
+\subsection*{R\+SA Encryption}
+
+
+\begin{DoxyEnumerate}
+\item Open a Linux Terminal.
+\item Navigate to the root directory containing the {\itshape rsaencrypt} source code.
+\item Run the $\ast$\char`\"{}make rsaencrypt\char`\"{}$\ast$ command.
+\item An executable called {\itshape rsaencrypt} will be created.
+\item Use $\ast$\char`\"{}./rsaencrypt\char`\"{}$\ast$ to run the R\+SA Encryption program (if no input parameters are specified, a help menu will be displayed)
+\item A list of input parameters and respective default values can be seen below\+:
+\end{DoxyEnumerate}
+
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}\PBS\centering \textbf{ Parameter }&\PBS\centering \textbf{ Description }&\PBS\centering \textbf{ Default Value  }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\PBS\centering \textbf{ Parameter }&\PBS\centering \textbf{ Description }&\PBS\centering \textbf{ Default Value  }\\\cline{1-3}
+\endhead
+\PBS\centering -\/h &\PBS\centering Prints out the help menu &\PBS\centering \\\cline{1-3}
+\PBS\centering -\/key &\PBS\centering Specifies the R\+C4 key to encrypt/decrypt &\PBS\centering None \\\cline{1-3}
+\PBS\centering -\/fo &\PBS\centering Specifies the file to write the encrypted result to &\PBS\centering None \\\cline{1-3}
+\PBS\centering -\/\+KU &\PBS\centering Specifies the R\+SA public key file to use for encryption &\PBS\centering None \\\cline{1-3}
+\PBS\centering -\/kf &\PBS\centering Specifies the path to the R\+C4 key to encrypt/decrypt &\PBS\centering None \\\cline{1-3}
+\PBS\centering -\/hex &\PBS\centering Specifies that the key used is in hex instead of ascii &\PBS\centering ascii \\\cline{1-3}
+\end{longtabu}
+\subsubsection*{R\+SA Encryption Usage Example}
+
+
+\begin{DoxyCode}
+./rsaencrypt -key key -fo outputfile -KU public\_key\_file
+\end{DoxyCode}
+
+
+
+
+
+
+\subsection*{R\+SA Decryption}
+
+
+\begin{DoxyEnumerate}
+\item Open a Linux Terminal.
+\item Navigate to the root directory containing the {\itshape rsadecrypt} source code.
+\item Run the $\ast$\char`\"{}make rsadecrypt\char`\"{}$\ast$ command.
+\item An executable called {\itshape rsadecrypt} will be created.
+\item Use $\ast$\char`\"{}./rsadecrypt\char`\"{}$\ast$ to run the R\+SA Decryption program (if no input parameters are specified, a help menu will be displayed)
+\item A list of input parameters and respective default values can be seen below\+:
+\end{DoxyEnumerate}
+
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}\PBS\centering \textbf{ Parameter }&\PBS\centering \textbf{ Description }&\PBS\centering \textbf{ Default Value  }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\PBS\centering \textbf{ Parameter }&\PBS\centering \textbf{ Description }&\PBS\centering \textbf{ Default Value  }\\\cline{1-3}
+\endhead
+\PBS\centering -\/h &\PBS\centering Prints out the help menu &\PBS\centering \\\cline{1-3}
+\PBS\centering -\/fi &\PBS\centering Specifies the path to the key to decrypt &\PBS\centering None \\\cline{1-3}
+\PBS\centering -\/key &\PBS\centering Specifies the key to decrypt &\PBS\centering None \\\cline{1-3}
+\PBS\centering -\/\+KR &\PBS\centering Specifies the R\+SA private key file to use for decryption &\PBS\centering None \\\cline{1-3}
+\PBS\centering -\/fo &\PBS\centering Specifies the file to write the decrypted result to &\PBS\centering None \\\cline{1-3}
+\end{longtabu}
+\subsubsection*{R\+SA Decryption Usage Example}
+
+
+\begin{DoxyCode}
+./rsadecrypt -fi inputfile -KR private\_key\_file -fo outputfile
+\end{DoxyCode}
+
+
+
+
+
+
+\subsection*{R\+C4}
+
+
+\begin{DoxyEnumerate}
+\item Open a Linux Terminal.
+\item Navigate to the root directory containing the {\itshape rc4} source code.
+\item Run the $\ast$\char`\"{}make rc4\char`\"{}$\ast$ command.
+\item An executable called {\itshape rc4} will be created.
+\item Use $\ast$\char`\"{}./rc4\char`\"{}$\ast$ to run the R\+C4 Encryption/\+Decryption Program (if no input parameters are specified, a help menu will be displayed)
+\item A list of input parameters and respective default values can be seen below\+:
+\end{DoxyEnumerate}
+
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}\PBS\centering \textbf{ Parameter }&\PBS\centering \textbf{ Description }&\PBS\centering \textbf{ Default Value  }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\PBS\centering \textbf{ Parameter }&\PBS\centering \textbf{ Description }&\PBS\centering \textbf{ Default Value  }\\\cline{1-3}
+\endhead
+\PBS\centering -\/h &\PBS\centering Prints out the help menu &\PBS\centering \\\cline{1-3}
+\PBS\centering -\/fi &\PBS\centering Specifies the file to encrypt/decrypt &\PBS\centering None \\\cline{1-3}
+\PBS\centering -\/fo &\PBS\centering Specifies the file to write the encrypted/decrypted result to &\PBS\centering None \\\cline{1-3}
+\PBS\centering -\/kf &\PBS\centering Specifies the path to the encryption key for the initialisation of the R\+NG (ascii by default) &\PBS\centering None \\\cline{1-3}
+\PBS\centering -\/hex &\PBS\centering Specifies that the key used is in hex instead of ascii &\PBS\centering ascii \\\cline{1-3}
+\end{longtabu}
+$>$$\ast$ If no key is specified by the command line parameters then the user will be prompted for a key at runtime. $>$$\ast$ All keys must have a maximum size of 16 bytes.
+
+\subsubsection*{R\+C4 Encryption/\+Decryption Usage Example}
+
+
+\begin{DoxyCode}
+./rc4 -fi inputfile -fo outputfile -kf keyfile
+\end{DoxyCode}
+
+
+
+
+ 

@@ -1,0 +1,251 @@
+.TH "rc4Lib.h" 3 "Thu May 23 2019" "Version 0.1" "EHN 410 - Group 7" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+rc4Lib.h \- RC4 library function prototype file\&. This file is used to perform encryption/decryption using the rc4 stream cipher\&. First an RC4 context is created using the constructRc4Context function\&. rc4 is then initialised with the rc4Init - by passing in the init key + key length and indicating if the key is hex or not\&. A byte of the key stream is received using the rc4GetByte (with the rc4 context) or encrypted/decrypted by using the appropriate function with the input and output file passed in\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <gmp\&.h>\fP
+.br
+\fC#include <stdarg\&.h>\fP
+.br
+\fC#include <obstack\&.h>\fP
+.br
+\fC#include <stdint\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <stdbool\&.h>\fP
+.br
+\fC#include 'textConverter\&.h'\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBrc4ctx_t\fP"
+.br
+.RI "struct \fBrc4ctx_t\fP - Structure used to retain the context of the RC4 key stream generator\&. "
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBRC4_STATE_SIZE\fP   256"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef unsigned char \fBU8\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBrc4ctx_t\fP * \fBconstructRc4Context\fP ()"
+.br
+.RI "constructRc4Context - Function to construct the RC4 context structure and construct the state vector used for RC4 byte generation\&. The user must use the function in order to initialize the RC4 state\&. The caller must also ensure that they use the member function destroyRc4Context in order to deallocate all memory once the RC4 structure is no longer needed\&. "
+.ti -1c
+.RI "void \fBdestroyRc4Context\fP (\fBrc4ctx_t\fP *rc4Ctx)"
+.br
+.RI "destroyRc4Context - Function used to deallocate all memory allocated for the rc4 context structure passed in as "
+.ti -1c
+.RI "void \fBrc4Init\fP (\fBrc4ctx_t\fP *rc4Ctx, \fBU8\fP *key, int keylen, uint8_t isKeyHex)"
+.br
+.RI "rc4Init - Function used to initialize the state of the RC4 context and the state vector used for the RC4 byte generate\&. Requires the use of the function constructRc4Context in order to generate a RC4 context\&. If the initialization key provided in "
+.ti -1c
+.RI "\fBU8\fP \fBrc4GetByte\fP (\fBrc4ctx_t\fP *rc4Ctx)"
+.br
+.RI "rc4GetByte - Function used to generate a single byte of the RC4 key stream for the RC4 context passed in as "
+.ti -1c
+.RI "void \fBswapStateElements\fP (\fBU8\fP *val1, \fBU8\fP *val2)"
+.br
+.RI "swapStateElements - Function to swap the contents of the uint8_t pointers passed in as parameters "
+.ti -1c
+.RI "void \fBperformRc4\fP (unsigned char *inputFileName, unsigned char *outputFileName, \fBrc4ctx_t\fP *rc4Ctx, int isTextHex)"
+.br
+.RI "performRc4 - Function used to encrypt or decrypt the contents of the file "
+.in -1c
+.SH "Detailed Description"
+.PP 
+RC4 library function prototype file\&. This file is used to perform encryption/decryption using the rc4 stream cipher\&. First an RC4 context is created using the constructRc4Context function\&. rc4 is then initialised with the rc4Init - by passing in the init key + key length and indicating if the key is hex or not\&. A byte of the key stream is received using the rc4GetByte (with the rc4 context) or encrypted/decrypted by using the appropriate function with the input and output file passed in\&. 
+
+
+.PP
+\fBAuthors:\fP
+.RS 4
+Mohamed Ameen Omar (u16055323) 
+.PP
+Douglas Healy (u16018100) 
+.PP
+Llewellyn Moyse (u15100708) 
+.RE
+.PP
+\fBVersion:\fP
+.RS 4
+0\&.1 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+2019-05-22
+.RE
+.PP
+\fBCopyright:\fP
+.RS 4
+Copyright (c) 2019 
+.RE
+.PP
+
+.PP
+Definition in file \fBrc4Lib\&.h\fP\&.
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define RC4_STATE_SIZE   256"
+
+.PP
+Definition at line 30 of file rc4Lib\&.h\&.
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef unsigned char \fBU8\fP"
+
+.PP
+Definition at line 32 of file rc4Lib\&.h\&.
+.SH "Function Documentation"
+.PP 
+.SS "\fBrc4ctx_t\fP* constructRc4Context ()"
+
+.PP
+constructRc4Context - Function to construct the RC4 context structure and construct the state vector used for RC4 byte generation\&. The user must use the function in order to initialize the RC4 state\&. The caller must also ensure that they use the member function destroyRc4Context in order to deallocate all memory once the RC4 structure is no longer needed\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+rc4ctx_t* - a pointer to the rc4 context object created\&. 
+.RE
+.PP
+
+.PP
+Definition at line 28 of file rc4Lib\&.c\&.
+.SS "void destroyRc4Context (\fBrc4ctx_t\fP * rc4Ctx)"
+
+.PP
+destroyRc4Context - Function used to deallocate all memory allocated for the rc4 context structure passed in as 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIrc4Ctx\&.\fP Sets the parameter 
+.br
+\fIrc4Ctx\fP to NULL\&.
+.br
+\fIrc4Ctx\fP - The RC4 context structure to deallocate and clean\&. 
+.RE
+.PP
+
+.PP
+Definition at line 49 of file rc4Lib\&.c\&.
+.SS "void performRc4 (unsigned char * inputFileName, unsigned char * outputFileName, \fBrc4ctx_t\fP * rc4Ctx, int isTextHex)"
+
+.PP
+performRc4 - Function used to encrypt or decrypt the contents of the file 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIinputFileName\fP and write the result to the file 
+.br
+\fIoutputFileName\&.\fP The encryption or decryption is done using RC4 encryption or decryption\&. Each character in the input file is read in and a single byte for the RC4 key stream is generated\&. A single byte for the plaintext or Ciphertext and XOR'ed with a single byte from the RC4 key stream to generate a the corresponding ciphertext or plaintext\&. The bytes used during the RC4 encryption or decryption are generated from the RC4 context passed in as 
+.br
+\fIrc4Ctx\&.\fP RC4 encryption
+.br
+\fIinputFileName\fP - unsigned char* - pointer to a string containing the path to the input file\&. 
+.br
+\fIoutputFileName\fP - unsigned char* - pointer to a string containing the path to the output file\&. 
+.br
+\fIrc4Ctx\fP - rc4ctx_t* - a pointer to the RC4 context to use during encryption or decryption\&. 
+.br
+\fIisTextHex\fP - flag used to determine if the input is encoded using ascii or hex encoding\&. 
+.RE
+.PP
+
+.PP
+Definition at line 140 of file rc4Lib\&.c\&.
+.SS "\fBU8\fP rc4GetByte (\fBrc4ctx_t\fP * rc4Ctx)"
+
+.PP
+rc4GetByte - Function used to generate a single byte of the RC4 key stream for the RC4 context passed in as 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIrc4Ctx\&.\fP Returns the single byte as a single uint8_t\&.
+.br
+\fIrc4Ctx\fP - rc4ctx_t* - a pointer to the RC4 context from which to generate the single byte\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+uint8_t - A single byte in the RC4 key stream\&. 
+.RE
+.PP
+
+.PP
+Definition at line 105 of file rc4Lib\&.c\&.
+.SS "void rc4Init (\fBrc4ctx_t\fP * rc4Ctx, \fBU8\fP * key, int keylen, uint8_t isKeyHex)"
+
+.PP
+rc4Init - Function used to initialize the state of the RC4 context and the state vector used for the RC4 byte generate\&. Requires the use of the function constructRc4Context in order to generate a RC4 context\&. If the initialization key provided in 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIkey\fP is a hex string, it is converted to ascii string before initialization\&.
+.br
+\fIrc4Ctx\fP - rc4ctx_t* - a pointer to the RC4 context structure to initialize\&. 
+.br
+\fIkey\fP - uint8_t* - a pointer to the initialization key to be used\&. 
+.br
+\fIkeylen\fP - int - the length of the key provided 
+.br
+\fIkey\&.\fP 
+.br
+\fIisKeyHex\fP - uint8_t - a flag to determine if the key passed in as 
+.br
+\fIkey\fP is a hex string or ascii string\&. 
+.RE
+.PP
+
+.PP
+Definition at line 68 of file rc4Lib\&.c\&.
+.SS "void swapStateElements (\fBU8\fP * val1, \fBU8\fP * val2)"
+
+.PP
+swapStateElements - Function to swap the contents of the uint8_t pointers passed in as parameters 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIval1\fP and 
+.br
+\fIval2\&.\fP 
+.br
+\fIval1\fP - uint8_t* - pointer to a uint8_t variable whose contents to switch with 
+.br
+\fIval2\&.\fP 
+.br
+\fIval2\fP - uint8_t* - pointer to a uint8_t variable whose contents to switch with 
+.br
+\fIval1\&.\fP 
+.RE
+.PP
+
+.PP
+Definition at line 120 of file rc4Lib\&.c\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for EHN 410 - Group 7 from the source code\&.

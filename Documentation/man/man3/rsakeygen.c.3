@@ -1,0 +1,107 @@
+.TH "rsakeygen.c" 3 "Thu May 23 2019" "Version 0.1" "EHN 410 - Group 7" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+rsakeygen.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'rsakeygen\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBmain\fP (int argc, char *argv[])"
+.br
+.ti -1c
+.RI "void \fBprintHelp\fP ()"
+.br
+.RI "printHelp - Function used to print the help menu for the rsa kegen utility "
+.ti -1c
+.RI "void \fBclearMemory\fP (unsigned char *publickeyfile, unsigned char *privatekeyfile, unsigned char *keyFile, unsigned char *key)"
+.br
+.RI "clearMemory - Function used to deallocate all memory allocated for the rsa keygen utility\&. "
+.ti -1c
+.RI "void \fBverifyArgument\fP (size_t argCounter, size_t argc, char *parameter)"
+.br
+.RI "verifyArgument - Function used to verify if a paramter has an argument or not\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBAuthors:\fP
+.RS 4
+Mohamed Ameen Omar (u16055323) 
+.PP
+Douglas Healy (u16018100) 
+.PP
+Llewellyn Moyse (u15100708) 
+.RE
+.PP
+\fBVersion:\fP
+.RS 4
+0\&.1 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+2019-05-22
+.RE
+.PP
+\fBCopyright:\fP
+.RS 4
+Copyright (c) 2019 
+.RE
+.PP
+
+.PP
+Definition in file \fBrsakeygen\&.c\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "void clearMemory (unsigned char * publickeyfile, unsigned char * privatekeyfile, unsigned char * keyFile, unsigned char * key)"
+
+.PP
+clearMemory - Function used to deallocate all memory allocated for the rsa keygen utility\&. clearMemory - Function used to deallocate all memory allocated for the rsa encryption utility\&.
+.PP
+clearMemory - Function used to deallocate all memory allocated for the rsa decryption utility\&.
+.PP
+clearMemory - Function used to deallocate all memory allocated for the rc4 utility\&. 
+.PP
+Definition at line 205 of file rsakeygen\&.c\&.
+.SS "int main (int argc, char * argv[])"
+
+.PP
+Definition at line 15 of file rsakeygen\&.c\&.
+.SS "void printHelp ()"
+
+.PP
+printHelp - Function used to print the help menu for the rsa kegen utility printHelp - Function used to print the help menu for the rsa encrypt utility
+.PP
+printHelp - Function used to print the help menu for the rsa decrypt utility
+.PP
+printHelp - Function used to print the help menu for the rc4 utility 
+.PP
+Definition at line 187 of file rsakeygen\&.c\&.
+.SS "void verifyArgument (size_t argCounter, size_t argc, char * parameter)"
+
+.PP
+verifyArgument - Function used to verify if a paramter has an argument or not\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIargCounter\fP - The current index being verified for the commandline paramters\&. 
+.br
+\fIargc\fP - The total number of commandline arguments\&. 
+.br
+\fIparameter\fP - The parameter whose argument is being verified\&. 
+.RE
+.PP
+
+.PP
+Definition at line 235 of file rsakeygen\&.c\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for EHN 410 - Group 7 from the source code\&.

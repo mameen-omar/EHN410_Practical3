@@ -1,0 +1,224 @@
+\hypertarget{text_converter_8c}{}\section{text\+Converter.\+c File Reference}
+\label{text_converter_8c}\index{text\+Converter.\+c@{text\+Converter.\+c}}
+
+
+The text converter libary implementation file. This file contains functions used to convert between different bases of text. Such as conversion from ascii to hex, hex to ascii, hex to int. This is used for encryption when a certian base is required, different from the one provided.  
+
+
+{\ttfamily \#include \char`\"{}text\+Converter.\+h\char`\"{}}\newline
+Include dependency graph for text\+Converter.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{text_converter_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \hyperlink{text_converter_8c_a7e5ab2188af44718071074f450963568}{hex\+To\+Int} (char ch)
+\begin{DoxyCompactList}\small\item\em hex\+To\+Int -\/ Function that converts a given hex value into an integer. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{text_converter_8c_aa177516503b10de65b504a3714073ad7}{hex\+To\+Ascii} (char ch1, char ch2)
+\begin{DoxyCompactList}\small\item\em hex\+To\+Ascii -\/ Function that converts a given hex value to its A\+S\+C\+II equivalent. \end{DoxyCompactList}\item 
+void \hyperlink{text_converter_8c_ad697cbb5d9e462b3017df1f1d939ee96}{hex\+To\+Ascii\+String} (char $\ast$hex\+String, char $\ast$ascii\+String, int hex\+String\+Length)
+\begin{DoxyCompactList}\small\item\em hex\+To\+Ascii\+String -\/ Function that converts a given string of hex values into its A\+S\+C\+II equivalent. A hex string contains hex chars and is \char`\"{}encoded\char`\"{} in ascii In order to encrypt it, it must be converted to the equivalent ascii plain text string plaintext string is half the size of hex, since two hex chars = 1 ascii char if hex string is \char`\"{}4\+A\char`\"{} it will be converted to \char`\"{}\+J\char`\"{} in ascii which will have a hex representation of \char`\"{}4a\char`\"{} The original hex string converted to hex staright or printed in hex straight rather will print or have the value \char`\"{}0x34\char`\"{}, \char`\"{}0x31\char`\"{} B\+A\+S\+I\+C\+A\+L\+LY T\+HE H\+EX S\+T\+R\+I\+NG FF IS I\+N\+T\+E\+R\+P\+R\+E\+T\+ED AS T\+HE C\+H\+A\+RS FF, whereas when using this function we intend it to be \char`\"{}\+J\char`\"{}, ie the char \char`\"{}\+J\char`\"{} \end{DoxyCompactList}\item 
+unsigned char $\ast$ \hyperlink{text_converter_8c_ac189aee6672718650020cf627d45c780}{ascii\+To\+Hex\+String} (unsigned char $\ast$ascii\+String, unsigned char $\ast$hex\+String, size\+\_\+t ascii\+String\+Len)
+\begin{DoxyCompactList}\small\item\em Function name\+: ascii\+To\+Hex\+String -\/ convert an ascii String to an ascii string. \end{DoxyCompactList}\item 
+unsigned char $\ast$ \hyperlink{text_converter_8c_afba897e91364663f883cc51ed309dc92}{key\+Hex\+To\+Ascii} (unsigned char $\ast$hex\+Key, int key\+Length)
+\begin{DoxyCompactList}\small\item\em key\+Hex\+To\+Ascii -\/ Function to convert a hex encoded key to an ascii string. The caller must ensure they deallocate the memory allocated for the returned ascii encoded string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The text converter libary implementation file. This file contains functions used to convert between different bases of text. Such as conversion from ascii to hex, hex to ascii, hex to int. This is used for encryption when a certian base is required, different from the one provided. 
+
+\begin{DoxyAuthor}{Authors}
+Mohamed Ameen Omar (u16055323) 
+
+Douglas Healy (u16018100) 
+
+Llewellyn Moyse (u15100708) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2019-\/05-\/22
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2019 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{text_converter_8c_ac189aee6672718650020cf627d45c780}\label{text_converter_8c_ac189aee6672718650020cf627d45c780}} 
+\index{text\+Converter.\+c@{text\+Converter.\+c}!ascii\+To\+Hex\+String@{ascii\+To\+Hex\+String}}
+\index{ascii\+To\+Hex\+String@{ascii\+To\+Hex\+String}!text\+Converter.\+c@{text\+Converter.\+c}}
+\subsubsection{\texorpdfstring{ascii\+To\+Hex\+String()}{asciiToHexString()}}
+{\footnotesize\ttfamily unsigned char$\ast$ ascii\+To\+Hex\+String (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{ascii\+String,  }\item[{unsigned char $\ast$}]{hex\+String,  }\item[{size\+\_\+t}]{ascii\+String\+Len }\end{DoxyParamCaption})}
+
+
+
+Function name\+: ascii\+To\+Hex\+String -\/ convert an ascii String to an ascii string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ascii\+String} & -\/ unsigned char$\ast$ pointing to the A\+S\+C\+II String to be converted. \\
+\hline
+{\em hex\+String} & -\/ unsigned char$\ast$ pointing to a memory where the converted Hex string should be stored. \\
+\hline
+{\em ascii\+String\+Len} & -\/ size\+\_\+t containing the length of the A\+S\+C\+II String to be converted. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+unsigned char$\ast$ ascii\+To\+Hex\+String -\/ pointer to the converted Hex String, pointing to the same memory location as 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em hex\+String.} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 84 of file text\+Converter.\+c.
+
+\mbox{\Hypertarget{text_converter_8c_aa177516503b10de65b504a3714073ad7}\label{text_converter_8c_aa177516503b10de65b504a3714073ad7}} 
+\index{text\+Converter.\+c@{text\+Converter.\+c}!hex\+To\+Ascii@{hex\+To\+Ascii}}
+\index{hex\+To\+Ascii@{hex\+To\+Ascii}!text\+Converter.\+c@{text\+Converter.\+c}}
+\subsubsection{\texorpdfstring{hex\+To\+Ascii()}{hexToAscii()}}
+{\footnotesize\ttfamily uint8\+\_\+t hex\+To\+Ascii (\begin{DoxyParamCaption}\item[{char}]{ch1,  }\item[{char}]{ch2 }\end{DoxyParamCaption})}
+
+
+
+hex\+To\+Ascii -\/ Function that converts a given hex value to its A\+S\+C\+II equivalent. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ch1} & -\/ char value of the first hex value. \\
+\hline
+{\em ch2} & -\/ char value of the second hex value. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 42 of file text\+Converter.\+c.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{text_converter_8c_aa177516503b10de65b504a3714073ad7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{text_converter_8c_aa177516503b10de65b504a3714073ad7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{text_converter_8c_ad697cbb5d9e462b3017df1f1d939ee96}\label{text_converter_8c_ad697cbb5d9e462b3017df1f1d939ee96}} 
+\index{text\+Converter.\+c@{text\+Converter.\+c}!hex\+To\+Ascii\+String@{hex\+To\+Ascii\+String}}
+\index{hex\+To\+Ascii\+String@{hex\+To\+Ascii\+String}!text\+Converter.\+c@{text\+Converter.\+c}}
+\subsubsection{\texorpdfstring{hex\+To\+Ascii\+String()}{hexToAsciiString()}}
+{\footnotesize\ttfamily void hex\+To\+Ascii\+String (\begin{DoxyParamCaption}\item[{char $\ast$}]{hex\+String,  }\item[{char $\ast$}]{ascii\+String,  }\item[{int}]{hex\+String\+Length }\end{DoxyParamCaption})}
+
+
+
+hex\+To\+Ascii\+String -\/ Function that converts a given string of hex values into its A\+S\+C\+II equivalent. A hex string contains hex chars and is \char`\"{}encoded\char`\"{} in ascii In order to encrypt it, it must be converted to the equivalent ascii plain text string plaintext string is half the size of hex, since two hex chars = 1 ascii char if hex string is \char`\"{}4\+A\char`\"{} it will be converted to \char`\"{}\+J\char`\"{} in ascii which will have a hex representation of \char`\"{}4a\char`\"{} The original hex string converted to hex staright or printed in hex straight rather will print or have the value \char`\"{}0x34\char`\"{}, \char`\"{}0x31\char`\"{} B\+A\+S\+I\+C\+A\+L\+LY T\+HE H\+EX S\+T\+R\+I\+NG FF IS I\+N\+T\+E\+R\+P\+R\+E\+T\+ED AS T\+HE C\+H\+A\+RS FF, whereas when using this function we intend it to be \char`\"{}\+J\char`\"{}, ie the char \char`\"{}\+J\char`\"{} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em char$\ast$} & hex\+String -\/ The string of hex values to be converted. \\
+\hline
+{\em char$\ast$} & ascii\+String -\/ The output of the converted hex string. \\
+\hline
+{\em int} & hex\+String\+Length -\/ The length of parameter hex\+String. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 61 of file text\+Converter.\+c.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{text_converter_8c_ad697cbb5d9e462b3017df1f1d939ee96_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{text_converter_8c_ad697cbb5d9e462b3017df1f1d939ee96_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{text_converter_8c_a7e5ab2188af44718071074f450963568}\label{text_converter_8c_a7e5ab2188af44718071074f450963568}} 
+\index{text\+Converter.\+c@{text\+Converter.\+c}!hex\+To\+Int@{hex\+To\+Int}}
+\index{hex\+To\+Int@{hex\+To\+Int}!text\+Converter.\+c@{text\+Converter.\+c}}
+\subsubsection{\texorpdfstring{hex\+To\+Int()}{hexToInt()}}
+{\footnotesize\ttfamily uint8\+\_\+t hex\+To\+Int (\begin{DoxyParamCaption}\item[{char}]{ch }\end{DoxyParamCaption})}
+
+
+
+hex\+To\+Int -\/ Function that converts a given hex value into an integer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ch} & -\/ hex value that wil be converted to int. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t the converted int value. 
+\end{DoxyReturn}
+
+
+Definition at line 23 of file text\+Converter.\+c.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{text_converter_8c_a7e5ab2188af44718071074f450963568_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{text_converter_8c_afba897e91364663f883cc51ed309dc92}\label{text_converter_8c_afba897e91364663f883cc51ed309dc92}} 
+\index{text\+Converter.\+c@{text\+Converter.\+c}!key\+Hex\+To\+Ascii@{key\+Hex\+To\+Ascii}}
+\index{key\+Hex\+To\+Ascii@{key\+Hex\+To\+Ascii}!text\+Converter.\+c@{text\+Converter.\+c}}
+\subsubsection{\texorpdfstring{key\+Hex\+To\+Ascii()}{keyHexToAscii()}}
+{\footnotesize\ttfamily unsigned char$\ast$ key\+Hex\+To\+Ascii (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{hex\+Key,  }\item[{int}]{key\+Length }\end{DoxyParamCaption})}
+
+
+
+key\+Hex\+To\+Ascii -\/ Function to convert a hex encoded key to an ascii string. The caller must ensure they deallocate the memory allocated for the returned ascii encoded string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hex\+Key} & -\/ unsigned char$\ast$ -\/ the hexadecimal encoded key to convert. \\
+\hline
+{\em key\+Length} & -\/ int -\/ the length of the key \\
+\hline
+{\em hex\+Key.} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+unsigned char$\ast$ -\/ The resulting ascii encoded string. 
+\end{DoxyReturn}
+
+
+Definition at line 104 of file text\+Converter.\+c.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{text_converter_8c_afba897e91364663f883cc51ed309dc92_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{text_converter_8c_afba897e91364663f883cc51ed309dc92_icgraph}
+\end{center}
+\end{figure}

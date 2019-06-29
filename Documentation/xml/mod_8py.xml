@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="mod_8py" kind="file" language="Python">
+    <compoundname>mod.py</compoundname>
+    <innernamespace refid="namespacemod">mod</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="namespacemod_1a6150e0515f7202e2fb518f7206ed97dc" refkind="member"><highlight class="normal">x<sp/>=<sp/>495<sp/></highlight></codeline>
+<codeline lineno="2" refid="namespacemod_1a0a2f84ed7838f07779ae24c5a9086d33" refkind="member"><highlight class="normal">y<sp/>=<sp/>145</highlight></codeline>
+<codeline lineno="3" refid="namespacemod_1a14f94e529dff0b8bfba8e16fbe9755d6" refkind="member"><highlight class="normal">z<sp/>=<sp/>841</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">print(str((x**y)%z))</highlight></codeline>
+    </programlisting>
+    <location file="mod.py"/>
+  </compounddef>
+</doxygen>

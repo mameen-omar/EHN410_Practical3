@@ -1,0 +1,233 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="main_8c" kind="file" language="C++">
+    <compoundname>main.c</compoundname>
+    <includes local="no">gmp.h</includes>
+    <includes local="no">stdarg.h</includes>
+    <includes local="no">obstack.h</includes>
+    <includes local="yes">stdio.h</includes>
+    <includes local="yes">stdlib.h</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>stdarg.h</label>
+      </node>
+      <node id="5">
+        <label>stdlib.h</label>
+      </node>
+      <node id="0">
+        <label>main.c</label>
+        <link refid="main_8c"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>gmp.h</label>
+      </node>
+      <node id="3">
+        <label>obstack.h</label>
+      </node>
+      <node id="4">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="main_8c_1a0ddf1224851353fc92bfbff6f499fa97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char *argv[])</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>argv</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.c" line="37" column="1" bodyfile="main.c" bodystart="37" bodyend="81"/>
+        <references refid="namespacerc4_test_1a905c521e05ec8042631a912b71d0454e" compoundref="rc4_test_8py" startline="14">rc4Test.temp</references>
+        <references refid="namespacemod_1a6150e0515f7202e2fb518f7206ed97dc" compoundref="mod_8py" startline="1">mod.x</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>EHN<sp/>410<sp/>-<sp/>Mohamed<sp/>Ameen<sp/>Omar<sp/>-<sp/>u16055323<sp/>-<sp/>2019</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="comment">//<sp/>Vulgrind:<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>valgrind<sp/>-v<sp/>--leak-check=yes<sp/>./main</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/>https://gmplib.org</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">How<sp/>to<sp/>use<sp/>GMP:<sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/><sp/><sp/><sp/>https://www.cs.colorado.edu/~srirams/courses/csci2824-spr14/gmpTutorial.html</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/><sp/><sp/><sp/>http://www-oldurls.inf.ethz.ch/personal/fukudak/lect/mssemi/reports/01_rep_DiyoraSalimova.pdf</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/><sp/><sp/><sp/>https://gmplib.org/manual/Integer-Arithmetic.html#Integer-Arithmetic</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/><sp/><sp/><sp/>https://gmplib.org/manual/Number-Theoretic-Functions.html#Number-Theoretic-Functions</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"></highlight></codeline>
+<codeline lineno="27"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gmp.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdarg.h&gt;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;obstack.h&gt;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;stdio.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;stdlib.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="main_8c_1a0ddf1224851353fc92bfbff6f499fa97" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="main_8c_1a0ddf1224851353fc92bfbff6f499fa97" kindref="member">main</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>argv[])</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">{<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>mpz_t<sp/>is<sp/>a<sp/>type<sp/>for<sp/>gmp<sp/>integers.<sp/>These<sp/>integers<sp/>grow<sp/>dynamically.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Need<sp/>to<sp/>explicitly<sp/>clear<sp/>or<sp/>free<sp/>the<sp/>memory<sp/>allocated<sp/>for<sp/>a<sp/>mpz_t<sp/>using<sp/>-<sp/>clear(var)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>mpz_t<sp/>integ;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>mpz_t*<sp/><ref refid="namespacerc4_test_1a905c521e05ec8042631a912b71d0454e" kindref="member">temp</ref><sp/>=<sp/>malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(mpz_t));</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>mpz_init(temp[0]);<sp/></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>mpz_clear(temp[0]);<sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>free(temp);<sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>initialize<sp/>the<sp/>variable</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>mpz_init(integ);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>mpz_set_ui(integ,0);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>gmp_printf(&quot;Hello<sp/>%Zd\n&quot;,<sp/>integ);<sp/>//<sp/>use<sp/>this<sp/>to<sp/>print<sp/>it</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>char*<sp/>temp<sp/>=<sp/>&quot;ABCDEF&quot;;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count<sp/>=<sp/>100;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;%d\n&quot;</highlight><highlight class="normal">,<sp/>count);<sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>mpz_t<sp/>vec[count];<sp/></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="namespacemod_1a6150e0515f7202e2fb518f7206ed97dc" kindref="member">x</ref><sp/>=<sp/>0;<sp/><ref refid="namespacemod_1a6150e0515f7202e2fb518f7206ed97dc" kindref="member">x</ref>&lt;count;<ref refid="namespacemod_1a6150e0515f7202e2fb518f7206ed97dc" kindref="member">x</ref>++)<sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mpz_init(vec[<ref refid="namespacemod_1a6150e0515f7202e2fb518f7206ed97dc" kindref="member">x</ref>]);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>mpz_set_str(vec[0],</highlight><highlight class="stringliteral">&quot;AB&quot;</highlight><highlight class="normal">,<sp/>16);<sp/></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>mpz_set_str(vec[1],</highlight><highlight class="stringliteral">&quot;CD&quot;</highlight><highlight class="normal">,<sp/>16);<sp/></highlight><highlight class="comment">//convert<sp/>string<sp/>from<sp/>hex<sp/>to<sp/>decimal<sp/>!!<sp/>mpz_set_str(where<sp/>to<sp/>store,<sp/>the<sp/>string,<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>gmp_printf(</highlight><highlight class="stringliteral">&quot;Hello<sp/>%Z02X\n&quot;</highlight><highlight class="normal">,<sp/>vec[0]);<sp/></highlight><highlight class="comment">//<sp/>print<sp/>in<sp/>hex</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="namespacemod_1a6150e0515f7202e2fb518f7206ed97dc" kindref="member">x</ref><sp/>=<sp/>0;<sp/><ref refid="namespacemod_1a6150e0515f7202e2fb518f7206ed97dc" kindref="member">x</ref>&lt;count;<ref refid="namespacemod_1a6150e0515f7202e2fb518f7206ed97dc" kindref="member">x</ref>++)<sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mpz_clear(vec[<ref refid="namespacemod_1a6150e0515f7202e2fb518f7206ed97dc" kindref="member">x</ref>]);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>mpz_clear(integ);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>unsigned<sp/>char*<sp/>mytemp<sp/>=<sp/>calloc(5,sizeof(char));</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>for(int<sp/>x<sp/>=<sp/>0;<sp/>x<sp/>&lt;<sp/>5;<sp/>x++){</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>printf(&quot;%p\n&quot;,<sp/>mytemp+x);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="85"><highlight class="comment"></highlight></codeline>
+<codeline lineno="86"><highlight class="comment">#include<sp/>&quot;rc4.h&quot;</highlight></codeline>
+<codeline lineno="87"><highlight class="comment"></highlight></codeline>
+<codeline lineno="88"><highlight class="comment">//<sp/>https://datatracker.ietf.org/doc/rfc6229/</highlight></codeline>
+<codeline lineno="89"><highlight class="comment">//<sp/>https://www.rfc-editor.org/rfc/pdfrfc/rfc6229.txt.pdf</highlight></codeline>
+<codeline lineno="90"><highlight class="comment">//<sp/>https://tools.ietf.org/id/draft-josefsson-rc4-test-vectors-00.html</highlight></codeline>
+<codeline lineno="91"><highlight class="comment">//<sp/>https://tools.ietf.org/id/draft-josefsson-rc4-test-vectors-01.html</highlight></codeline>
+<codeline lineno="92"><highlight class="comment">//<sp/>https://tools.ietf.org/html/draft-josefsson-rc4-test-vectors-02</highlight></codeline>
+<codeline lineno="93"><highlight class="comment">//<sp/>http://www.potaroo.net/ietf/idref/draft-josefsson-rc4-test-vectors/</highlight></codeline>
+<codeline lineno="94"><highlight class="comment">//<sp/>http://www.potaroo.net/ietf/idref/draft-luis140219-curdle-rc4-die-die-die/</highlight></codeline>
+<codeline lineno="95"><highlight class="comment">//<sp/>https://www.rfc-editor.org/pipermail/rfc-dist/2011-May/002994.html</highlight></codeline>
+<codeline lineno="96"><highlight class="comment">//<sp/>https://crypto.stackexchange.com/questions/20897/what-are-the-plaintexts-for-the-rc4-stream-cipher-test-vectors-in-rfc6229<sp/>--<sp/>explains<sp/>the<sp/>test<sp/>vectors</highlight></codeline>
+<codeline lineno="97"><highlight class="comment">//<sp/>https://www.oryx-embedded.com/doc/rc4_8c_source.html</highlight></codeline>
+<codeline lineno="98"><highlight class="comment"></highlight></codeline>
+<codeline lineno="99"><highlight class="comment">//<sp/>constructs<sp/>the<sp/>state<sp/>and<sp/>initializes<sp/>the<sp/>struct</highlight></codeline>
+<codeline lineno="100"><highlight class="comment">//<sp/>returns<sp/>a<sp/>pointer<sp/>to<sp/>the<sp/>rc4CTX</highlight></codeline>
+<codeline lineno="101"><highlight class="comment">//<sp/>caller<sp/>must<sp/>free<sp/>the<sp/>memory</highlight></codeline>
+<codeline lineno="102"><highlight class="comment">rc4ctx_t<sp/>*<sp/>constructRc4Context()<sp/></highlight></codeline>
+<codeline lineno="103"><highlight class="comment">{</highlight></codeline>
+<codeline lineno="104"><highlight class="comment"><sp/><sp/><sp/><sp/>rc4ctx_t*<sp/>rc4Ctx<sp/>=<sp/>malloc(sizeof(rc4ctx_t));</highlight></codeline>
+<codeline lineno="105"><highlight class="comment"></highlight></codeline>
+<codeline lineno="106"><highlight class="comment"><sp/><sp/><sp/><sp/>for(size_t<sp/>x<sp/>=<sp/>0;<sp/>x<sp/>&lt;<sp/>RC4_STATE_SIZE;<sp/>x++)<sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mpz_init(rc4Ctx-&gt;state[x]);<sp/></highlight></codeline>
+<codeline lineno="108"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="comment"><sp/><sp/><sp/><sp/>rc4Ctx-&gt;index1<sp/>=<sp/>0;<sp/></highlight></codeline>
+<codeline lineno="110"><highlight class="comment"><sp/><sp/><sp/><sp/>rc4Ctx-&gt;index2<sp/>=<sp/>0;<sp/></highlight></codeline>
+<codeline lineno="111"><highlight class="comment"></highlight></codeline>
+<codeline lineno="112"><highlight class="comment"><sp/><sp/><sp/><sp/>return<sp/>rc4Ctx;<sp/></highlight></codeline>
+<codeline lineno="113"><highlight class="comment">}</highlight></codeline>
+<codeline lineno="114"><highlight class="comment"></highlight></codeline>
+<codeline lineno="115"><highlight class="comment"></highlight></codeline>
+<codeline lineno="116"><highlight class="comment">//<sp/>resets<sp/>all<sp/>values</highlight></codeline>
+<codeline lineno="117"><highlight class="comment">//<sp/>clears<sp/>all<sp/>mpz_t<sp/>elements</highlight></codeline>
+<codeline lineno="118"><highlight class="comment">//<sp/>clears<sp/>all<sp/>memory</highlight></codeline>
+<codeline lineno="119"><highlight class="comment">//<sp/>sets<sp/>pointer<sp/>to<sp/>null</highlight></codeline>
+<codeline lineno="120"><highlight class="comment">void<sp/>destroyRc4Context(rc4ctx_t<sp/>*<sp/>rc4Ctx)</highlight></codeline>
+<codeline lineno="121"><highlight class="comment">{</highlight></codeline>
+<codeline lineno="122"><highlight class="comment"><sp/><sp/><sp/><sp/>for(int<sp/>x<sp/>=<sp/>0;<sp/>x&lt;RC4_STATE_SIZE;<sp/>x++)<sp/>{</highlight></codeline>
+<codeline lineno="123"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mpz_clear((*rc4Ctx).state[x]);</highlight></codeline>
+<codeline lineno="124"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="125"><highlight class="comment"></highlight></codeline>
+<codeline lineno="126"><highlight class="comment"><sp/><sp/><sp/><sp/>free(rc4Ctx);<sp/></highlight></codeline>
+<codeline lineno="127"><highlight class="comment"><sp/><sp/><sp/><sp/>rc4Ctx<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="128"><highlight class="comment">}</highlight></codeline>
+<codeline lineno="129"><highlight class="comment"></highlight></codeline>
+<codeline lineno="130"><highlight class="comment"></highlight></codeline>
+<codeline lineno="131"><highlight class="comment"></highlight></codeline>
+<codeline lineno="132"><highlight class="comment">//<sp/>inititalize<sp/>the<sp/>state<sp/>of<sp/>RC4<sp/>with<sp/>the<sp/>key<sp/>given</highlight></codeline>
+<codeline lineno="133"><highlight class="comment">//<sp/>if<sp/>the<sp/>key<sp/>is<sp/>hexString<sp/>convert<sp/>to<sp/>ascii<sp/>string</highlight></codeline>
+<codeline lineno="134"><highlight class="comment">void<sp/>rc4Init(rc4ctx_t*<sp/>rc4Ctx,<sp/>unsigned<sp/>char*<sp/>key,<sp/>int<sp/>keylen,<sp/>int<sp/>isKeyHex)</highlight></codeline>
+<codeline lineno="135"><highlight class="comment">{</highlight></codeline>
+<codeline lineno="136"><highlight class="comment"><sp/><sp/><sp/><sp/>for(rc4Ctx-&gt;index1<sp/>=<sp/>0;<sp/>rc4Ctx-&gt;index1<sp/>&lt;<sp/>RC4_STATE_SIZE;<sp/>rc4Ctx-&gt;index1++)<sp/>{</highlight></codeline>
+<codeline lineno="137"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mpz_set_ui(rc4Ctx-&gt;state[rc4Ctx-&gt;index1],<sp/>rc4Ctx-&gt;index1);</highlight></codeline>
+<codeline lineno="138"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="139"><highlight class="comment"></highlight></codeline>
+<codeline lineno="140"><highlight class="comment"><sp/><sp/><sp/><sp/>//<sp/>for(rc4Ctx-&gt;index1<sp/>=<sp/>0;<sp/>rc4Ctx-&gt;index1<sp/>&lt;<sp/>255;<sp/>rc4Ctx-&gt;index1++)<sp/>{</highlight></codeline>
+<codeline lineno="141"><highlight class="comment"><sp/><sp/><sp/><sp/>//<sp/><sp/><sp/><sp/><sp/>gmp_printf(&quot;Hello<sp/>%Z02d\n&quot;,<sp/>rc4Ctx-&gt;state[rc4Ctx-&gt;index1]);</highlight></codeline>
+<codeline lineno="142"><highlight class="comment"><sp/><sp/><sp/><sp/>//<sp/>}<sp/></highlight></codeline>
+<codeline lineno="143"><highlight class="comment"><sp/><sp/><sp/><sp/>rc4Ctx-&gt;index2<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="144"><highlight class="comment"></highlight></codeline>
+<codeline lineno="145"><highlight class="comment"><sp/><sp/><sp/><sp/>for(rc4Ctx-&gt;index1<sp/>=<sp/>0;<sp/>rc4Ctx-&gt;index1<sp/>&lt;<sp/>RC4_STATE_SIZE;<sp/>rc4Ctx-&gt;index1++)<sp/>{</highlight></codeline>
+<codeline lineno="146"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rc4Ctx-&gt;index2<sp/>=<sp/>(rc4Ctx-&gt;index2<sp/>+<sp/>rc4Ctx-&gt;state[rc4Ctx-&gt;index1]<sp/>+<sp/>key[rc4Ctx-&gt;index1<sp/>%<sp/>keylen])<sp/>%<sp/>256;</highlight></codeline>
+<codeline lineno="147"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>swapStateElements(&amp;rc4Ctx-&gt;state[rc4Ctx-&gt;index1],<sp/>&amp;rc4Ctx-&gt;state[rc4Ctx-&gt;index2]);</highlight></codeline>
+<codeline lineno="148"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="149"><highlight class="comment"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="150"><highlight class="comment"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="151"><highlight class="comment">}</highlight></codeline>
+<codeline lineno="152"><highlight class="comment"></highlight></codeline>
+<codeline lineno="153"><highlight class="comment">//<sp/>return<sp/>a<sp/>single<sp/>byte<sp/>of<sp/>the<sp/>key<sp/>stream<sp/>generated<sp/>by<sp/>rc4<sp/></highlight></codeline>
+<codeline lineno="154"><highlight class="comment">unsigned<sp/>char*<sp/>rc4GetByte(rc4ctx_t*<sp/>rc4Ctx)<sp/></highlight></codeline>
+<codeline lineno="155"><highlight class="comment">{</highlight></codeline>
+<codeline lineno="156"><highlight class="comment"><sp/><sp/><sp/><sp/>unsigned<sp/>char*<sp/>temp<sp/>=<sp/>(unsigned<sp/>char*)<sp/>&quot;Hello&quot;;</highlight></codeline>
+<codeline lineno="157"><highlight class="comment"><sp/><sp/><sp/><sp/>return<sp/>temp;<sp/></highlight></codeline>
+<codeline lineno="158"><highlight class="comment">}</highlight></codeline>
+<codeline lineno="159"><highlight class="comment"></highlight></codeline>
+<codeline lineno="160"><highlight class="comment">void<sp/>swapStateElements(mpz_t*<sp/>val1,<sp/>mpz_t*<sp/>val2)</highlight></codeline>
+<codeline lineno="161"><highlight class="comment">{</highlight></codeline>
+<codeline lineno="162"><highlight class="comment"><sp/><sp/><sp/><sp/>int<sp/>temp<sp/>=<sp/>mpz_get_ui(*val1);<sp/></highlight></codeline>
+<codeline lineno="163"><highlight class="comment"><sp/><sp/><sp/><sp/>mpz_set(*val1,*val2);</highlight></codeline>
+<codeline lineno="164"><highlight class="comment"><sp/><sp/><sp/><sp/>mpz_set_ui(*val2,temp);</highlight></codeline>
+<codeline lineno="165"><highlight class="comment">}</highlight></codeline>
+<codeline lineno="166"><highlight class="comment"></highlight></codeline>
+<codeline lineno="167"><highlight class="comment"></highlight></codeline>
+<codeline lineno="168"><highlight class="comment"></highlight></codeline>
+<codeline lineno="169"><highlight class="comment"></highlight></codeline>
+<codeline lineno="170"><highlight class="comment"></highlight></codeline>
+<codeline lineno="171"><highlight class="comment">*/</highlight></codeline>
+    </programlisting>
+    <location file="main.c"/>
+  </compounddef>
+</doxygen>

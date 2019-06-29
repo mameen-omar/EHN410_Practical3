@@ -1,0 +1,220 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="rsaencrypt_8h" kind="file" language="C++">
+    <compoundname>rsaencrypt.h</compoundname>
+    <includes refid="rsa_8h" local="yes">rsa.h</includes>
+    <includedby refid="rsaencrypt_8c" local="yes">rsaencrypt.c</includedby>
+    <incdepgraph>
+      <node id="239">
+        <label>stdbool.h</label>
+      </node>
+      <node id="234">
+        <label>stdarg.h</label>
+      </node>
+      <node id="228">
+        <label>rsaencrypt.h</label>
+        <link refid="rsaencrypt_8h"/>
+        <childnode refid="229" relation="include">
+        </childnode>
+      </node>
+      <node id="236">
+        <label>stdint.h</label>
+      </node>
+      <node id="238">
+        <label>stdlib.h</label>
+      </node>
+      <node id="229">
+        <label>rsa.h</label>
+        <link refid="rsa_8h"/>
+        <childnode refid="230" relation="include">
+        </childnode>
+        <childnode refid="241" relation="include">
+        </childnode>
+      </node>
+      <node id="240">
+        <label>textConverter.h</label>
+        <link refid="text_converter_8h"/>
+        <childnode refid="232" relation="include">
+        </childnode>
+        <childnode refid="236" relation="include">
+        </childnode>
+        <childnode refid="237" relation="include">
+        </childnode>
+        <childnode refid="238" relation="include">
+        </childnode>
+        <childnode refid="239" relation="include">
+        </childnode>
+      </node>
+      <node id="237">
+        <label>string.h</label>
+      </node>
+      <node id="231">
+        <label>rc4Lib.h</label>
+        <link refid="rc4_lib_8h"/>
+        <childnode refid="232" relation="include">
+        </childnode>
+        <childnode refid="233" relation="include">
+        </childnode>
+        <childnode refid="234" relation="include">
+        </childnode>
+        <childnode refid="235" relation="include">
+        </childnode>
+        <childnode refid="236" relation="include">
+        </childnode>
+        <childnode refid="237" relation="include">
+        </childnode>
+        <childnode refid="238" relation="include">
+        </childnode>
+        <childnode refid="239" relation="include">
+        </childnode>
+        <childnode refid="240" relation="include">
+        </childnode>
+      </node>
+      <node id="241">
+        <label>math.h</label>
+      </node>
+      <node id="233">
+        <label>gmp.h</label>
+      </node>
+      <node id="235">
+        <label>obstack.h</label>
+      </node>
+      <node id="232">
+        <label>stdio.h</label>
+      </node>
+      <node id="230">
+        <label>randomNumberGenerator.h</label>
+        <link refid="random_number_generator_8h"/>
+        <childnode refid="231" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="243">
+        <label>rsaencrypt.c</label>
+        <link refid="rsaencrypt_8c"/>
+      </node>
+      <node id="242">
+        <label>rsaencrypt.h</label>
+        <link refid="rsaencrypt_8h"/>
+        <childnode refid="243" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="rsaencrypt_8h_1a0d20b69b0ad703df78459e1033d5c1d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void printHelp</definition>
+        <argsstring>()</argsstring>
+        <name>printHelp</name>
+        <briefdescription>
+<para>printHelp - Function used to print the help menu for the rsa encrypt utility </para>        </briefdescription>
+        <detaileddescription>
+<para>printHelp - Function used to print the help menu for the rsa encrypt utility</para><para>printHelp - Function used to print the help menu for the rsa decrypt utility</para><para>printHelp - Function used to print the help menu for the rsa encrypt utility</para><para>printHelp - Function used to print the help menu for the rc4 utility</para><para>printHelp - Function used to print the help menu for the rsa decrypt utility</para><para>printHelp - Function used to print the help menu for the rc4 utility</para><para>printHelp - Function used to print the help menu for the rsa encrypt utility</para><para>printHelp - Function used to print the help menu for the rsa decrypt utility</para><para>printHelp - Function used to print the help menu for the rc4 utility </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rsaencrypt.h" line="21" column="1" bodyfile="rc4.c" bodystart="148" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="rsaencrypt_8h_1af4281a2d885e84cab62d73096f86f46b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void clearMemory</definition>
+        <argsstring>(unsigned char *publickeyfile, unsigned char *outputfileName, unsigned char *keyFile, unsigned char *key)</argsstring>
+        <name>clearMemory</name>
+        <param>
+          <type>unsigned char *</type>
+          <declname>publickeyfile</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>outputfileName</declname>
+          <defname>privatekeyfile</defname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>keyFile</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>clearMemory - Function used to deallocate all memory allocated for the rsa encryption utility. </para>        </briefdescription>
+        <detaileddescription>
+<para>clearMemory - Function used to deallocate all memory allocated for the rsa encryption utility.</para><para>clearMemory - Function used to deallocate all memory allocated for the rsa decryption utility.</para><para>clearMemory - Function used to deallocate all memory allocated for the rsa encryption utility.</para><para>clearMemory - Function used to deallocate all memory allocated for the rc4 utility.</para><para>clearMemory - Function used to deallocate all memory allocated for the rsa decryption utility.</para><para>clearMemory - Function used to deallocate all memory allocated for the rc4 utility.</para><para>clearMemory - Function used to deallocate all memory allocated for the rsa encryption utility.</para><para>clearMemory - Function used to deallocate all memory allocated for the rsa decryption utility.</para><para>clearMemory - Function used to deallocate all memory allocated for the rc4 utility. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rsaencrypt.h" line="25" column="1" bodyfile="rc4.c" bodystart="165" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="rsaencrypt_8h_1ad09bd2f098bcd4eb97823dd5059b8a93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void verifyArgument</definition>
+        <argsstring>(size_t argCounter, size_t argc, char *parameter)</argsstring>
+        <name>verifyArgument</name>
+        <param>
+          <type>size_t</type>
+          <declname>argCounter</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>parameter</declname>
+        </param>
+        <briefdescription>
+<para>verifyArgument - Function used to verify if a paramter has an argument or not. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>argCounter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The current index being verified for the commandline paramters. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>argc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The total number of commandline arguments. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>parameter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The parameter whose argument is being verified. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rsaencrypt.h" line="33" column="1" bodyfile="rc4.c" bodystart="194" bodyend="201"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="authors"><para>Mohamed Ameen Omar (u16055323) </para></simplesect>
+<simplesect kind="authors"><para>Douglas Healy (u16018100) </para></simplesect>
+<simplesect kind="authors"><para>Llewellyn Moyse (u15100708) </para></simplesect>
+<simplesect kind="version"><para>0.1 </para></simplesect>
+<simplesect kind="date"><para>2019-05-22</para></simplesect>
+<simplesect kind="copyright"><para>Copyright (c) 2019 </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="13"><highlight class="preprocessor">#ifndef<sp/>RSAENCRYPT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RSAENCRYPT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="rsa_8h" kindref="compound">rsa.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="rsaencrypt_8h_1a0d20b69b0ad703df78459e1033d5c1d4" kindref="member">printHelp</ref>();<sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="rsaencrypt_8h_1af4281a2d885e84cab62d73096f86f46b" kindref="member">clearMemory</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="namespacersa_key_gen_tester_1aadfca7c8e87311f9a2de04174ef81764" kindref="member">publickeyfile</ref>,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>outputfileName,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="namespacerc4_test_1a399a06f7a52ec2592bd7dc1fe0998548" kindref="member">keyFile</ref>,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="namespacersa_key_gen_tester_1aa8fa75d45876bcbe59f33f49e7d3572d" kindref="member">key</ref><sp/>);<sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="rsaencrypt_8h_1ad09bd2f098bcd4eb97823dd5059b8a93" kindref="member">verifyArgument</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>argCounter,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>parameter);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="rsaencrypt.h"/>
+  </compounddef>
+</doxygen>

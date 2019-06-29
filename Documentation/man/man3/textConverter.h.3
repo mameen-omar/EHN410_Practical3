@@ -1,0 +1,181 @@
+.TH "textConverter.h" 3 "Thu May 23 2019" "Version 0.1" "EHN 410 - Group 7" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+textConverter.h \- The text converter libary function prototype file\&. This file contains functions used to convert between different bases of text\&. Such as conversion from ascii to hex, hex to ascii, hex to int\&. This is used for encryption when a certian base is required, different from the one provided\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdint\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <stdbool\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "uint8_t \fBhexToInt\fP (char ch)"
+.br
+.RI "hexToInt - Function that converts a given hex value into an integer\&. "
+.ti -1c
+.RI "uint8_t \fBhexToAscii\fP (char ch1, char ch2)"
+.br
+.RI "hexToAscii - Function that converts a given hex value to its ASCII equivalent\&. "
+.ti -1c
+.RI "void \fBhexToAsciiString\fP (char *hexString, char *asciiString, int hexStringLength)"
+.br
+.RI "hexToAsciiString - Function that converts a given string of hex values into its ASCII equivalent\&. A hex string contains hex chars and is 'encoded' in ascii In order to encrypt it, it must be converted to the equivalent ascii plain text string plaintext string is half the size of hex, since two hex chars = 1 ascii char if hex string is '4A' it will be converted to 'J' in ascii which will have a hex representation of '4a' The original hex string converted to hex staright or printed in hex straight rather will print or have the value '0x34', '0x31' BASICALLY THE HEX STRING FF IS INTERPRETED AS THE CHARS FF, whereas when using this function we intend it to be 'J', ie the char 'J' "
+.ti -1c
+.RI "unsigned char * \fBasciiToHexString\fP (unsigned char *asciiString, unsigned char *hexString, size_t asciiStringLen)"
+.br
+.RI "Function name: asciiToHexString - convert an ascii String to an ascii string\&. "
+.ti -1c
+.RI "unsigned char * \fBkeyHexToAscii\fP (unsigned char *hexKey, int keyLength)"
+.br
+.RI "keyHexToAscii - Function to convert a hex encoded key to an ascii string\&. The caller must ensure they deallocate the memory allocated for the returned ascii encoded string\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+The text converter libary function prototype file\&. This file contains functions used to convert between different bases of text\&. Such as conversion from ascii to hex, hex to ascii, hex to int\&. This is used for encryption when a certian base is required, different from the one provided\&. 
+
+
+.PP
+\fBAuthors:\fP
+.RS 4
+Mohamed Ameen Omar (u16055323) 
+.PP
+Douglas Healy (u16018100) 
+.PP
+Llewellyn Moyse (u15100708) 
+.RE
+.PP
+\fBVersion:\fP
+.RS 4
+0\&.1 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+2019-05-22
+.RE
+.PP
+\fBCopyright:\fP
+.RS 4
+Copyright (c) 2019 
+.RE
+.PP
+
+.PP
+Definition in file \fBtextConverter\&.h\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "unsigned char* asciiToHexString (unsigned char * asciiString, unsigned char * hexString, size_t asciiStringLen)"
+
+.PP
+Function name: asciiToHexString - convert an ascii String to an ascii string\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIasciiString\fP - unsigned char* pointing to the ASCII String to be converted\&. 
+.br
+\fIhexString\fP - unsigned char* pointing to a memory where the converted Hex string should be stored\&. 
+.br
+\fIasciiStringLen\fP - size_t containing the length of the ASCII String to be converted\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+unsigned char* asciiToHexString - pointer to the converted Hex String, pointing to the same memory location as 
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIhexString\&.\fP 
+.RE
+.PP
+
+.PP
+Definition at line 84 of file textConverter\&.c\&.
+.SS "uint8_t hexToAscii (char ch1, char ch2)"
+
+.PP
+hexToAscii - Function that converts a given hex value to its ASCII equivalent\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIch1\fP - char value of the first hex value\&. 
+.br
+\fIch2\fP - char value of the second hex value\&. 
+.RE
+.PP
+
+.PP
+Definition at line 42 of file textConverter\&.c\&.
+.SS "void hexToAsciiString (char * hexString, char * asciiString, int hexStringLength)"
+
+.PP
+hexToAsciiString - Function that converts a given string of hex values into its ASCII equivalent\&. A hex string contains hex chars and is 'encoded' in ascii In order to encrypt it, it must be converted to the equivalent ascii plain text string plaintext string is half the size of hex, since two hex chars = 1 ascii char if hex string is '4A' it will be converted to 'J' in ascii which will have a hex representation of '4a' The original hex string converted to hex staright or printed in hex straight rather will print or have the value '0x34', '0x31' BASICALLY THE HEX STRING FF IS INTERPRETED AS THE CHARS FF, whereas when using this function we intend it to be 'J', ie the char 'J' 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIchar*\fP hexString - The string of hex values to be converted\&. 
+.br
+\fIchar*\fP asciiString - The output of the converted hex string\&. 
+.br
+\fIint\fP hexStringLength - The length of parameter hexString\&. 
+.RE
+.PP
+
+.PP
+Definition at line 61 of file textConverter\&.c\&.
+.SS "uint8_t hexToInt (char ch)"
+
+.PP
+hexToInt - Function that converts a given hex value into an integer\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIch\fP - hex value that wil be converted to int\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+uint8_t the converted int value\&. 
+.RE
+.PP
+
+.PP
+Definition at line 23 of file textConverter\&.c\&.
+.SS "unsigned char* keyHexToAscii (unsigned char * hexKey, int keyLength)"
+
+.PP
+keyHexToAscii - Function to convert a hex encoded key to an ascii string\&. The caller must ensure they deallocate the memory allocated for the returned ascii encoded string\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIhexKey\fP - unsigned char* - the hexadecimal encoded key to convert\&. 
+.br
+\fIkeyLength\fP - int - the length of the key 
+.br
+\fIhexKey\&.\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+unsigned char* - The resulting ascii encoded string\&. 
+.RE
+.PP
+
+.PP
+Definition at line 104 of file textConverter\&.c\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for EHN 410 - Group 7 from the source code\&.

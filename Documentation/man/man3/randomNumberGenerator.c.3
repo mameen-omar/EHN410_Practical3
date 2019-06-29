@@ -1,0 +1,122 @@
+.TH "randomNumberGenerator.c" 3 "Thu May 23 2019" "Version 0.1" "EHN 410 - Group 7" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+randomNumberGenerator.c \- Random number generator implementation file\&. This file is used to generate random numbers to be used in the RSA generation\&. The random number generator takes in a specified seed value\&. rseed is used to initialise\&. The rrand is used to retrieve a single byte from the random number generator\&. After completion, the destroyRNG function must be executed\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'randomNumberGenerator\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBrseed\fP (\fBU8\fP *key, int keylen, int isKeyHex)"
+.br
+.RI "rseed - Function used to create a random number generator object and set the seed for the random number generator\&. "
+.ti -1c
+.RI "\fBU8\fP \fBrrand\fP ()"
+.br
+.RI "rrand - Function used to generate a random number of a single byte long\&. "
+.ti -1c
+.RI "void \fBdestroyRNG\fP ()"
+.br
+.RI "destroyRNG - Function used to deallocate all memory allocated for the random number generator, specifically the RC4 key stream state context structure\&. "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBrc4ctx_t\fP * \fBrngContext\fP = NULL"
+.br
+.RI "var - rngContext - The RC4 context state used for random number generation\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Random number generator implementation file\&. This file is used to generate random numbers to be used in the RSA generation\&. The random number generator takes in a specified seed value\&. rseed is used to initialise\&. The rrand is used to retrieve a single byte from the random number generator\&. After completion, the destroyRNG function must be executed\&. 
+
+
+.PP
+\fBAuthors:\fP
+.RS 4
+Mohamed Ameen Omar (u16055323) 
+.PP
+Douglas Healy (u16018100) 
+.PP
+Llewellyn Moyse (u15100708) 
+.RE
+.PP
+\fBVersion:\fP
+.RS 4
+0\&.1 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+2019-05-22
+.RE
+.PP
+\fBCopyright:\fP
+.RS 4
+Copyright (c) 2019 
+.RE
+.PP
+
+.PP
+Definition in file \fBrandomNumberGenerator\&.c\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "void destroyRNG ()"
+
+.PP
+destroyRNG - Function used to deallocate all memory allocated for the random number generator, specifically the RC4 key stream state context structure\&. 
+.PP
+Definition at line 61 of file randomNumberGenerator\&.c\&.
+.SS "\fBU8\fP rrand ()"
+
+.PP
+rrand - Function used to generate a random number of a single byte long\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+U8 - A random number of 8 bits long\&. 
+.RE
+.PP
+
+.PP
+Definition at line 45 of file randomNumberGenerator\&.c\&.
+.SS "void rseed (\fBU8\fP * key, int keylen, int isKeyHex)"
+
+.PP
+rseed - Function used to create a random number generator object and set the seed for the random number generator\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIkey\fP - uint8_t* - The key used to seed the random number generator\&. 
+.br
+\fIkeylen\fP - The length of the key 
+.br
+\fIkey\&.\fP 
+.br
+\fIisKeyHex\fP - flag used to indicate if the key 
+.br
+\fIkey\fP is hex or ascii encoded\&. 
+.RE
+.PP
+
+.PP
+Definition at line 32 of file randomNumberGenerator\&.c\&.
+.SH "Variable Documentation"
+.PP 
+.SS "\fBrc4ctx_t\fP* rngContext = NULL"
+
+.PP
+var - rngContext - The RC4 context state used for random number generation\&. 
+.PP
+Definition at line 22 of file randomNumberGenerator\&.c\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for EHN 410 - Group 7 from the source code\&.
